@@ -1,0 +1,4 @@
+OrderedDictionary {
+	'BaselineOfSmalltalkDocs.package' : #SquotCypressCodeSerializer,
+	'SmalltalkDocs.package' : #SquotCypressCodeSerializer
+}
