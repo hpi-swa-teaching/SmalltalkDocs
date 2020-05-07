@@ -1,0 +1,11 @@
+{
+	"class" : {
+		"newStarted" : "max 5/7/2020 09:42",
+		"newStartedOn:" : "max 5/7/2020 09:43" },
+	"instance" : {
+		"getHelpFor:" : "max 5/6/2020 19:02",
+		"getHelpStringFrom:" : "max 5/6/2020 17:59",
+		"helloWorld" : "max 5/7/2020 09:45",
+		"htmlEnd" : "max 5/6/2020 18:29",
+		"htmlStart" : "max 5/6/2020 18:28",
+		"initialize" : "max 5/6/2020 17:32" } }

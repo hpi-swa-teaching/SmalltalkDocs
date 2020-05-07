@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"app" ],
+	"name" : "TestHelp",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
