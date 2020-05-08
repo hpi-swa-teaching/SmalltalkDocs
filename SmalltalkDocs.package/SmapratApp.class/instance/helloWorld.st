@@ -1,5 +1,5 @@
 handler
 helloWorld
 
-	<get: '/hello-world'>
+	<get: '/'>
 	self sendHtml: '<html> <body> Hello World </body> </html>'.
