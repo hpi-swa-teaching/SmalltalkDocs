@@ -1,4 +1,4 @@
 templating
 htmlEnd
 	
-	^ '</body> </html>'
+	^ '</div></body> </html>'
