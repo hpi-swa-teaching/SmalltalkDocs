@@ -8,9 +8,11 @@ styleSection
 		}
 		.float-child
 		{
-		    width: 30%;
-		    float: left;
-		    padding: 20px;
+			width: 30%;
+			height: 95%;
+			overflow: scroll;
+			float: left;
+			padding: 20px;
 		}  
 	</style>
 	'.
