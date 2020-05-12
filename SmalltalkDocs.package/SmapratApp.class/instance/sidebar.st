@@ -6,4 +6,4 @@ sidebar
 	(Environment current allClasses collect: [:aClass | aClass className]) 
 		sort;
 		do: [:aClassName | classes := classes, '<li>', aClassName, '</li>'].
-	^ '</ul><div class="float-child">', classes,  '</div>'.
+	^ '<div class="float-child sidebar">', classes,  '</ul></div>'.
