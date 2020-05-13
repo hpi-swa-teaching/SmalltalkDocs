@@ -5,6 +5,6 @@
 ```
 Metacello new
 	baseline: 'SmalltalkDocs';
-	repository: 'github://hpi-swa-teaching/SmalltalkDocs:master';
+	repository: 'github://hpi-swa-teaching/SmalltalkDocs:master/packages';
 	load.
 ```
