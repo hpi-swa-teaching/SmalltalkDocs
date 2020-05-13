@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "SmapratApp",
+	"name" : "RPApplicationFix",
 	"pools" : [
 		 ],
-	"super" : "RPApplicationFix",
+	"super" : "RPApplication",
 	"type" : "normal" }
