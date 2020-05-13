@@ -3,7 +3,8 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #baseline : 'SmalltalkDocs',
       #platforms : [ #squeak ],
-      #directory : 'packages'
+      #directory : 'packages',
+      #loads: 'Tests'
     }
   ],
   #testing : {
