@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SmapratApp",
+	"pools" : [
+		 ],
+	"super" : "RPApplicationFix",
+	"type" : "normal" }
