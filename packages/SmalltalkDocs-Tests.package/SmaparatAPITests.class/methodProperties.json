@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"api" : "max 5/15/2020 16:54",
+		"api:" : "max 5/15/2020 16:54",
+		"helpPageSerializer" : "max 5/15/2020 17:07",
+		"helpPageSerializer:" : "max 5/15/2020 17:07",
+		"mockHelpBook" : "max 5/15/2020 16:55",
+		"mockHelpBook:" : "max 5/15/2020 16:55",
+		"setUp" : "max 5/19/2020 12:37",
+		"tearDown" : "max 5/15/2020 18:50",
+		"testGetClasses" : "max 5/19/2020 21:58",
+		"testGetHelpBookJson" : "max 5/19/2020 12:40",
+		"testGetHelpPageJson" : "max 5/19/2020 21:13",
+		"testGetHelpPagesJson" : "max 5/19/2020 14:52",
+		"testIdentifyHelpBook" : "max 5/15/2020 17:07",
+		"testSerializeBook" : "max 5/19/2020 12:32",
+		"testSerializeBookPage" : "max 5/19/2020 12:28",
+		"testSerializeBookPages" : "max 5/19/2020 12:31" } }

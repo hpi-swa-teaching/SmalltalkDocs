@@ -1,13 +1,13 @@
 {
-	"category" : "SmalltalkDocs-Tests",
+	"category" : "SmalltalkDocs-Core",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"app" ],
-	"name" : "TestHelp",
+		 ],
+	"name" : "HelpPageSerializer",
 	"pools" : [
 		 ],
 	"super" : "Object",

@@ -2,5 +2,5 @@
 	"class" : {
 		 },
 	"instance" : {
-		"removeModelRouteFor:" : "max 5/13/2020 14:10",
-		"route:" : "max 5/13/2020 14:03" } }
+		"getRegexHandlerFromUrl" : "max 5/19/2020 20:54",
+		"removeModelRouteFor:" : "max 5/13/2020 14:10" } }
