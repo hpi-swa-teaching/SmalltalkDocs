@@ -4,7 +4,7 @@ baseline: spec
 	spec for: #common do: [
 		spec baseline: 'RatPack' with: [
 				spec
-					loads: #('default' 'example' 'TravisCI');
+					loads: #('RatPack-Core' 'RatPack-Testing');
 					repository: 'github://hpi-swa-teaching/RatPack2.0:develop/packages'].
 		spec 
 			package: 'SmalltalkDocs-Core';
