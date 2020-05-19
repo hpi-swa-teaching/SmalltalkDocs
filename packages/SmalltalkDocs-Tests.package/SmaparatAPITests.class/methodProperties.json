@@ -8,6 +8,11 @@
 		"helpPageSerializer:" : "max 5/15/2020 17:07",
 		"mockHelpBook" : "max 5/15/2020 16:55",
 		"mockHelpBook:" : "max 5/15/2020 16:55",
-		"setUp" : "max 5/15/2020 18:50",
+		"setUp" : "max 5/19/2020 12:37",
 		"tearDown" : "max 5/15/2020 18:50",
-		"testIdentifyHelpBook" : "max 5/15/2020 17:07" } }
+		"testGetHelpBookJson" : "max 5/19/2020 12:40",
+		"testGetHelpPagesJson" : "max 5/19/2020 14:29",
+		"testIdentifyHelpBook" : "max 5/15/2020 17:07",
+		"testSerializeBook" : "max 5/19/2020 12:32",
+		"testSerializeBookPage" : "max 5/19/2020 12:28",
+		"testSerializeBookPages" : "max 5/19/2020 12:31" } }

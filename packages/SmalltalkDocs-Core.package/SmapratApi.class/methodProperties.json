@@ -2,4 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getHelpPageFrom:" : "max 5/14/2020 18:07" } }
+		"getHelpBookFrom:" : "max 5/19/2020 12:38",
+		"getHelpPagesFrom:" : "max 5/19/2020 14:30",
+		"helloWorld:" : "max 5/19/2020 13:04" } }

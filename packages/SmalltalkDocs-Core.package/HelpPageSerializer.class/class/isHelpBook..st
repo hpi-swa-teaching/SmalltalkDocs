@@ -1,4 +1,4 @@
-as yet unclassified
+checking
 isHelpBook: aClass
 
 	^ CustomHelp subclasses includes: aClass.
