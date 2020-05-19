@@ -10,5 +10,5 @@
 	"name" : "SmapratApi",
 	"pools" : [
 		 ],
-	"super" : "RPApplicationFix",
+	"super" : "RPApplication",
 	"type" : "normal" }
