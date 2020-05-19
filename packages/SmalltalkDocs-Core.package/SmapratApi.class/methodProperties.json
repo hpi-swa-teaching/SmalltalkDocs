@@ -1,6 +1,8 @@
 {
 	"class" : {
-		 },
+		"defaultPort" : "max 5/19/2020 22:03",
+		"newStarted" : "max 5/19/2020 22:03",
+		"newStartedOn:" : "max 5/19/2020 22:03" },
 	"instance" : {
 		"getClasses" : "max 5/19/2020 21:57",
 		"getHelpBookFrom:" : "max 5/19/2020 12:38",
