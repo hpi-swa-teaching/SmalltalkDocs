@@ -9,6 +9,6 @@ getHelpFor: aClassName
 				'<div class="float-child">
 					<h1>',aClassName,'</h1>
 					<p>', 
-						(self getHelpStringFrom: (Environment current classNamed: aClassName)),
+						(self getCheckedHelpString: (Environment current classNamed: aClassName)),
 					'</p>
 				</div>', self htmlEnd)].
