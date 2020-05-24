@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"classMethod1" : "max 5/24/2020 21:30",
+		"classMethod2" : "max 5/24/2020 21:30",
+		"classMethod3" : "max 5/24/2020 21:30",
+		"classMethod4:" : "max 5/24/2020 21:30" },
+	"instance" : {
+		"method1" : "max 5/24/2020 21:29",
+		"method2" : "max 5/24/2020 21:29",
+		"method3:" : "max 5/24/2020 21:29" } }
