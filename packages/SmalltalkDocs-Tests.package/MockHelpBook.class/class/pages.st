@@ -1,4 +1,4 @@
 as yet unclassified
 pages
 	
-	^#(first second)
+	^#(first second MockSubHelpBook)
