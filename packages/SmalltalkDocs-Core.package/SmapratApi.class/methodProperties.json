@@ -3,9 +3,11 @@
 		"newStarted" : "max 5/22/2020 20:24",
 		"newStartedOn:" : "max 5/22/2020 20:24" },
 	"instance" : {
-		"getClasses" : "max 5/19/2020 21:57",
+		"getClassMethodFrom:named:" : "max 5/25/2020 23:36",
+		"getClasses" : "max 5/25/2020 23:28",
 		"getHelpBookFrom:" : "max 5/19/2020 12:38",
 		"getHelpPageFrom:at:" : "max 5/19/2020 21:18",
 		"getHelpPagesFrom:" : "max 5/19/2020 14:51",
-		"getMethods:" : "max 5/24/2020 21:49",
+		"getInstanceMethodFrom:named:" : "max 5/25/2020 23:35",
+		"getMethods:" : "max 5/25/2020 23:33",
 		"helloWorld:" : "max 5/19/2020 13:04" } }

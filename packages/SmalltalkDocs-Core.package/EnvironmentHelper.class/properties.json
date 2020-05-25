@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "EnvironmentHelper",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

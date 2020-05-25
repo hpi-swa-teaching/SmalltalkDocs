@@ -4,4 +4,5 @@
 	"instance" : {
 		"getRegexHandlerFromUrl" : "max 5/19/2020 20:54",
 		"removeModelRouteFor:" : "max 5/13/2020 14:10",
-		"sendJson:" : "max 5/20/2020 14:08" } }
+		"sendJson:" : "max 5/20/2020 14:08",
+		"sendText:" : "max 5/25/2020 00:07" } }
