@@ -12,7 +12,7 @@ testGetMethodComment
 	self assert: result contentType = 'application/json'.
 	self assert: result status = #ok.
 	contents := Json readFrom: result contents contents readStream.
-	self assert: (contents at: 'precodeComment') = ''.
+	self assert: (contents at: 'precodeComment') = nil.
 	self assert: (contents at: 'hasPrecodeComment') = false.
 	
 	result := RPTestHelper get: '/env/classes/MockClass/methods/class/classMethod4:' on: api.
@@ -26,5 +26,5 @@ testGetMethodComment
 	self assert: result contentType = 'application/json'.
 	self assert: result status = #ok.
 	contents := Json readFrom: result contents contents readStream.
-	self assert: (contents at: 'precodeComment') = ''.
+	self assert: (contents at: 'precodeComment') = nil.
 	self assert: (contents at: 'hasPrecodeComment') = false.
