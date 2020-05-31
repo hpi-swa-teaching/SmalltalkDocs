@@ -4,12 +4,12 @@
 		"newStartedOn:" : "max 5/22/2020 20:24" },
 	"instance" : {
 		"getClassMethodFrom:named:" : "max 5/31/2020 19:40",
-		"getClassMethodTextFrom:named:" : "max 5/31/2020 19:36",
+		"getClassMethodTextFrom:named:" : "max 5/31/2020 21:24",
 		"getClasses" : "max 5/25/2020 23:28",
 		"getHelpBookFrom:" : "max 5/19/2020 12:38",
 		"getHelpPageFrom:at:" : "max 5/19/2020 21:18",
 		"getHelpPagesFrom:" : "max 5/19/2020 14:51",
 		"getInstanceMethodFrom:named:" : "max 5/31/2020 19:41",
-		"getInstanceMethodTextFrom:named:" : "max 5/31/2020 19:47",
+		"getInstanceMethodTextFrom:named:" : "max 5/31/2020 21:24",
 		"getMethods:" : "max 5/25/2020 23:33",
 		"helloWorld:" : "max 5/19/2020 13:04" } }
