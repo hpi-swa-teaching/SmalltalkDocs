@@ -1,6 +1,9 @@
 as yet unclassified
 getInstanceMethodFrom: aClassName named: aMethodName
-	<get: '/env/classes/(\w+)/methods/instance/([\w:]+)/text'>
-	|class|
-	class := Environment current classNamed: aClassName.
-	self sendText: (EnvironmentHelper getMethodTextFrom: class named: aMethodName asSymbol).
+	<get: '/env/classes/(\w+)/methods/instance/([\w:]+)'>
+	|class comment hasComment|
+	class := (Environment current classNamed: aClassName).
+	comment := class firstPrecodeCommentFor: aMethodName asSymbol.
+	hasComment := comment isNil not.
+	comment ifNil: [comment := String empty].
+	self sendJson: (Dictionary newFrom: {'precodeComment' -> comment. 'hasPrecodeComment'-> hasComment}) asJsonString.
