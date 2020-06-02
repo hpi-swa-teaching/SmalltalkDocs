@@ -3,14 +3,16 @@
 		"newStarted" : "max 5/22/2020 20:24",
 		"newStartedOn:" : "max 5/22/2020 20:24" },
 	"instance" : {
-		"getClassInfoFrom:" : "max 6/1/2020 23:57",
-		"getClassMethodFrom:named:" : "max 5/31/2020 21:45",
-		"getClassMethodTextFrom:named:" : "max 6/1/2020 22:28",
+		"getClassInfoFrom:" : "max 6/2/2020 18:22",
+		"getClassMethodFrom:named:" : "max 6/2/2020 18:22",
+		"getClassMethodTextFrom:named:" : "max 6/2/2020 18:32",
 		"getClasses" : "max 5/25/2020 23:28",
 		"getHelpBookFrom:" : "max 5/19/2020 12:38",
 		"getHelpPageFrom:at:" : "max 5/19/2020 21:18",
 		"getHelpPagesFrom:" : "max 5/19/2020 14:51",
-		"getInstanceMethodFrom:named:" : "max 5/31/2020 21:43",
-		"getInstanceMethodTextFrom:named:" : "max 6/1/2020 22:28",
-		"getMethods:" : "max 5/25/2020 23:33",
-		"helloWorld:" : "max 5/19/2020 13:04" } }
+		"getInstanceMethodFrom:named:" : "max 6/2/2020 18:23",
+		"getInstanceMethodTextFrom:named:" : "max 6/2/2020 18:32",
+		"getMethods:" : "max 6/2/2020 18:13",
+		"helloWorld:" : "max 5/19/2020 13:04",
+		"sendErrorNoSuchClass" : "max 6/2/2020 17:59",
+		"sendErrorNoSuchMethod" : "max 6/2/2020 18:20" } }

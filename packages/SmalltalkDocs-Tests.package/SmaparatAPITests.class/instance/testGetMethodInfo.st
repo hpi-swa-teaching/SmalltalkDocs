@@ -1,5 +1,5 @@
 testing
-testGetMethodComment
+testGetMethodInfo
 	| result contents |
 	result := RPTestHelper get: '/env/classes/MockClass/methods/instance/method2' on: api.
 	self assert: result contentType = 'application/json'.
