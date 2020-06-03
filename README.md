@@ -11,7 +11,7 @@ Metacello new
 	load.
 ```
 ### Frontend
-Download the [build artifacts](https://github.com/sch-max/smaprat/suites/749775644/artifacts/7692015) and extract it.
+Download the [build artifacts](https://github.com/sch-max/smaprat/suites/749775644/artifacts/7692015) and extract it (and its inner archive).
 
 ## How to start
 
