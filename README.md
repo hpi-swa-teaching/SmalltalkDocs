@@ -10,7 +10,7 @@ Metacello new
 	repository: 'github://hpi-swa-teaching/SmalltalkDocs:dev/packages';
 	load.
 ```
-#### Frontend
+### Frontend
 Download the [build artifacts](https://github.com/sch-max/smaprat/suites/749775644/artifacts/7692015) and extract it.
 
 ## How to start
