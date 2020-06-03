@@ -21,4 +21,4 @@ Run `SmapratApi newStarted` to start the Api on port 4567, or specify a port usi
 
 ### Start the frontend
 
-Run `python -m SimpleHTTPServer` in the extracted folder.
+Run `python -m SimpleHTTPServer` in the extracted folder. The frontend runs now on port 8000.
