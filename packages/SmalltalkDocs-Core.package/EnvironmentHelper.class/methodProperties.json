@@ -1,6 +1,8 @@
 {
 	"class" : {
-		"getClassInfoJsonFrom:" : "max 6/7/2020 16:27",
+		"getCategoriesJson" : "max 6/7/2020 16:44",
+		"getCategoryInfoJsonFrom:" : "max 6/7/2020 17:03",
+		"getClassInfoJsonFrom:" : "max 6/7/2020 17:14",
 		"getClassesJson" : "max 5/25/2020 23:26",
 		"getMethodTextFrom:named:" : "max 5/31/2020 21:32",
 		"getMethodsJsonFrom:" : "max 5/25/2020 23:32" },
