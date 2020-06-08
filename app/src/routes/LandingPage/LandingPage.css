@@ -8,6 +8,37 @@
     display: flex;
     flex-direction: row;
 }
+h1{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #175578;
+}
+#description{
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    transform: translateX(-50%);
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+}
 
 .classBox {
     margin: 0 0;

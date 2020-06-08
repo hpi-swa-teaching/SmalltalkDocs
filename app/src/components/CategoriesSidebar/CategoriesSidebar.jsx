@@ -14,20 +14,28 @@ const CategoriesSidebar = () => {
   }, []);
 
   return (
-    <ul>
+  <div>
+    <ul id="box">
+      <img id={"logo"}/>
+      <p id={"sidebarHeading"}>Smaprat</p>
+      <div id="buttonBack">
+        <button id="closeButton"></button>
+      </div>
+      <p id={"sidebarHeading2"}>Class List</p>
       {categories.map(aCategoryName => (
         <li>
-          <button
+          <button id="listbuttons"
             type="button"
             key={aCategoryName}
             onClick={() => setCurrentCategory(aCategoryName)}
           >
             {aCategoryName}
-          </button>
+          </button >
           {aCategoryName === currentCategory ? <ClassList categoryName={currentCategory} /> : null}
         </li>
       ))}
     </ul>
+  </div>
   );
 };
 
