@@ -7,6 +7,7 @@ import './CategoriesSidebar.css';
 const CategoriesSidebar = () => {
   const [categories, setCategories] = useState([]);
   const [currentCategory, setCurrentCategory] = useState('');
+  const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
     const simpleFetch = async () => setCategories(await getCategories());
@@ -15,19 +16,28 @@ const CategoriesSidebar = () => {
 
   return (
   <div>
-    <ul id="box">
-      <img id={"logo"}/>
-      <p id={"sidebarHeading"}>Smaprat</p>
-      <div id="buttonBack">
-        <button id="closeButton"></button>
+    <ul class="sidebarBox">
+      <img class={"logo"}/>
+      <p class={"sidebarHeading"}>Smaprat</p>
+      <div class="buttonBack">
+        <button class="closeButton"></button>
       </div>
-      <p id={"sidebarHeading2"}>Class List</p>
+      <p class={"sidebarHeading2"}>Class List</p>
       {categories.map(aCategoryName => (
         <li>
-          <button id="listbuttons"
+          <button class="categorybuttons"
             type="button"
             key={aCategoryName}
-            onClick={() => setCurrentCategory(aCategoryName)}
+            onClick={() => {
+              if(!isOpen){
+                setCurrentCategory(aCategoryName);
+                setOpen(true);
+              }
+              else{
+                setCurrentCategory(null);
+                setOpen(false);
+              }
+            }}
           >
             {aCategoryName}
           </button >

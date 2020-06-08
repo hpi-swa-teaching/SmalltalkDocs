@@ -10,8 +10,8 @@ const LandingPage = () => (
     </div>
     {/* TODO: entry point for issue 30 */}
     <div className="classBox">
-      <h1 id="heading">Welcome to Smaprat!</h1>
-      <p id="description">Start by selecting a class from the list on the left :)</p>
+      <h1>Welcome to Smaprat!</h1>
+      <h2 id="description">Start by selecting a class from the list on the left :)</h2>
     </div>
   </div>
 );
