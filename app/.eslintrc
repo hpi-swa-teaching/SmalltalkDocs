@@ -1,0 +1,25 @@
+{
+  "env": {"es6":  true, "node": true, "jest":  true, "browser":  true},
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "rules": {
+    "no-use-before-define": [
+      "error",
+      { "functions": true, "classes": true, "variables": false }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "printWidth": 100
+      }
+    ]
+  },
+  "plugins": ["prettier"],
+  "parser": "babel-eslint"
+}

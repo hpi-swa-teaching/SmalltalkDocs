@@ -1,0 +1,6 @@
+*.config.js
+public/
+build/
+serviceworker.js
+serviceWorker.js
+setupTests.js

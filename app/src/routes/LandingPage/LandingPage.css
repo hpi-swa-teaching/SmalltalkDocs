@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0;
+}
+
+#bigBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.classBox {
+    margin: 0 0;
+}
