@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0;
+}
+
+#classpage {
+    display: flex;
+    flex-direction: row;
+}
+
+.classBox {
+    margin: 0 0;
+}
+
+#methodpage {
+    display: flex;
+    flex-direction: row;
+}
+
+.methodBox {
+    margin: 0 0;
+}
+
+#helppage {
+    display: flex;
+    flex-direction: row;
+}
+
+.helpBox {
+    margin: 0 0;
+}
