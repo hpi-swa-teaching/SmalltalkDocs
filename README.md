@@ -1,3 +1,4 @@
+![Backend CI](https://github.com/hpi-swa-teaching/SmalltalkDocs/workflows/Backend%20CI/badge.svg?branch=dev) ![Frontend CI](https://github.com/hpi-swa-teaching/SmalltalkDocs/workflows/Frontend%20CI/badge.svg?branch=dev)
 # 🗄️ SmalltalkDocs
 
 ## Squeak API
