@@ -68,4 +68,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: smaprat-frontend
-        path: build/smaprat-frontend.zip
+        path: app/build/smaprat-frontend.zip
