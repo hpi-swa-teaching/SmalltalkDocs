@@ -1,8 +1,8 @@
 # 🗄️ SmalltalkDocs
 
-# Squeak API
+## Squeak API
 
-## How to install
+### How to install
 ```
 Metacello new
 	baseline: 'SmalltalkDocs';
@@ -10,29 +10,29 @@ Metacello new
 	load.
 ```
 
-# React App: småprat
+## React App: småprat
 
-## Notes for developers
+### Notes for developers
 
 * Do not forget to install Jest Plugin for Webstorm (Preferences - Languages & Frameworks - JavaScript - Libraries - Download - 'jest' - Download and Install)
 * Only use functional code style
 
-## How to start
+### How to start
 
-### Start the backend
+#### Start the backend
 
 Run `SmapratApi newStarted` to start the Api on port 4567, or specify a port using `SmapratApi newStartedOn: <aPort>`. You can also use the RatPack Control Panel which can be found under Tools -> RatPack Control Panel.
 
-### Start the frontend
+#### Start the frontend
 
 Run `npm install` if you have not already done so. Now you can start the developement version of the frontend using `npm start`.
 
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.  
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -40,12 +40,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.  
 You will also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.  
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.  
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -55,7 +55,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
