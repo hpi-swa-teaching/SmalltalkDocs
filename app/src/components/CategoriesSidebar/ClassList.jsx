@@ -20,10 +20,11 @@ const ClassList = props => {
         ? null
         : relatedClasses.map(aClassName => (
             <li key={`${aClassName}`}>
-              <div class="classlinkbox">
-                <NavLink class="classlink" to={`/classes/${aClassName}`}>{aClassName}</NavLink>
+              <div className="classlinkbox">
+                <NavLink className="classlink" to={`/classes/${aClassName}`}>
+                  {aClassName}
+                </NavLink>
               </div>
-
             </li>
           ))}
     </ul>

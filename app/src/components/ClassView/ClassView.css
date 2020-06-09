@@ -1,4 +1,4 @@
-h1{
+h1 {
     position: absolute;
     top: 5%;
     left: 50%;
@@ -15,7 +15,8 @@ h1{
 
     color: #175578;
 }
-h2{
+
+h2 {
     position: absolute;
     left: 50%;
     top: 12%;
@@ -30,7 +31,7 @@ h2{
     color: #000000;
 }
 
-p{
+p {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -38,7 +39,7 @@ p{
     line-height: 28px;
 }
 
-.description{
+.description {
 
     position: absolute;
     left: 50%;

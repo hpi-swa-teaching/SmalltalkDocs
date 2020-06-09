@@ -33,26 +33,30 @@ const MethodSidebar = ({ currentClass }) => {
 
   return (
     <div className="sidebar">
-        <div>
-            <NavLink class="backlinktext" key="allClasses" to="/">
-                All classes...
-            </NavLink>
-        </div>
-        <div>
-            <NavLink class="helplinktext" key="helpPage" to={`/help/${currentClass}`} disabled={!hasHelpPage}>
-                Help Page
-            </NavLink>
-        </div>
+      <div>
+        <NavLink class="backlinktext" key="allClasses" to="/">
+          All classes...
+        </NavLink>
+      </div>
+      <div>
+        <NavLink
+          class="helplinktext"
+          key="helpPage"
+          to={`/help/${currentClass}`}
+          disabled={!hasHelpPage}
+        >
+          Help Page
+        </NavLink>
+      </div>
 
-            <p className="sidebarHeadingC">Class Side</p>
+      <p className="sidebarHeadingC">Class Side</p>
 
-        <ul className="methodListC">{createMethodList('class', classMethods)}</ul>
-        <p className="sidebarHeadingI">Instance Side</p>
-        <ul className="methodListI">{createMethodList('instance', instanceMethods)}</ul>
-        <button type="button" key="goBack" onClick={() => history.goBack()}>
-            Go Back
-        </button>
-
+      <ul className="methodListC">{createMethodList('class', classMethods)}</ul>
+      <p className="sidebarHeadingI">Instance Side</p>
+      <ul className="methodListI">{createMethodList('instance', instanceMethods)}</ul>
+      <button type="button" key="goBack" onClick={() => history.goBack()}>
+        Go Back
+      </button>
     </div>
   );
 };

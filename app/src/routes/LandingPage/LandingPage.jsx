@@ -5,7 +5,7 @@ import './LandingPage.css';
 const LandingPage = () => (
   <div id="bigBox">
     <div>
-        {/*<h1>Smaprat</h1>*/}
+      {/* <h1>Smaprat</h1> */}
       <CategoriesSidebar />
     </div>
     {/* TODO: entry point for issue 30 */}
