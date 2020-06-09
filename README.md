@@ -18,12 +18,14 @@ Metacello new
 * Do not forget to install Jest Plugin for Webstorm (Preferences - Languages & Frameworks - JavaScript - Libraries - Download - 'jest' - Download and Install)
 * Only use functional code style
 * If you use VS Code add following statement to settings.json  
-	```{
-		"eslint.alwaysShowStatus": true,
-		"eslint.workingDirectories": [
-			"./app"
-		]
-	}```
+```
+{
+	"eslint.alwaysShowStatus": true,
+	"eslint.workingDirectories": [
+		"./app"
+	]
+}
+```
 
 ### How to start
 
