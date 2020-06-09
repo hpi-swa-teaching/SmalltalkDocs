@@ -25,7 +25,7 @@ const MethodSidebar = ({ currentClass }) => {
   const createMethodList = (side, methodNames) =>
     methodNames.map(aMethodName => (
       <li key={`${side}-${aMethodName}`}>
-        <NavLink to={`/classes/${currentClass}/methods/${side}/${aMethodName}`}>
+        <NavLink class="linktext" to={`/classes/${currentClass}/methods/${side}/${aMethodName}`}>
           {aMethodName}
         </NavLink>
       </li>
@@ -33,21 +33,26 @@ const MethodSidebar = ({ currentClass }) => {
 
   return (
     <div className="sidebar">
-      <NavLink key="allClasses" to="/">
-        All classes...
-      </NavLink>
+        <div>
+            <NavLink class="backlinktext" key="allClasses" to="/">
+                All classes...
+            </NavLink>
+        </div>
+        <div>
+            <NavLink class="helplinktext" key="helpPage" to={`/help/${currentClass}`} disabled={!hasHelpPage}>
+                Help Page
+            </NavLink>
+        </div>
 
-      <button type="button" key="goBack" onClick={() => history.goBack()}>
-        Go Back
-      </button>
+            <p className="sidebarHeadingC">Class Side</p>
 
-      <NavLink key="helpPage" to={`/help/${currentClass}`} disabled={!hasHelpPage}>
-        Help Page
-      </NavLink>
-      <h2>Class Side</h2>
-      <ul>{createMethodList('class', classMethods)}</ul>
-      <h2>Instance Side</h2>
-      <ul>{createMethodList('instance', instanceMethods)}</ul>
+        <ul className="methodListC">{createMethodList('class', classMethods)}</ul>
+        <p className="sidebarHeadingI">Instance Side</p>
+        <ul className="methodListI">{createMethodList('instance', instanceMethods)}</ul>
+        <button type="button" key="goBack" onClick={() => history.goBack()}>
+            Go Back
+        </button>
+
     </div>
   );
 };
