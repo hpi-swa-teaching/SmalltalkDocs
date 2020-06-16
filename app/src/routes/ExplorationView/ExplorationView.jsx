@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router';
 import ClassView from '../../components/ClassView/ClassView';
-import Header from '../../components/Header/Header';
+
 import HelpView from '../../components/HelpView/HelpView';
 import MethodSidebar from '../../components/MethodSidebar/MethodSidebar';
 import MethodView from '../../components/MethodView/MethodView';
@@ -18,7 +18,7 @@ const ExplorationView = () => {
 
   return (
     <div>
-      <Header />
+
 
       <div>
         {'currentClass' in pathParams ? (
