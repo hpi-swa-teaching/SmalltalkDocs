@@ -18,12 +18,12 @@ const ClassView = ({ currentClass }) => {
   }, [currentClass]);
 
   return (
-    <div>
+    <div >
       <h1>{currentClass}</h1>
       {loading ? (
         <CircularProgress />
       ) : (
-        <div className="description">This class has a total of {content} methods</div>
+        <div className="description"><h2>This class has a total of {content} methods</h2></div>
       )}
     </div>
   );

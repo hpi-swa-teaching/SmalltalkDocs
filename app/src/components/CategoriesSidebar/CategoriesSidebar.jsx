@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getCategories } from '../../utils/apiHandler';
 import ClassList from './ClassList';
-
+import SidebarHeader from '../Header/SidebarHeader';
 import './CategoriesSidebar.css';
 
 const CategoriesSidebar = () => {
@@ -15,16 +15,15 @@ const CategoriesSidebar = () => {
   }, []);
 
   return (
-    <div>
-      <ul className="sidebarBox">
-        <img alt="Smaprat Logo" className="logo" />
-        <p className="sidebarHeading">Smaprat</p>
-        <div className="buttonBack">
-          <button className="closeButton" type="button" />
-        </div>
-        <p className="sidebarHeading2">Class List</p>
-        {categories.map(aCategoryName => (
-          <li>
+
+    <div class="sidenav">
+        <SidebarHeader/>
+
+
+      <p className="sidebarHeading2">Class List</p>
+
+      {categories.map(aCategoryName => (
+          <li className="categorylist">
             <button
               className="categorybuttons"
               type="button"
@@ -45,8 +44,8 @@ const CategoriesSidebar = () => {
               <ClassList categoryName={currentCategory} />
             ) : null}
           </li>
-        ))}
-      </ul>
+      ))}
+
     </div>
   );
 };

@@ -1,20 +1,26 @@
 .classlink{
     position: relative;
-    top: -150px;
+
     word-wrap: break-word;
     width: 10px;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 28px;
     text-align: center;
     text-decoration: none;
 
-    color: #000000;
+    color: #FFFFFF;
 }
 
 .classlinkbox{
     width: 330px;
+}
+
+.classlist{
+    position: relative;
+    left: 10%;
+    list-style-type: none;
 }

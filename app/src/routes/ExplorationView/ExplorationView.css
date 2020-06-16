@@ -4,29 +4,32 @@
     padding: 0;
 }
 
-#classpage {
-    display: flex;
-    flex-direction: row;
+.main{
+    margin-left: 417px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
 }
 
-.classBox {
-    margin: 0 0;
+h1 {
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    font-weight: bold;
+
+    color: #175578;
 }
 
-#methodpage {
-    display: flex;
-    flex-direction: row;
-}
+h2 {
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
 
-.methodBox {
-    margin: 0 0;
-}
-
-#helppage {
-    display: flex;
-    flex-direction: row;
-}
-
-.helpBox {
-    margin: 0 0;
+    color: #000000;
 }

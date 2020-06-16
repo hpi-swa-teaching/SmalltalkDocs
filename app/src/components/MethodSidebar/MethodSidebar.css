@@ -1,8 +1,8 @@
-.sidebar button {
+.backButton {
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
-    position: absolute;
-
+    position: relative;
+    margin-top: 50px;
     width: 375px;
     height: 41px;
     left: 11px;
@@ -18,49 +18,35 @@
 
 /* Add a background color on hover */
 .btn-group button:hover {
-    background-color: #3e8e41;
+    background-color: #FFFFFF;
+}
+
+.barClose{
+    position: relative;
+    top: -3px;
+    left: -2px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background: url("../../ressources/images/barClose.png");
+
+}
+
+.closeButton{
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-top: 22px;
+    height: 36px;
+    width: 36px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    float: right;
+
 }
 
 .sidebarHeading{
     position: relative;
-    left: 58%;
-
-
-    transform: translateX(-50%);
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 56px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #FFFFFF;
-
-
-}
-.sidebarHeadingC{
-    position: relative;
     left: 10%;
-    top: 50px;
-
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 42px;
-
-
-    color: #FFFFFF;
-}
-
-.sidebarHeadingI{
-    position: relative;
-    left: 10%;
-    top: 50px;
 
 
 
@@ -69,17 +55,24 @@
     font-weight: normal;
     font-size: 36px;
     line-height: 42px;
+    margin-top: 10px;
 
 
     color: #FFFFFF;
 }
 
-.sidebar{
-    position: relative;
+
+
+.sidebar {
+    height: 100%;
     width: 417px;
-    height: 1000px;
-
-
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
     background: #175578;
 }
 
@@ -97,10 +90,10 @@
     color: #FFFFFF;
 }
 
-.helplinktext{
+
+.navlinktext{
     position: relative;
     left: 10%;
-    top: 20px;
 
     font-family: Roboto;
 
@@ -108,34 +101,23 @@
     line-height: 28px;
 
     text-decoration: none;
+    margin: 5px;
 
     color: #FFFFFF;
 }
 
-.backlinktext{
-    position: relative;
-    left: 10%;
-    top: 20px;
 
 
-    font-family: Roboto;
 
-    font-size: 24px;
-    line-height: 28px;
 
-    text-decoration: none;
-
-    color: #FFFFFF;
-}
-
-.methodListC{
+.ClassMethodList{
     position: relative;
     left: 14%;
 
     list-style-type: none;
 }
 
-.methodListI{
+.InstanceMethodList{
     position: relative;
     left: 14%;
 
@@ -144,5 +126,4 @@
 
 li{
     position: relative;
-    top: 50px;
 }

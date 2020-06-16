@@ -4,6 +4,7 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { getMethodInfo, getMethodText } from '../../utils/apiHandler';
+import './MethodView.css';
 
 const MethodView = ({ currentClass, site, currentMethod }) => {
   const [loading, setLoading] = useState(true);
@@ -26,19 +27,27 @@ const MethodView = ({ currentClass, site, currentMethod }) => {
 
   return (
     <div>
+
       <h1>{currentMethod}</h1>
-      {hasPrecodeComment ? (
-        <p>
-          <i>{precodeComment}</i>
-        </p>
-      ) : null}
-      {loading ? (
-        <CircularProgress />
-      ) : (
-        <SyntaxHighlighter language="smalltalk" style={docco}>
-          {methodText}
-        </SyntaxHighlighter>
-      )}
+
+      <div className={"comment"}>
+        {hasPrecodeComment ? (
+          <p>
+            {precodeComment}
+          </p>
+        ) : null}
+      </div>
+
+      <div className={"code"}>
+        {loading ? (
+          <CircularProgress />
+        ) : (
+          <SyntaxHighlighter language="smalltalk" style={docco}>
+            {methodText}
+          </SyntaxHighlighter>
+        )}
+      </div>
+
     </div>
   );
 };

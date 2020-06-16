@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory, NavLink } from 'react-router-dom';
 import { getAllMethodsOf, getClass } from '../../utils/apiHandler';
 import './MethodSidebar.css';
+import SidebarHeader from '../Header/SidebarHeader';
 
 const MethodSidebar = ({ currentClass }) => {
   const history = useHistory();
@@ -25,22 +26,24 @@ const MethodSidebar = ({ currentClass }) => {
   const createMethodList = (side, methodNames) =>
     methodNames.map(aMethodName => (
       <li key={`${side}-${aMethodName}`}>
-        <NavLink class="linktext" to={`/classes/${currentClass}/methods/${side}/${aMethodName}`}>
+        <NavLink class="linktext"  to={`/classes/${currentClass}/methods/${side}/${aMethodName}`}>
           {aMethodName}
         </NavLink>
       </li>
     ));
 
   return (
+
     <div className="sidebar">
+      <SidebarHeader/>
       <div>
-        <NavLink class="backlinktext" key="allClasses" to="/">
+        <NavLink class="navlinktext" key="allClasses" to="/">
           All classes...
         </NavLink>
       </div>
       <div>
         <NavLink
-          class="helplinktext"
+          class="navlinktext"
           key="helpPage"
           to={`/help/${currentClass}`}
           disabled={!hasHelpPage}
@@ -49,14 +52,21 @@ const MethodSidebar = ({ currentClass }) => {
         </NavLink>
       </div>
 
-      <p className="sidebarHeadingC">Class Side</p>
+      <p className="sidebarHeading">Class Side</p>
 
-      <ul className="methodListC">{createMethodList('class', classMethods)}</ul>
-      <p className="sidebarHeadingI">Instance Side</p>
-      <ul className="methodListI">{createMethodList('instance', instanceMethods)}</ul>
-      <button type="button" key="goBack" onClick={() => history.goBack()}>
+      <div className={"ClassMethodList"}>
+          {createMethodList('class', classMethods)}
+      </div>
+      <p className="sidebarHeading">Instance Side</p>
+
+      <div className={"InstanceMethodList"}>
+          {createMethodList('instance', instanceMethods)}
+      </div>
+
+      <button className={"backButton"} type="button" key="goBack" onClick={() => history.goBack()}>
         Go Back
       </button>
+
     </div>
   );
 };
