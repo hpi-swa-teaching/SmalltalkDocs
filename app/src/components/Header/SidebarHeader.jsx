@@ -7,7 +7,7 @@ const Header = () => {
         <div className={"head"}>
             <img  alt="" className="logo" />
             <p className="sidebarHeadingC">Smaprat</p>
-            <button className="closeButton" type="button"><img  className="barClose" /></button>
+            <button className="closeButton" type="button"><img  alt="" className="barClose" /></button>
         </div>
     );
 
