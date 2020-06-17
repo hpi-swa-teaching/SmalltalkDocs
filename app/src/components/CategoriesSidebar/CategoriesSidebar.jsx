@@ -30,9 +30,11 @@ const CategoriesSidebar = () => {
               if (!isOpen) {
                 setCurrentCategory(aCategoryName);
                 setOpen(true);
-              } else {
+              } else if (currentCategory === aCategoryName) {
                 setCurrentCategory(null);
                 setOpen(false);
+              } else {
+                setCurrentCategory(aCategoryName);
               }
             }}
           >

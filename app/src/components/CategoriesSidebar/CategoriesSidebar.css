@@ -13,9 +13,6 @@
 
 .sidebarHeading2{
     position: relative;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 36px;
     line-height: 42px;
     text-align: left;
@@ -32,9 +29,6 @@
 .categorybuttons{
 
     width: 350px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 24px;
     line-height: 32px;
     text-align: left;
@@ -44,8 +38,10 @@
     color: #FFFFFF;
 }
 
-.categorybuttons:hover{
-    background: #f1f1f1;
+.categorybuttons:hover {
+    background: #ffffff;
+    color: #175578;
+    padding-left: 10px;
 }
 
 

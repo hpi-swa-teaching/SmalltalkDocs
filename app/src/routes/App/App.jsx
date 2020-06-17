@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
+const DokuLandingPage = lazy(() => import('../DokuLandingPage/DokuLandingPage'));
 const LandingPage = lazy(() => import('../LandingPage/LandingPage'));
 const ExplorationView = lazy(() => import('../ExplorationView/ExplorationView'));
 const NotFound = lazy(() => import('../NotFound/NotFound'));
@@ -11,8 +12,9 @@ const App = () => (
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/help/bookName" component={ExplorationView} />
-        <Route exact path="/classes/:currentClass" component={ExplorationView} />
+        <Route exact path="/doku" component={DokuLandingPage} />
+        <Route exact path="/doku/help/bookName" component={ExplorationView} />
+        <Route exact path="/doku/classes/:currentClass" component={ExplorationView} />
         <Route
           exact
           path="/classes/:currentClass/methods/:site/:currentMethod"

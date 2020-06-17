@@ -28,7 +28,7 @@ const MethodSidebar = ({ currentClass }) => {
       <li key={`${side}-${aMethodName}`}>
         <NavLink
           className="linktext"
-          to={`/classes/${currentClass}/methods/${side}/${aMethodName}`}
+          to={`/doku/classes/${currentClass}/methods/${side}/${aMethodName}`}
         >
           {aMethodName}
         </NavLink>

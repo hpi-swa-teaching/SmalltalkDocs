@@ -18,7 +18,7 @@
 
 /* Add a background color on hover */
 .btn-group button:hover {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 .barClose{
@@ -50,9 +50,9 @@
 
 
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+    
+    
+    
     font-size: 36px;
     line-height: 42px;
     margin-top: 10px;
@@ -79,9 +79,9 @@
 .linktext{
     position: relative;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+    
+    
+    
     font-size: 24px;
     line-height: 28px;
     text-align: center;
@@ -95,7 +95,7 @@
     position: relative;
     left: 10%;
 
-    font-family: Roboto;
+    
 
     font-size: 24px;
     line-height: 28px;

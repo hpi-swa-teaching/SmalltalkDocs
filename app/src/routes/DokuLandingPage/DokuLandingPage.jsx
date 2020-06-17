@@ -1,12 +1,17 @@
 import React from 'react';
-import './LandingPage.css';
+import CategoriesSidebar from '../../components/CategoriesSidebar/CategoriesSidebar';
+import './DokuLandingPage.css';
 
 const LandingPage = () => (
   <div className="bigBox">
+    <div>
+      {/* <h1>Smaprat</h1> */}
+      <CategoriesSidebar />
+    </div>
+    {/* TODO: entry point for issue 30 */}
     <div className="main">
       <h1>Welcome to Smaprat!</h1>
       <h2 id="description">Start by selecting a class from the list on the left :)</h2>
-      <button className="enterbutton" type="button" />
     </div>
   </div>
 );

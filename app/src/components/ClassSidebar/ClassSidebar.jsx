@@ -18,7 +18,7 @@ const ClassSidebar = () => {
     classNames.map(aClass => (
       // TODO: style button as a material UI TreeItem
       <li key={`${aClass}-a`}>
-        <NavLink to={`/classes/${aClass}`}>{aClass}</NavLink>
+        <NavLink to={`/doku/classes/${aClass}`}>{aClass}</NavLink>
       </li>
     ));
 
