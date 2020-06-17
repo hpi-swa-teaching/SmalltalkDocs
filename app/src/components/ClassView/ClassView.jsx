@@ -25,7 +25,6 @@ const ClassView = ({ currentClass }) => {
   return (
     <div>
       <h1>{currentClass}</h1>
-      <div className="comment">{hasClassComment ? <p>{classComment}</p> : null}</div>
       {loading ? (
         <CircularProgress />
       ) : (
@@ -33,6 +32,7 @@ const ClassView = ({ currentClass }) => {
           <h2>This class has a total of {content} methods</h2>
         </div>
       )}
+      {hasClassComment ? <div className="comment"> <p>{classComment}</p> </div>: null}
     </div>
   );
 };

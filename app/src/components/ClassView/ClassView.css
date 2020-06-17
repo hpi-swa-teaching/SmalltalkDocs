@@ -7,8 +7,15 @@
     font-weight: normal;
     font-size: 36px;
     line-height: 42px;
-
+    margin-top: 5px;
     color: #000000;
 
+}
+
+.comment {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #175578;
+    margin: 20px;
 }
 
