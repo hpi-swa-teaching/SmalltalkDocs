@@ -21,7 +21,7 @@ const ClassList = props => {
         : relatedClasses.map(aClassName => (
             <li className="classlist" key={`${aClassName}`}>
               <div className="classlinkbox">
-                <NavLink className="classlink" to={`/classes/${aClassName}`}>
+                <NavLink className="classlink" to={`/doku/classes/${aClassName}`}>
                   {aClassName}
                 </NavLink>
               </div>

@@ -1,14 +1,19 @@
 import React from 'react';
 import './LandingPage.css';
+import { NavLink } from 'react-router-dom';
 
 const LandingPage = () => (
-  <div className="bigBox">
-    <div className="main">
-      <h1>Welcome to Smaprat!</h1>
-      <h2 id="description">Start by selecting a class from the list on the left :)</h2>
-      <button className="enterbutton" type="button" />
+
+    <div className="frame">
+        <h1 className="heading">Smaprat</h1>
+        <h2 className="description">Welcome to Smaprat, a documentation for Smalltalk!</h2>
+        <div  className="enterbutton">
+          <NavLink className="enterLink" to={`../doku`}>
+              Enter Doku
+          </NavLink>
+        </div>
     </div>
-  </div>
+
 );
 
 export default LandingPage;

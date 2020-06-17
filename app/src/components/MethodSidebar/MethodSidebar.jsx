@@ -39,7 +39,7 @@ const MethodSidebar = ({ currentClass }) => {
     <div className="sidebar">
       <SidebarHeader />
       <div>
-        <NavLink class="navlinktext" key="allClasses" to="/">
+        <NavLink class="navlinktext" key="allClasses" to="/doku/">
           All classes...
         </NavLink>
       </div>
