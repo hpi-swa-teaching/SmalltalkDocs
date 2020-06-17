@@ -3,13 +3,13 @@ import CategoriesSidebar from '../../components/CategoriesSidebar/CategoriesSide
 import './LandingPage.css';
 
 const LandingPage = () => (
-  <div class="bigBox">
-    <div >
+  <div className="bigBox">
+    <div>
       {/* <h1>Smaprat</h1> */}
       <CategoriesSidebar />
     </div>
     {/* TODO: entry point for issue 30 */}
-    <div class="main">
+    <div className="main">
       <h1>Welcome to Smaprat!</h1>
       <h2 id="description">Start by selecting a class from the list on the left :)</h2>
     </div>

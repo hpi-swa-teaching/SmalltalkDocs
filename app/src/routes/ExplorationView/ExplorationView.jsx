@@ -18,34 +18,29 @@ const ExplorationView = () => {
 
   return (
     <div>
-
-
       <div>
         {'currentClass' in pathParams ? (
-            <MethodSidebar currentClass={pathParams.currentClass} />
+          <MethodSidebar currentClass={pathParams.currentClass} />
         ) : null}
       </div>
 
-      <div className={"main"}>
-        {doExploreClass() ? (
-            <ClassView  currentClass={pathParams.currentClass} />
-        ) : null}
+      <div className="main">
+        {doExploreClass() ? <ClassView currentClass={pathParams.currentClass} /> : null}
       </div>
 
-      <div className={"main"}>
-      {doExploreMethod() ? (
+      <div className="main">
+        {doExploreMethod() ? (
           <MethodView
-              currentClass={pathParams.currentClass}
-              site={pathParams.site}
-              currentMethod={pathParams.currentMethod}
+            currentClass={pathParams.currentClass}
+            site={pathParams.site}
+            currentMethod={pathParams.currentMethod}
           />
-      ) : null}
+        ) : null}
       </div>
 
-      <div className={"main"}>
+      <div className="main">
         {doExploreBook() ? <HelpView bookName={pathParams.bookName} className="helpBox" /> : null}
       </div>
-
     </div>
   );
 };

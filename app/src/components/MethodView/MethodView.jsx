@@ -27,18 +27,11 @@ const MethodView = ({ currentClass, site, currentMethod }) => {
 
   return (
     <div>
-
       <h1>{currentMethod}</h1>
 
-      <div className={"comment"}>
-        {hasPrecodeComment ? (
-          <p>
-            {precodeComment}
-          </p>
-        ) : null}
-      </div>
+      <div className="comment">{hasPrecodeComment ? <p>{precodeComment}</p> : null}</div>
 
-      <div className={"code"}>
+      <div className="code">
         {loading ? (
           <CircularProgress />
         ) : (
@@ -47,7 +40,6 @@ const MethodView = ({ currentClass, site, currentMethod }) => {
           </SyntaxHighlighter>
         )}
       </div>
-
     </div>
   );
 };

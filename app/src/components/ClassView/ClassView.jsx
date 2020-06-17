@@ -15,27 +15,23 @@ const ClassView = ({ currentClass }) => {
       const methodsResponse = await getAllMethodsOf(currentClass);
       const classResponse = await getClass(currentClass);
       setContent(methodsResponse.count.total);
-      setHasClassComment(classResponse.hasClassComment)
-      setClassComment(classResponse.classComment)
+      setHasClassComment(classResponse.hasClassComment);
+      setClassComment(classResponse.classComment);
       setLoading(false);
     };
     simpleFetch();
   }, [currentClass]);
 
   return (
-    <div >
+    <div>
       <h1>{currentClass}</h1>
-      <div className={"comment"}>
-        {hasClassComment ? (
-          <p>
-            {classComment}
-          </p>
-        ) : null}
-      </div>
+      <div className="comment">{hasClassComment ? <p>{classComment}</p> : null}</div>
       {loading ? (
         <CircularProgress />
       ) : (
-        <div className="description"><h2>This class has a total of {content} methods</h2></div>
+        <div className="description">
+          <h2>This class has a total of {content} methods</h2>
+        </div>
       )}
     </div>
   );
