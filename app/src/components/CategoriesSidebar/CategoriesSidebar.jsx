@@ -20,29 +20,33 @@ const CategoriesSidebar = () => {
 
       <p className="sidebarHeading2">Class List</p>
 
-      {categories.map(aCategoryName => (
-        <li className="categorylist">
-          <button
-            className="categorybuttons"
-            type="button"
-            key={aCategoryName}
-            onClick={() => {
-              if (!isOpen) {
-                setCurrentCategory(aCategoryName);
-                setOpen(true);
-              } else if (currentCategory === aCategoryName) {
-                setCurrentCategory(null);
-                setOpen(false);
-              } else {
-                setCurrentCategory(aCategoryName);
-              }
-            }}
-          >
-            {aCategoryName}
-          </button>
-          {aCategoryName === currentCategory ? <ClassList categoryName={currentCategory} /> : null}
-        </li>
-      ))}
+      {categories
+        ? categories.map(aCategoryName => (
+            <li className="categorylist">
+              <button
+                className="categorybuttons"
+                type="button"
+                key={aCategoryName}
+                onClick={() => {
+                  if (!isOpen) {
+                    setCurrentCategory(aCategoryName);
+                    setOpen(true);
+                  } else if (currentCategory === aCategoryName) {
+                    setCurrentCategory(null);
+                    setOpen(false);
+                  } else {
+                    setCurrentCategory(aCategoryName);
+                  }
+                }}
+              >
+                {aCategoryName}
+              </button>
+              {aCategoryName === currentCategory ? (
+                <ClassList categoryName={currentCategory} />
+              ) : null}
+            </li>
+          ))
+        : null}
     </div>
   );
 };
