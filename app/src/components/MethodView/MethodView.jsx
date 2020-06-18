@@ -29,7 +29,12 @@ const MethodView = ({ currentClass, site, currentMethod }) => {
     <div>
       <h1>{currentMethod}</h1>
 
-      {hasPrecodeComment ?<div className="comment"> <p>{precodeComment}</p> </div>: null}
+      {hasPrecodeComment ? (
+        <div className="comment">
+          {' '}
+          <p>{precodeComment}</p>{' '}
+        </div>
+      ) : null}
 
       <div className="code">
         {loading ? (

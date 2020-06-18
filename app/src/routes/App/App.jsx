@@ -15,7 +15,11 @@ const App = () => (
         <Route exact path="/doku" component={DokuLandingPage} />
         <Route exact path="/doku/help/bookName" component={ExplorationView} />
         <Route exact path="/doku/classes/:currentClass" component={ExplorationView} />
-        <Route exact path="/doku/classes/:currentClass/methods/:site/:currentMethod" component={ExplorationView}/>
+        <Route
+          exact
+          path="/doku/classes/:currentClass/methods/:site/:currentMethod"
+          component={ExplorationView}
+        />
         <Route component={NotFound} />
       </Switch>
     </Suspense>

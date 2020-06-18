@@ -39,13 +39,13 @@ const MethodSidebar = ({ currentClass }) => {
     <div className="sidebar">
       <SidebarHeader />
       <div>
-        <NavLink class="navlinktext" key="allClasses" to="/doku/">
+        <NavLink className="navlinktext" key="allClasses" to="/doku/">
           All classes...
         </NavLink>
       </div>
       <div>
         <NavLink
-          class="navlinktext"
+          className="navlinktext"
           key="helpPage"
           to={`/help/${currentClass}`}
           disabled={!hasHelpPage}
