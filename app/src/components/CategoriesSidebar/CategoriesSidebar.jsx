@@ -22,11 +22,10 @@ const CategoriesSidebar = () => {
 
       {categories
         ? categories.map(aCategoryName => (
-            <li className="categorylist">
+            <li className="categorylist" key={aCategoryName}>
               <button
                 className="categorybuttons"
                 type="button"
-                key={aCategoryName}
                 onClick={() => {
                   if (!isOpen) {
                     setCurrentCategory(aCategoryName);

@@ -2,6 +2,7 @@ import React from 'react';
 import CategoriesSidebar from '../../components/CategoriesSidebar/CategoriesSidebar';
 import './DokuLandingPage.css';
 
+// TODO: Improve naming of component
 const LandingPage = () => (
   <div className="bigBox">
     <div>
