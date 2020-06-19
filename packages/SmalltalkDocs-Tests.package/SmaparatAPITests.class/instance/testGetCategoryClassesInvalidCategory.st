@@ -1,5 +1,5 @@
-testing
-testErrorGetCategoryClasses
+testing GetCategoryClasses
+testGetCategoryClassesInvalidCategory
 	| result contents className |
 	className := 'invalidClassName12567'.
 	[Environment current hasClassNamed: className] whileTrue: [className := ('invalidClassName12567','2')].

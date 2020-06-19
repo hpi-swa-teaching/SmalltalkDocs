@@ -1,4 +1,4 @@
-testing
+testing GetHelpPages
 testGetHelpPagesJson
 
 	| result |

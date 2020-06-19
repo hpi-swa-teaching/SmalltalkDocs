@@ -1,6 +1,5 @@
-testing
+testing GetCategories
 testGetCategories
-
 	| result contents |
 	result := RPTestHelper get: '/env/categories' on: api.
 	self assert: result contentType = 'application/json'.

@@ -1,6 +1,5 @@
 serializer
 getClassInfoJsonFrom: aClass
-
 	| hasClassComment classComment isHelpBook category |
 	hasClassComment := aClass hasComment.
 	hasClassComment ifTrue: [classComment := aClass comment] 

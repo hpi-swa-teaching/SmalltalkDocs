@@ -6,12 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"api",
-		"mockHelpBook",
-		"helpPageSerializer",
-		"nonexistingClassName" ],
-	"name" : "SmaparatAPITests",
+		 ],
+	"name" : "MockClassNoComment",
 	"pools" : [
 		 ],
-	"super" : "TestCase",
+	"super" : "Object",
 	"type" : "normal" }

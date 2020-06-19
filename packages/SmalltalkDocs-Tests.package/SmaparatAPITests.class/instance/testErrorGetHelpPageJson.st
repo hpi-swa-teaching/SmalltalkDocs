@@ -1,4 +1,4 @@
-testing
+testing GetHelpPages
 testErrorGetHelpPageJson
 
 	| result contents className |

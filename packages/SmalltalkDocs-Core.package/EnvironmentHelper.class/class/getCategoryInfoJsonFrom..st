@@ -1,6 +1,5 @@
 serializer
 getCategoryInfoJsonFrom: aCategory
-
 	| classes |
 	classes := aCategory classes collect: [
 			:class | class name asString].

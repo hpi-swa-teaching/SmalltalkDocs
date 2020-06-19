@@ -1,9 +1,7 @@
-testing
-testErrorGetClassInfo
-	| result contents className |
-	className := 'invalidClassName12567'.
-	[Environment current hasClassNamed: className] whileTrue: [className := ('invalidClassName12567','2')].
-	result := RPTestHelper get: '/env/classes/MockClassNotExistingClass',className on: api.
+testing GetMethodInfo
+testGetMethodInfoInvalidClassClassMethod
+	| result contents  |
+	result := RPTestHelper get: '/env/classes/', self nonexistingClassName, '/methods/class/method2' on: api.
 	self assert: result contentType = 'application/error+json'.
 	self assert: result status = #notFound.
 	contents := Json readFrom: result contents contents readStream.

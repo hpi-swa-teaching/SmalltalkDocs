@@ -1,6 +1,5 @@
-testing
+testing GetClasses
 testGetClasses
-
 	| result contents |
 	result := RPTestHelper get: '/env/classes' on: api.
 	self assert: result contentType = 'application/json'.

@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"api",
 		"mockHelpBook",
-		"helpPageSerializer",
-		"nonexistingClassName" ],
-	"name" : "SmaparatAPITests",
+		"helpPageSerializer" ],
+	"name" : "HelpPageSerializerTests",
 	"pools" : [
 		 ],
 	"super" : "TestCase",
