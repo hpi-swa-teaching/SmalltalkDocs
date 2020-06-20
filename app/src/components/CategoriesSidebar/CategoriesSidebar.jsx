@@ -18,7 +18,7 @@ const CategoriesSidebar = () => {
     <div className="sidenav">
       <SidebarHeader />
 
-      <p className="sidebarHeading2">Class List</p>
+      <p className="sidebarHeading2">Categories</p>
 
       {categories
         ? categories.map(aCategoryName => (

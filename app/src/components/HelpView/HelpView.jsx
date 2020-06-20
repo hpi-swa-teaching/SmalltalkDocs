@@ -19,7 +19,7 @@ const HelpView = ({ bookName }) => {
     <div>
       <h1>{bookName}</h1>
       {loading ? <CircularProgress /> : null}
-      <div>{content}</div>
+      <code>{content}</code>
     </div>
   );
 };

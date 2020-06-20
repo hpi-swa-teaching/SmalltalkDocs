@@ -53,7 +53,8 @@ describe('MethodSidebar', () => {
       );
     });
 
-    expect(container).toHaveTextContent('All classes...');
+    expect(container).toHaveTextContent('Categories');
+    expect(container).toHaveTextContent('Help Page');
 
     global.fetch.mockRestore();
   });

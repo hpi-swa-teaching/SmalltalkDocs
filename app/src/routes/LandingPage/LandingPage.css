@@ -6,14 +6,11 @@
 
 .frame{
     text-align: center;
-
-
 }
 
 .heading{
     position: relative;
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 3.5rem;
     text-align: center;
     font-weight: bold;
     margin-top: 10%;
@@ -23,30 +20,22 @@
 .description {
     margin-top: 20px;
     position: relative;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 2.2rem;
     text-align: center;
-
     color: #000000;
 }
 
 .enterbutton{
+    background-color: #FFFFFF;
+    color: #175578;
     margin-top: 100px;
     display: inline-block;
-    color: #FFFFFF;
+    cursor: pointer;
     padding: 10px;
+    font-size: 1.5rem;
     border-color: #175578;
     border-width: 3px;
     border-style: solid;
-}
-
-.enterLink{
-    position: relative;
-    word-wrap: break-word;
-    font-size: 22px;
-    line-height: 28px;
-    text-align: center;
-    text-decoration: none;
 }
 
 .enterbutton:hover{

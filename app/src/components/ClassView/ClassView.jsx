@@ -6,7 +6,7 @@ import './ClassView.css';
 
 const ClassView = ({ currentClass }) => {
   const [loading, setLoading] = useState(true);
-  const [content, setContent] = useState('');
+  const [count, setCount] = useState('');
   const [hasClassComment, setHasClassComment] = useState(false);
   const [classComment, setClassComment] = useState('');
 
@@ -14,7 +14,7 @@ const ClassView = ({ currentClass }) => {
     const simpleFetch = async () => {
       const methodsResponse = await getAllMethodsOf(currentClass);
       const classResponse = await getClass(currentClass);
-      setContent(methodsResponse.count.total);
+      setCount(methodsResponse.count.total);
       setHasClassComment(classResponse.hasClassComment);
       setClassComment(classResponse.classComment);
       setLoading(false);
@@ -29,7 +29,7 @@ const ClassView = ({ currentClass }) => {
         <CircularProgress />
       ) : (
         <div className="description">
-          <h2>This class has a total of {content} methods</h2>
+          <h3>This class has a total of {count} methods.</h3>
         </div>
       )}
       {hasClassComment ? (

@@ -39,31 +39,34 @@ const MethodSidebar = ({ currentClass }) => {
     <div className="sidebar">
       <SidebarHeader />
       <div>
-        <NavLink className="navlinktext" key="allClasses" to="/doku/">
-          All classes...
-        </NavLink>
-      </div>
-      <div>
-        <NavLink
-          className="navlinktext"
-          key="helpPage"
-          to={`/doku/help/${currentClass}`}
+        <button
+          className="backButton"
+          type="button"
+          key="goBack"
+          onClick={() => history.push('/doku')}
+        >
+          Categories
+        </button>
+        <button
+          className="backButton"
+          type="button"
+          key="showHelp"
+          onClick={() => history.push(`/doku/help/${currentClass}`)}
           disabled={!hasHelpPage}
         >
           Help Page
-        </NavLink>
+        </button>
       </div>
 
-      <p className="sidebarHeading">Class Side</p>
+      <NavLink className="sidebarHeading sidebarHeadingLink" to={`/doku/classes/${currentClass}`}>
+        {currentClass}
+      </NavLink>
 
+      <p className="sidebarHeading2">Class Methods</p>
       <div className="ClassMethodList">{createMethodList('class', classMethods)}</div>
-      <p className="sidebarHeading">Instance Side</p>
 
+      <p className="sidebarHeading2">Instance Methods</p>
       <div className="InstanceMethodList">{createMethodList('instance', instanceMethods)}</div>
-
-      <button className="backButton" type="button" key="goBack" onClick={() => history.goBack()}>
-        Go Back
-      </button>
     </div>
   );
 };

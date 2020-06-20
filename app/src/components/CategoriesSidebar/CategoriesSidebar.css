@@ -13,10 +13,10 @@
 
 .sidebarHeading2{
     position: relative;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 2rem;
     text-align: left;
-    margin: 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
     color: #FFFFFF;
 }
 
@@ -29,8 +29,8 @@
 .categorybuttons{
 
     width: 350px;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.2rem;
+    padding: 2px;
     text-align: left;
     border: none;
     background: none;
