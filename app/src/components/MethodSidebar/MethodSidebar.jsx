@@ -63,10 +63,9 @@ const MethodSidebar = ({ currentClass }) => {
       </NavLink>
 
       <p className="sidebarHeading2">Class Methods</p>
-
       <div className="ClassMethodList">{createMethodList('class', classMethods)}</div>
-      <p className="sidebarHeading2">Instance Methods</p>
 
+      <p className="sidebarHeading2">Instance Methods</p>
       <div className="InstanceMethodList">{createMethodList('instance', instanceMethods)}</div>
     </div>
   );
