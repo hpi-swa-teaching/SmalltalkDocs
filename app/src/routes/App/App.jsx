@@ -11,8 +11,8 @@ const App = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
-        <Route exact path="/" render={LandingPage} />
-        <Route exact path="/doku" render={DokuLandingPage} />
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/doku" component={DokuLandingPage} />
         <Route
           exact
           path="/doku/help/:currentClass"
@@ -28,7 +28,7 @@ const App = () => (
           path="/doku/classes/:currentClass/methods/:site/:currentMethod"
           render={props => <ExplorationView {...props} mode="method" />}
         />
-        <Route render={NotFound} />
+        <Route component={NotFound} />
       </Switch>
     </Suspense>
   </Router>
