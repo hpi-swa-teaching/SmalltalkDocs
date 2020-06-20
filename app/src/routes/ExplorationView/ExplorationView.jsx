@@ -7,14 +7,12 @@ import MethodSidebar from '../../components/MethodSidebar/MethodSidebar';
 import MethodView from '../../components/MethodView/MethodView';
 import './ExplorationView.css';
 
-const ExplorationView = () => {
+const ExplorationView = options => {
   const pathParams = useParams();
 
-  // TODO: improve path distinction
-  // TODO: refactor property names to symbols
-  const doExploreClass = () => 'currentClass' in pathParams && !('currentMethod' in pathParams);
-  const doExploreMethod = () => 'currentClass' in pathParams && 'currentMethod' in pathParams;
-  const doExploreBook = () => 'bookName' in pathParams;
+  const doExploreClass = () => options.mode === 'class';
+  const doExploreMethod = () => options.mode === 'method';
+  const doExploreBook = () => options.mode === 'help';
 
   return (
     <div>
@@ -39,7 +37,9 @@ const ExplorationView = () => {
       </div>
 
       <div className="main">
-        {doExploreBook() ? <HelpView bookName={pathParams.bookName} className="helpBox" /> : null}
+        {doExploreBook() ? (
+          <HelpView bookName={pathParams.currentClass} className="helpBox" />
+        ) : null}
       </div>
     </div>
   );

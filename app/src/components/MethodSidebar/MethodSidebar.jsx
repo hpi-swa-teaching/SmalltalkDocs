@@ -47,7 +47,7 @@ const MethodSidebar = ({ currentClass }) => {
         <NavLink
           className="navlinktext"
           key="helpPage"
-          to={`/help/${currentClass}`}
+          to={`/doku/help/${currentClass}`}
           disabled={!hasHelpPage}
         >
           Help Page

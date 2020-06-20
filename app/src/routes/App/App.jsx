@@ -11,16 +11,24 @@ const App = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route exact path="/doku" component={DokuLandingPage} />
-        <Route exact path="/doku/help/bookName" component={ExplorationView} />
-        <Route exact path="/doku/classes/:currentClass" component={ExplorationView} />
+        <Route exact path="/" render={LandingPage} />
+        <Route exact path="/doku" render={DokuLandingPage} />
+        <Route
+          exact
+          path="/doku/help/:currentClass"
+          render={props => <ExplorationView {...props} mode="help" />}
+        />
+        <Route
+          exact
+          path="/doku/classes/:currentClass"
+          render={props => <ExplorationView {...props} mode="class" />}
+        />
         <Route
           exact
           path="/doku/classes/:currentClass/methods/:site/:currentMethod"
-          component={ExplorationView}
+          render={props => <ExplorationView {...props} mode="method" />}
         />
-        <Route component={NotFound} />
+        <Route render={NotFound} />
       </Switch>
     </Suspense>
   </Router>
