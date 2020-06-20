@@ -1,9 +1,11 @@
 .backButton {
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
+    padding: 10px 24px;
+    /* Some padding */
+    cursor: pointer;
+    /* Pointer/hand icon */
     position: relative;
-    margin-top: 50px;
-    width: 375px;
+    margin: 20px 10px;
+    width: 40%;
     height: 41px;
     left: 11px;
     top: 80%;
@@ -13,7 +15,8 @@
 }
 
 .btn-group button:not(:last-child) {
-    border-bottom: none; /* Prevent double borders */
+    border-bottom: none;
+    /* Prevent double borders */
 }
 
 /* Add a background color on hover */
@@ -21,7 +24,7 @@
     background-color: #ffffff;
 }
 
-.barClose{
+.barClose {
     position: relative;
     top: -3px;
     left: -2px;
@@ -29,10 +32,9 @@
     height: 36px;
     border: 0;
     background: url("../../ressources/images/barClose.png");
-
 }
 
-.closeButton{
+.closeButton {
     margin-right: 20px;
     margin-bottom: 30px;
     margin-top: 22px;
@@ -44,24 +46,26 @@
 
 }
 
-.sidebarHeading{
+.sidebarHeading {
     position: relative;
-    left: 10%;
-
-
-
-    
-    
-    
-    font-size: 36px;
-    line-height: 42px;
+    left: 5%;
+    font-size: 1.5rem;
     margin-top: 10px;
-
-
     color: #FFFFFF;
 }
 
+.sidebarHeadingLink {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
+.sidebarHeading2 {
+    position: relative;
+    left: 10%;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
 
 .sidebar {
     height: 100%;
@@ -76,54 +80,43 @@
     background: #175578;
 }
 
-.linktext{
+.linktext {
     position: relative;
-
-    
-    
-    
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 1.2rem;
     text-align: center;
     text-decoration: none;
-
     color: #FFFFFF;
 }
 
+.linktext:hover {
+    color: #cfcfcf;
+}
 
-.navlinktext{
+.navlinktext {
     position: relative;
     left: 10%;
-
-    
-
-    font-size: 24px;
-    line-height: 28px;
-
+    font-size: 1.2rem;
     text-decoration: none;
     margin: 5px;
-
     color: #FFFFFF;
 }
 
+.navlinktext:hover {
+    color: #cfcfcf;
+}
 
-
-
-
-.ClassMethodList{
+.ClassMethodList {
     position: relative;
     left: 14%;
-
     list-style-type: none;
 }
 
-.InstanceMethodList{
+.InstanceMethodList {
     position: relative;
     left: 14%;
-
     list-style-type: none;
 }
 
-li{
+li {
     position: relative;
 }
