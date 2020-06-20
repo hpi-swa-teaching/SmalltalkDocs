@@ -1,0 +1,15 @@
+{
+	"category" : "SmalltalkDocs-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"searchTerm",
+		"wildcard" ],
+	"name" : "SearchMatcher",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

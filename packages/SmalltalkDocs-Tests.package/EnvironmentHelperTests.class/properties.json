@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"environmentHelper" ],
+	"name" : "EnvironmentHelperTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

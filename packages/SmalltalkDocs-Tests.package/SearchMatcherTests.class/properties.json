@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "max 6/7/2020 16:18",
+	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MockClass",
+		"searchMatcher" ],
+	"name" : "SearchMatcherTests",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TestCase",
 	"type" : "normal" }

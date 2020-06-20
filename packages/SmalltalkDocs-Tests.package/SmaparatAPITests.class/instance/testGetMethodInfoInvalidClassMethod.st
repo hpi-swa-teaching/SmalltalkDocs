@@ -1,7 +1,7 @@
 testing GetMethodInfo
 testGetMethodInfoInvalidClassMethod
 	| result contents  |
-	result := RPTestHelper get: '/env/classes/MockClass/methods/class/invalidMethodThatDoesNotExist' on: api.
+	result := RPTestHelper get: '/env/classes/SmapratMockClass/methods/class/invalidMethodThatDoesNotExist' on: api.
 	self assert: result contentType = 'application/error+json'.
 	self assert: result status = #notFound.
 	contents := Json readFrom: result contents contents readStream.
