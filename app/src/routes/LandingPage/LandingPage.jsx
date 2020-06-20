@@ -1,17 +1,24 @@
 import React from 'react';
 import './LandingPage.css';
-import { NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-const LandingPage = () => (
-  <div className="frame">
-    <h1 className="heading">Smaprat</h1>
-    <h2 className="description">Welcome to Smaprat, a documentation for Smalltalk!</h2>
-    <div className="enterbutton">
-      <NavLink className="enterLink" to="../doku">
+const LandingPage = () => {
+  const history = useHistory();
+
+  return (
+    <div className="frame">
+      <h1 className="heading">Smaprat</h1>
+      <h2 className="description">Welcome to Smaprat, a documentation for Smalltalk!</h2>
+      <button
+        type="button"
+        key="enterDoku"
+        className="enterbutton"
+        onClick={() => history.push('/doku')}
+      >
         Enter Doku
-      </NavLink>
+      </button>
     </div>
-  </div>
-);
+  );
+};
 
 export default LandingPage;
