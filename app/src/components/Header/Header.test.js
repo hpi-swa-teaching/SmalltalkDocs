@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import Header from './Header';
+import SidebarHeader from './SidebarHeader';
 
 let container = null;
 beforeEach(() => {
@@ -20,9 +20,9 @@ afterEach(() => {
 describe('Header', () => {
   it('should display the header', () => {
     act(() => {
-      render(<Header />, container);
+      render(<SidebarHeader />, container);
     });
 
-    expect(container.querySelector('h1')).toHaveTextContent('Smaprat');
+    expect(container.textContent).toContain('Smaprat');
   });
 });

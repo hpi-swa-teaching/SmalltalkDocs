@@ -1,8 +1,9 @@
 import React from 'react';
-import './LandingPage.css';
 import { useHistory } from 'react-router-dom';
+import '../LandingPages.css';
+import './RootLandingPage.css';
 
-const LandingPage = () => {
+const RootLandingPage = () => {
   const history = useHistory();
 
   return (
@@ -15,10 +16,18 @@ const LandingPage = () => {
         className="enterbutton"
         onClick={() => history.push('/doku')}
       >
-        Enter Doku
+        Enter Documentation
+      </button>
+      <button
+        type="button"
+        key="enterStatistics"
+        className="enterbutton"
+        onClick={() => history.push('/statistics')}
+      >
+        Enter Statistics
       </button>
     </div>
   );
 };
 
-export default LandingPage;
+export default RootLandingPage;

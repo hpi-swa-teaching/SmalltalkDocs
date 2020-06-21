@@ -2,8 +2,11 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
-const DokuLandingPage = lazy(() => import('../DokuLandingPage/DokuLandingPage'));
-const LandingPage = lazy(() => import('../LandingPage/LandingPage'));
+const RootLandingPage = lazy(() => import('../LandingPages/RootLandingPage/RootLandingPage'));
+const StatisticsLandingPage = lazy(() =>
+  import('../LandingPages/StatisticsLandingPage/StatisticsLandingPage')
+);
+const DokuLandingPage = lazy(() => import('../LandingPages/DokuLandingPage/DokuLandingPage'));
 const ExplorationView = lazy(() => import('../ExplorationView/ExplorationView'));
 const NotFound = lazy(() => import('../NotFound/NotFound'));
 
@@ -11,8 +14,9 @@ const App = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
-        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/" component={RootLandingPage} />
         <Route exact path="/doku" component={DokuLandingPage} />
+        <Route exact path="/statistics" component={StatisticsLandingPage} />
         <Route
           exact
           path="/doku/help/:currentClass"

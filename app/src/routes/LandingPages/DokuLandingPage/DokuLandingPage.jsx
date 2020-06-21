@@ -1,15 +1,13 @@
 import React from 'react';
-import CategoriesSidebar from '../../components/CategoriesSidebar/CategoriesSidebar';
+import CategoriesSidebar from '../../../components/CategoriesSidebar/CategoriesSidebar';
+import '../LandingPages.css';
 import './DokuLandingPage.css';
 
-// TODO: Improve naming of component
-const LandingPage = () => (
+const DokuLandingPage = () => (
   <div className="bigBox">
     <div>
-      {/* <h1>Smaprat</h1> */}
       <CategoriesSidebar />
     </div>
-    {/* TODO: entry point for issue 30 */}
     <div className="main">
       <h1>Welcome to Smaprat!</h1>
       <h2 id="description">Start by selecting a class from the list on the left :)</h2>
@@ -17,4 +15,4 @@ const LandingPage = () => (
   </div>
 );
 
-export default LandingPage;
+export default DokuLandingPage;
