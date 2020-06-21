@@ -29,6 +29,7 @@ export const getCategories = async () =>
   fetch(`${baseURL}/env/categories`)
     .then(response => response.json())
     .then(jsonObject => jsonObject.categories)
+    .then(unsortedResult => unsortedResult.sort())
     .catch(error => console.log(error));
 
 export const getClassesOfCategories = async aCategorieName =>
