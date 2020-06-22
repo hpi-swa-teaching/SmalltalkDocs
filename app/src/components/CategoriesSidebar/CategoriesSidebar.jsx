@@ -4,7 +4,7 @@ import ClassList from './ClassList';
 import SidebarHeader from '../Header/SidebarHeader';
 import ClosedSidebarHeader from '../Header/ClosedSidebarHeader';
 import './CategoriesSidebar.css';
-import backButtonPic from "../../ressources/images/barClose.png";
+
 
 const CategoriesSidebar = options => {
   const [categories, setCategories] = useState([]);

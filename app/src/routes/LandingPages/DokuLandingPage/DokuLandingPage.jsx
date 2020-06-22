@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import CategoriesSidebar from '../../../components/CategoriesSidebar/CategoriesSidebar';
 import '../LandingPages.css';
 import './DokuLandingPage.css';

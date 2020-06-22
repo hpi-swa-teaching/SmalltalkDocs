@@ -1,7 +1,6 @@
 import React from 'react';
 import './ClosedSidebarHeader.css';
 
-import logo from '../../ressources/images/logo.png';
 import backButtonPic from '../../ressources/images/barClose.png';
 
 const Header = options => {
