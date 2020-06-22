@@ -3,6 +3,7 @@ import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import SidebarHeader from './SidebarHeader';
 
+
 let container = null;
 beforeEach(() => {
   // setup a DOM element as a render target

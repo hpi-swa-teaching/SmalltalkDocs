@@ -14,19 +14,32 @@ const ExplorationView = options => {
   const doExploreMethod = () => options.mode === 'method';
   const doExploreBook = () => options.mode === 'help';
 
+  function setBarVisibility(isVisible) {
+        if(isVisible){
+            document.getElementById("main1").style.marginLeft = "417px";
+            document.getElementById("main2").style.marginLeft = "417px";
+            document.getElementById("main3").style.marginLeft = "417px";
+        }
+        else{
+            document.getElementById("main1").style.marginLeft = "50px";
+            document.getElementById("main2").style.marginLeft = "50px";
+            document.getElementById("main3").style.marginLeft = "50px";
+        }
+  }
+
   return (
     <div>
       <div>
         {'currentClass' in pathParams ? (
-          <MethodSidebar currentClass={pathParams.currentClass} />
+          <MethodSidebar setBar={setBarVisibility.bind(this)} currentClass={pathParams.currentClass} />
         ) : null}
       </div>
 
-      <div className="main">
+      <div id="main1" className="main">
         {doExploreClass() ? <ClassView currentClass={pathParams.currentClass} /> : null}
       </div>
 
-      <div className="main">
+      <div id="main2" className="main">
         {doExploreMethod() ? (
           <MethodView
             currentClass={pathParams.currentClass}
@@ -36,7 +49,7 @@ const ExplorationView = options => {
         ) : null}
       </div>
 
-      <div className="main">
+      <div id="main3" className="main">
         {doExploreBook() ? (
           <HelpView bookName={pathParams.currentClass} className="helpBox" />
         ) : null}
