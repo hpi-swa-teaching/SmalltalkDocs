@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { getClassesOfCategories } from '../../utils/apiHandler';
+import { getClassesOfCategories } from '../../../utils/apiHandler';
 import './ClassList.css';
 
 const ClassList = props => {

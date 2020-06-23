@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import ClassView from '../../components/ClassView/ClassView';
 
 import HelpView from '../../components/HelpView/HelpView';
-import MethodSidebar from '../../components/MethodSidebar/MethodSidebar';
+import MethodSidebar from '../../components/Sidebars/MethodSidebar/MethodSidebar';
 import MethodView from '../../components/MethodView/MethodView';
 import './ExplorationView.css';
 

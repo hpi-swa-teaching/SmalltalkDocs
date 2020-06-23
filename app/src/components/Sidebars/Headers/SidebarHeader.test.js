@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import SidebarHeader from './SidebarHeader';
+import SidebarHeader from './OpenHeader';
 
 
 let container = null;
@@ -18,7 +18,7 @@ afterEach(() => {
   container = null;
 });
 
-describe('Header', () => {
+describe('Headers', () => {
   it('should display the header', () => {
     act(() => {
       render(<SidebarHeader />, container);
