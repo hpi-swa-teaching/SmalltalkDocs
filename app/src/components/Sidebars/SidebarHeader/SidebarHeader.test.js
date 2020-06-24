@@ -1,8 +1,7 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import SidebarHeader from './OpenHeader';
-
+import SidebarHeader from './SidebarHeader';
 
 let container = null;
 beforeEach(() => {
