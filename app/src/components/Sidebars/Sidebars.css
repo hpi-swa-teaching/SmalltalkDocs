@@ -27,22 +27,6 @@
     color: #FFFFFF;
 }
 
-.categoriesList{
-    position: relative;
-    left: 10%;
-    list-style-type: none;
-}
-
-.categoryButton{
-    width: 350px;
-    font-size: 1.2rem;
-    padding: 2px;
-    text-align: left;
-    border: none;
-    background: none;
-    color: #FFFFFF;
-}
-
 .categoryButton:hover {
     background: #f1f1f1;
     color: #175578;
