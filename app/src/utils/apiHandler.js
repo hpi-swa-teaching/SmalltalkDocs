@@ -72,3 +72,7 @@ export const getClass = async className =>
     .catch(error => console.log(error));
 
 export const isHelpBook = async className => (await getClass(className)).isHelpBook;
+
+// TODO: implement interface to backend for issue 39
+export const searchForClass = searchKey => ['Test1', 'Test2', 'Test3', searchKey];
+export const searchForCategory = searchKey => ['Test4', 'Test5', searchKey];
