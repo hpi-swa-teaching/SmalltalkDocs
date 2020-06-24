@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { getClassesOfCategories } from '../../../utils/apiHandler';
 import './ClassList.css';
@@ -11,7 +11,7 @@ const ClassList = props => {
 
   useEffect(() => {
     const simpleFetch = async () => setRelatedClasses(await getClassesOfCategories(categoryName));
-    simpleFetch().then(setLoading(false));
+    simpleFetch().then(() => setLoading(false));
   }, [categoryName]);
 
   return (
@@ -19,9 +19,9 @@ const ClassList = props => {
       {loading
         ? null
         : relatedClasses.map(aClassName => (
-            <li className="classlist" key={`${aClassName}`}>
-              <div className="classlinkbox">
-                <NavLink className="classlink" to={`/doku/classes/${aClassName}`}>
+            <li className="classList" key={`${aClassName}`}>
+              <div className="classLinkBox">
+                <NavLink className="classLink" to={`/doku/classes/${aClassName}`}>
                   {aClassName}
                 </NavLink>
               </div>
