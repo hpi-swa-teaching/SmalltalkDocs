@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SidebarHeader from '../Headers/SidebarHeader';
+import SidebarHeader from '../SidebarHeader/SidebarHeader';
 
 import '../Sidebars.css';
 
