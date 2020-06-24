@@ -45,7 +45,7 @@ describe('MethodSidebar', () => {
     await act(async () => {
       render(
         <Router>
-          <MethodSidebar currentClass="test" />
+          <MethodSidebar currentClass="test" toggleIsOpen={() => 1} isOpen />
         </Router>,
         container
       );
