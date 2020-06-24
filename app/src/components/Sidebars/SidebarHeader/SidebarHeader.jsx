@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 import './SidebarHeader.css';
 
@@ -12,7 +13,9 @@ const SidebarHeader = props => {
     <div className={isOpen ? 'openedHead' : 'closedHead'}>
       {isOpen ? (
         <div>
-          <img alt="" className="logo" src={logo} />
+          <NavLink to="/">
+            <img alt="" className="logo" src={logo} />
+          </NavLink>
           <p className="headTitle">Smaprat</p>
         </div>
       ) : null}
