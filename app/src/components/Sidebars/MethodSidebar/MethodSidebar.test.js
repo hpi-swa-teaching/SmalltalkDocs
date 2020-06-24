@@ -18,6 +18,9 @@ afterEach(() => {
 
 describe('MethodSidebar', () => {
   it('should display fetched class and its methods', async () => {
+    const isOpen = true;
+    const toggleIsOpen = () => {};
+
     const sampleClassAndMethodsOfClassResponse = {
       isHelpBook: true,
       classMethods: ['newStarted', 'newStartedOn:'],
@@ -45,7 +48,7 @@ describe('MethodSidebar', () => {
     await act(async () => {
       render(
         <Router>
-          <MethodSidebar currentClass="test" toggleIsOpen={() => 1} isOpen />
+          <MethodSidebar currentClass="test" toggleIsOpen={toggleIsOpen} isOpen={isOpen} />
         </Router>,
         container
       );
