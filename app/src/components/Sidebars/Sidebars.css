@@ -27,6 +27,11 @@
     color: #FFFFFF;
 }
 
+.secondarySidebarTitleLink {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .categoryButton:hover {
     background: #f1f1f1;
     color: #175578;

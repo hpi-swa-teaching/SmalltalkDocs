@@ -11,12 +11,10 @@ import './MethodSidebar.css';
 const MethodSidebar = props => {
   const { currentClass, isOpen, toggleIsOpen } = props;
 
-  // eslint-disable-next-line no-unused-vars
   const history = useHistory();
 
   const [classMethods, setClassSide] = useState([]);
   const [instanceMethods, setInstanceSide] = useState([]);
-  // eslint-disable-next-line no-unused-vars
   const [hasHelpPage, setHasHelpPage] = useState(false);
 
   useEffect(() => {
@@ -33,39 +31,33 @@ const MethodSidebar = props => {
   return (
     <div id={isOpen ? 'openSidebarBox' : 'closedSidebarBox'} className="sidenav">
       <SidebarHeader isOpen={isOpen} toggleOpen={toggleIsOpen} />
-      {/*      <div>
-        <button
-          className="backButton"
-          type="button"
-          key="goBack"
-          onClick={() => history.push('/doku')}
-        >
-          Categories
-        </button>
-        <button
-          className="backButton"
-          type="button"
-          key="showHelp"
-          onClick={() => history.push(`/doku/help/${currentClass}`)}
-          disabled={!hasHelpPage}
-        >
-          Help Page
-        </button>
-      </div> */}
-
       {isOpen ? (
         <div>
+          <button
+            className="backToCategoriesBtn"
+            type="button"
+            key="goBack"
+            onClick={() => history.push('/doku')}
+          >
+            Categories
+          </button>
           <NavLink
-            className="sidebarHeading sidebarHeadingLink"
+            className="secondarySidebarTitle secondarySidebarTitleLink"
             to={`/doku/classes/${currentClass}`}
           >
             {currentClass}
           </NavLink>
 
-          <p className="secondaryTitle">Class Methods</p>
+          {hasHelpPage ? (
+            <NavLink className="secondarySidebarTitle" to={`/doku/help/${currentClass}`}>
+              Help Page
+            </NavLink>
+          ) : null}
+
+          <p className="secondarySidebarTitle">Class Methods</p>
           <MethodList currentClass={currentClass} side="class" methodNames={classMethods} />
 
-          <p className="secondaryTitle">Instance Methods</p>
+          <p className="secondarySidebarTitle">Instance Methods</p>
           <MethodList currentClass={currentClass} side="instance" methodNames={instanceMethods} />
         </div>
       ) : null}
