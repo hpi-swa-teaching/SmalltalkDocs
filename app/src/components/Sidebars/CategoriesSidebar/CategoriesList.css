@@ -13,3 +13,7 @@
     background: none;
     color: #FFFFFF;
 }
+
+.categoryButton:hover {
+    color: #cfcfcf;
+}

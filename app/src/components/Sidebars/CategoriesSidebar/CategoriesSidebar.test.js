@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
+import { BrowserRouter as Router } from 'react-router-dom';
 import CategoriesSidebar from './CategoriesSidebar';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
 
@@ -17,6 +18,9 @@ afterEach(() => {
 
 describe('CategoriesSidebar', () => {
   it('should displayed buttons with fetched categories', async () => {
+    const isOpen = true;
+    const toggleIsOpen = () => {};
+
     const sampleCategoriesResponse = {
       categories: ['SmapratCore', 'SmapratAPI', 'SmapratApp'],
       count: 3
@@ -29,12 +33,15 @@ describe('CategoriesSidebar', () => {
     );
 
     await act(async () => {
-      render(<CategoriesSidebar />, container);
+      render(
+        <Router>
+          <CategoriesSidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+        </Router>,
+        container
+      );
     });
 
-    expect(container.querySelectorAll('button.categorybuttons').length).toBe(
-      sampleCategoriesResponse.count
-    );
+    expect(container.querySelector('#openSidebarBox')).toBeInTheDocument();
 
     global.fetch.mockRestore();
   });

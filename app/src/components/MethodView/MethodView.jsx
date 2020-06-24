@@ -1,6 +1,6 @@
 import { CircularProgress } from '@material-ui/core';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { getMethodInfo, getMethodText } from '../../utils/apiHandler';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
+import { BrowserRouter as Router } from 'react-router-dom';
 import MetricsSidebar from './MetricsSidebar';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
 
@@ -17,10 +18,18 @@ afterEach(() => {
 
 describe('MetricsSidebar', () => {
   it('should display the metrics sidebar', () => {
+    const isOpen = true;
+    const toggleIsOpen = () => {};
+
     act(() => {
-      render(<MetricsSidebar options />, container);
+      render(
+        <Router>
+          <MetricsSidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+        </Router>,
+        container
+      );
     });
 
-    expect(container.querySelector('#SideBox')).toBeInTheDocument();
+    expect(container.querySelector('#openSidebarBox')).toBeInTheDocument();
   });
 });
