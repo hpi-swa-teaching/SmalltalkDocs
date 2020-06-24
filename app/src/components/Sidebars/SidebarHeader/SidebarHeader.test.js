@@ -1,23 +1,21 @@
 import React from 'react';
-import { render, unmountComponentAtNode } from 'react-dom';
+import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import SidebarHeader from './SidebarHeader';
+import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
 
 let container = null;
 beforeEach(() => {
   // setup a DOM element as a render target
-  container = document.createElement('div');
-  document.body.appendChild(container);
+  container = prepareContainer(container);
 });
 
 afterEach(() => {
   // cleanup on exiting
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
+  container = cleanUpContainer(container);
 });
 
-describe('Headers', () => {
+describe('Header', () => {
   it('should display the header', () => {
     act(() => {
       render(<SidebarHeader />, container);
