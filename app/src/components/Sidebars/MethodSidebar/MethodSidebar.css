@@ -1,3 +1,10 @@
+.secondaryTitle {
+    position: relative;
+    left: 5%;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
 
 .backButton {
     padding: 10px 24px;
@@ -60,13 +67,6 @@
     color: #FFFFFF;
 }
 
-.sidebarMethodHeading2 {
-    position: relative;
-    left: 5%;
-    font-size: 1.3rem;
-    margin-top: 10px;
-    color: #FFFFFF;
-}
 
 .sidebar {
     height: 100%;
@@ -80,45 +80,4 @@
     padding-top: 20px;
     padding-bottom: 20px;
     background: #175578;
-}
-
-.linktext {
-    position: relative;
-    font-size: 1.2rem;
-    text-align: center;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-.linktext:hover {
-    color: #cfcfcf;
-}
-
-.navlinktext {
-    position: relative;
-    left: 10%;
-    font-size: 1.2rem;
-    text-decoration: none;
-    margin: 5px;
-    color: #FFFFFF;
-}
-
-.navlinktext:hover {
-    color: #cfcfcf;
-}
-
-.ClassMethodList {
-    position: relative;
-    left: 14%;
-    list-style-type: none;
-}
-
-.InstanceMethodList {
-    position: relative;
-    left: 14%;
-    list-style-type: none;
-}
-
-li {
-    position: relative;
 }

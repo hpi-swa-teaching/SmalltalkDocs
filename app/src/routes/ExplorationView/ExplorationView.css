@@ -9,6 +9,14 @@
     padding: 0px 10px;
 }
 
+#openedSidebar {
+    margin-left: 417px; /* Same as the width of the sidenav */
+}
+
+#closedSidebar {
+    margin-left: 50px;
+}
+
 h1 {
     position: relative;
     font-size: 2.5rem;

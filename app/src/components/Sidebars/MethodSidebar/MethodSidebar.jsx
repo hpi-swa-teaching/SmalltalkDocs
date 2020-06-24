@@ -1,77 +1,82 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, NavLink } from 'react-router-dom';
-import { getAllMethodsOf, getClass } from '../../../utils/apiHandler';
-import './MethodSidebar.css';
-import '../Sidebars.css';
+import PropTypes from 'prop-types';
+import { getClass, getClassMethods, getInstanceMethods } from '../../../utils/apiHandler';
+import SidebarHeader from '../SidebarHeader/SidebarHeader';
+import MethodList from './MethodList';
 
-const MethodSidebar = options => {
+import '../Sidebars.css';
+import './MethodSidebar.css';
+
+const MethodSidebar = props => {
+  const { currentClass, isOpen, toggleIsOpen } = props;
+
+  // eslint-disable-next-line no-unused-vars
   const history = useHistory();
+
   const [classMethods, setClassSide] = useState([]);
   const [instanceMethods, setInstanceSide] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [hasHelpPage, setHasHelpPage] = useState(false);
 
-  // TODO: refactor to functional style
   useEffect(() => {
-    async function simpleFetch() {
-      const classInfo = await getClass(options.currentClass);
-      setHasHelpPage(classInfo.isHelpBook);
-      const methods = await getAllMethodsOf(options.currentClass);
-      setClassSide([].concat(methods.classMethods).sort());
-      setInstanceSide([].concat(methods.instanceMethods).sort());
-    }
-    simpleFetch();
-  }, [options.currentClass]);
-
-  const createMethodList = (side, methodNames) =>
-    methodNames.map(aMethodName => (
-      <li key={`${side}-${aMethodName}`}>
-        <NavLink
-          className="linktext"
-          to={`/doku/classes/${options.currentClass}/methods/${side}/${aMethodName}`}
-        >
-          {aMethodName}
-        </NavLink>
-      </li>
-    ));
+    const fetchBookState = async () => setHasHelpPage((await getClass(currentClass)).isHelpBook);
+    const fetchInstanceMethods = async () =>
+      setInstanceSide([].concat(await getInstanceMethods(currentClass)).sort());
+    const fetchClassMethods = async () =>
+      setClassSide([].concat(await getClassMethods(currentClass)).sort());
+    fetchBookState().then();
+    fetchInstanceMethods().then();
+    fetchClassMethods().then();
+  }, [currentClass]);
 
   return (
-    <div>
-      <div id="SideBox" className="sidebar">
-        <div>
-          <button
-            className="backButton"
-            type="button"
-            key="goBack"
-            onClick={() => history.push('/doku')}
-          >
-            Categories
-          </button>
-          <button
-            className="backButton"
-            type="button"
-            key="showHelp"
-            onClick={() => history.push(`/doku/help/${options.currentClass}`)}
-            disabled={!hasHelpPage}
-          >
-            Help Page
-          </button>
-        </div>
-
-        <NavLink
-          className="sidebarHeading sidebarHeadingLink"
-          to={`/doku/classes/${options.currentClass}`}
+    <div id={isOpen ? 'openSidebarBox' : 'closedSidebarBox'} className="sidenav">
+      <SidebarHeader isOpen={isOpen} toggleOpen={toggleIsOpen} />
+      {/*      <div>
+        <button
+          className="backButton"
+          type="button"
+          key="goBack"
+          onClick={() => history.push('/doku')}
         >
-          {options.currentClass}
-        </NavLink>
+          Categories
+        </button>
+        <button
+          className="backButton"
+          type="button"
+          key="showHelp"
+          onClick={() => history.push(`/doku/help/${currentClass}`)}
+          disabled={!hasHelpPage}
+        >
+          Help Page
+        </button>
+      </div> */}
 
-        <p className="sidebarMethodHeading2">Class Methods</p>
-        <div className="ClassMethodList">{createMethodList('class', classMethods)}</div>
+      {isOpen ? (
+        <div>
+          <NavLink
+            className="sidebarHeading sidebarHeadingLink"
+            to={`/doku/classes/${currentClass}`}
+          >
+            {currentClass}
+          </NavLink>
 
-        <p className="sidebarMethodHeading2">Instance Methods</p>
-        <div className="InstanceMethodList">{createMethodList('instance', instanceMethods)}</div>
-      </div>
+          <p className="secondaryTitle">Class Methods</p>
+          <MethodList currentClass={currentClass} side="class" methodNames={classMethods} />
+
+          <p className="secondaryTitle">Instance Methods</p>
+          <MethodList currentClass={currentClass} side="instance" methodNames={instanceMethods} />
+        </div>
+      ) : null}
     </div>
   );
+};
+
+MethodSidebar.propTypes = {
+  currentClass: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  toggleIsOpen: PropTypes.func.isRequired
 };
 
 export default MethodSidebar;
