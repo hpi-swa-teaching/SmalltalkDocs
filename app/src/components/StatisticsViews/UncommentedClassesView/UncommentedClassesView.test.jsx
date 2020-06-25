@@ -24,7 +24,6 @@ describe('UncommentedClassView', () => {
     expect(container).toHaveTextContent('Class1');
     expect(container).toHaveTextContent('Class2');
     expect(container).toHaveTextContent('Class3');
-    global.fetch.mockRestore();
   });
 
   it('should display fetched classes', async () => {
@@ -32,6 +31,5 @@ describe('UncommentedClassView', () => {
       render(<UncommentedClassesView />, container);
     });
     expect(container).toHaveTextContent('Uncommented Classes');
-    global.fetch.mockRestore();
   });
 });
