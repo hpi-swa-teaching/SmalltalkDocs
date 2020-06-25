@@ -10,8 +10,6 @@ const DokuLandingPage = lazy(() => import('../LandingPages/DokuLandingPage/DokuL
 const ExplorationView = lazy(() => import('../ExplorationView/ExplorationView'));
 const NotFound = lazy(() => import('../NotFound/NotFound'));
 
-
-
 const App = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
