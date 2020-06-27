@@ -12,5 +12,6 @@ export function cleanUpContainer(container) {
   container.remove();
   // eslint-disable-next-line no-param-reassign
   container = null;
+  jest.clearAllMocks();
   return container;
 }

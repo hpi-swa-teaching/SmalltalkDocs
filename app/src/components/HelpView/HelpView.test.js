@@ -44,7 +44,7 @@ describe('ClassView', () => {
       title: 'Introduction'
     };
 
-    jest.spyOn(global, 'fetch').mockImplementation(path => {
+    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(path => {
       if (path === prefixPath)
         return Promise.resolve({
           json: () => sampleHelpClassPagesResponse
@@ -57,6 +57,8 @@ describe('ClassView', () => {
     await act(async () => {
       render(<HelpView bookName="testBookName" />, container);
     });
+
+    expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/help/testBookName/pages`);
 
     expect(container.querySelector('h1')).toHaveTextContent('testBookName');
 
