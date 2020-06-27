@@ -1,14 +1,14 @@
 .code {
   margin: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #175578;
+  color: #585858;
   font-size: 0.9rem;
   font-weight: 200;
-  color: #585858;
-  border-color: #175578;
-  border-style: solid;
-  border-width: 2px;
 }
 
 .comment {
-  font-size: 0.9rem;
   color: #fff;
+  font-size: 0.9rem;
 }

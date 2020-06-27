@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0 0;
+  padding: 0;
 }
 
 .main {
-  padding: 0 10px;
   margin-left: 417px; /* Same as the width of the sidenav */
+  padding: 0 10px;
 }
 
 #openedSidebar {
@@ -20,22 +20,22 @@
 h1 {
   position: relative;
   margin: 20px;
+  color: #175578;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #175578;
   text-align: center;
 }
 
 h2 {
   position: relative;
-  font-size: 1.8rem;
   color: #000;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 h3 {
   position: relative;
-  font-size: 1.2rem;
   color: #000;
+  font-size: 1.2rem;
   text-align: center;
 }

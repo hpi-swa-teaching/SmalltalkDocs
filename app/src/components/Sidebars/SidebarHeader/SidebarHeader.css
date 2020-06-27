@@ -10,8 +10,8 @@
 }
 
 .openedHead {
-  position: relative;
   display: flex;
+  position: relative;
   align-items: row;
   height: 90px;
 }
@@ -26,16 +26,16 @@
 }
 
 .headTitle {
-  position: relative;
   display: flex;
+  position: relative;
   align-items: center;
   margin-top: -65px;
   margin-bottom: 20px;
   margin-left: 130px;
+  color: #fff;
   font-size: 48px;
   font-weight: bold;
   line-height: 56px;
-  color: #fff;
   text-align: center;
 }
 

@@ -7,11 +7,11 @@
 .categoryButton {
   width: 350px;
   padding: 2px;
-  font-size: 1.2rem;
-  color: #fff;
-  text-align: left;
-  background: none;
   border: none;
+  background: none;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: left;
 }
 
 .categoryButton:hover {

@@ -5,37 +5,37 @@
 .heading {
   position: relative;
   margin-top: 10%;
+  color: #175578;
   font-size: 3.5rem;
   font-weight: bold;
-  color: #175578;
   text-align: center;
 }
 
 .description {
   position: relative;
   margin-top: 20px;
-  font-size: 2.2rem;
   color: #000;
+  font-size: 2.2rem;
   text-align: center;
 }
 
 .enterbutton {
   display: inline-block;
   width: 300px;
-  padding: 10px;
   margin-top: 100px;
   margin-right: 50px;
   margin-left: 50px;
-  font-size: 1.5rem;
-  color: #175578;
-  cursor: pointer;
-  background-color: #fff;
-  border-color: #175578;
-  border-style: solid;
+  padding: 10px;
   border-width: 3px;
+  border-style: solid;
+  border-color: #175578;
+  background-color: #fff;
+  color: #175578;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .enterbutton:hover {
-  color: #175578;
   background: #f1f1f1;
+  color: #175578;
 }
