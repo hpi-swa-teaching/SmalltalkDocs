@@ -34,6 +34,8 @@ jobs:
       run: npm install
     - name: Run linter "eslint"
       run: npm run lint
+    - name: Run linter "stylelint"
+      run: npm run csslint
 
   test:
     runs-on: ubuntu-latest
