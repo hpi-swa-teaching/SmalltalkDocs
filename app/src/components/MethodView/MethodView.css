@@ -1,14 +1,14 @@
-.code{
-    font-weight: 200;
-    font-size: 0.9rem;
-    margin: 20px;
-    color: #585858;
-    border-color: #175578;
-    border-width: 2px;
-    border-style: solid;
+.code {
+  font-weight: 200;
+  font-size: 0.9rem;
+  margin: 20px;
+  color: #585858;
+  border-color: #175578;
+  border-width: 2px;
+  border-style: solid;
 }
 
-.comment{
-    font-size: 0.9rem;
-    color: #FFFFFF;
+.comment {
+  font-size: 0.9rem;
+  color: #fff;
 }

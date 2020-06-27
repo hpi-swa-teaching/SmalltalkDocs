@@ -1,35 +1,35 @@
 * {
-    box-sizing: border-box;
-    margin: 0 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0;
 }
 
-.main{
-    padding: 0px 10px;
+.main {
+  padding: 0 10px;
 }
 
 #openedSidebar {
-    margin-left: 417px; /* Same as the width of the sidenav */
+  margin-left: 417px; /* Same as the width of the sidenav */
 }
 
 #closedSidebar {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
 h1 {
-    position: relative;
-    font-size: 48px;
-    line-height: 56px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 20px;
-    color: #175578;
+  position: relative;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #175578;
 }
 
 h2 {
-    position: relative;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    color: #000000;
+  position: relative;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: #000;
 }

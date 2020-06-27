@@ -1,47 +1,41 @@
-.frame{
-    text-align: center;
+.frame {
+  text-align: center;
 }
 
-.heading{
-    position: relative;
-    font-size: 3.5rem;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 10%;
-    color: #175578;
+.heading {
+  position: relative;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10%;
+  color: #175578;
 }
 
 .description {
-    margin-top: 20px;
-    position: relative;
-    font-size: 2.2rem;
-    text-align: center;
-    color: #000000;
+  margin-top: 20px;
+  position: relative;
+  font-size: 2.2rem;
+  text-align: center;
+  color: #000;
 }
 
-.enterbutton{
-    background-color: #FFFFFF;
-    color: #175578;
-    margin-top: 100px;
-    margin-left: 50px;
-    margin-right: 50px;
-    display: inline-block;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 1.5rem;
-    border-color: #175578;
-    border-width: 3px;
-    border-style: solid;
-    width: 300px;
+.enterbutton {
+  background-color: #fff;
+  color: #175578;
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-color: #175578;
+  border-width: 3px;
+  border-style: solid;
+  width: 300px;
 }
 
-.enterbutton:hover{
-    background: #f1f1f1;
-    color: #175578;
+.enterbutton:hover {
+  background: #f1f1f1;
+  color: #175578;
 }
-
-
-
-
-
-

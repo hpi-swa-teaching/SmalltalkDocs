@@ -1,14 +1,16 @@
 .backToCategoriesBtn {
-    padding: 10px 24px;
-    /* Some padding */
-    cursor: pointer;
-    /* Pointer/hand icon */
-    position: relative;
-    margin: 20px 10px;
-    width: 40%;
-    height: 41px;
-    left: 11px;
-    top: 80%;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  padding: 10px 24px;
+
+  /* Some padding */
+  cursor: pointer;
+
+  /* Pointer/hand icon */
+  position: relative;
+  margin: 20px 10px;
+  width: 40%;
+  height: 41px;
+  left: 11px;
+  top: 80%;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }

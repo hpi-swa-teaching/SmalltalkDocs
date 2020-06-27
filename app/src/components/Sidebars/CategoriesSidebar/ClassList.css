@@ -1,27 +1,27 @@
-.classLink{
-    position: relative;
-    word-wrap: break-word;
-    width: 10px;
-    font-size: 1.1rem;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
+.classLink {
+  position: relative;
+  word-wrap: break-word;
+  width: 10px;
+  font-size: 1.1rem;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
 }
 
-.classLinkBox{
-    width: 300px;
-    color: #FFFFFF;
+.classLinkBox {
+  width: 300px;
+  color: #fff;
 }
 
 .classLinkBox:hover {
-    background: #f1f1f1;
-    padding-left: 10px;
-    color: #175578;
+  background: #f1f1f1;
+  padding-left: 10px;
+  color: #175578;
 }
 
-.classList{
-    position: relative;
-    left: 5%;
-    list-style-type: none;
+.classList {
+  position: relative;
+  left: 5%;
+  list-style-type: none;
 }
