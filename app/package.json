@@ -37,8 +37,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint -c ./.eslintrc . --ext jsx,js",
     "lint-fix": "eslint -c ./.eslintrc . --ext jsx,js --fix",
-    "csslint": "npx stylelint 'src/**/*.css' --syntax css",
-    "csslint-fix": "npx stylelint 'src/**/*.css' --syntax css --fix"
+    "csslint": "stylelint 'src/**/*.css' --syntax css",
+    "csslint-fix": "stylelint 'src/**/*.css' --syntax css --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
