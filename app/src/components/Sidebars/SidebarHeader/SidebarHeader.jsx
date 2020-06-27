@@ -16,7 +16,7 @@ const SidebarHeader = props => {
           <NavLink to="/">
             <img alt="" className="logo" src={logo} />
           </NavLink>
-          <p className="headTitle">Smaprat</p>
+          <p className="headTitle">Småprat</p>
         </div>
       ) : null}
 

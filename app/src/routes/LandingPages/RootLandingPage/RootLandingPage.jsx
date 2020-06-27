@@ -9,8 +9,8 @@ const RootLandingPage = () => {
 
   return (
     <div className="frame">
-      <h1 className="heading">Smaprat</h1>
-      <h2 className="description">Welcome to Smaprat, a documentation for Smalltalk!</h2>
+      <h1 className="heading">Småprat</h1>
+      <h2 className="description">Welcome to Småprat, a documentation for Smalltalk!</h2>
       <button
         type="button"
         key="enterDoku"
