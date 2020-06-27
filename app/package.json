@@ -26,7 +26,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.10.0",
-    "prettier": "^1.14.3"
+    "prettier": "^1.14.3",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,7 +36,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint -c ./.eslintrc . --ext jsx,js",
-    "lint-fix": "eslint -c ./.eslintrc . --ext jsx,js --fix"
+    "lint-fix": "eslint -c ./.eslintrc . --ext jsx,js --fix",
+    "csslint": "npx stylelint 'src/**/*.css' --syntax css",
+    "csslint-fix": "npx stylelint 'src/**/*.css' --syntax css --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
