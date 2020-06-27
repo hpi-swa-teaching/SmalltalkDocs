@@ -1,12 +1,12 @@
 .classLink {
   position: relative;
-  word-wrap: break-word;
   width: 10px;
-  font-size: 1.1rem;
   padding: 5px;
+  font-size: 1.1rem;
+  color: inherit;
   text-align: center;
   text-decoration: none;
-  color: inherit;
+  word-wrap: break-word;
 }
 
 .classLinkBox {
@@ -15,9 +15,9 @@
 }
 
 .classLinkBox:hover {
-  background: #f1f1f1;
   padding-left: 10px;
   color: #175578;
+  background: #f1f1f1;
 }
 
 .classList {

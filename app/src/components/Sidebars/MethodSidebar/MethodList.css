@@ -7,9 +7,9 @@
 .LinkText {
   position: relative;
   font-size: 1.2rem;
+  color: #fff;
   text-align: center;
   text-decoration: none;
-  color: #fff;
 }
 
 .LinkText:hover {

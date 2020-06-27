@@ -1,18 +1,18 @@
 .description {
+  margin-top: 5px;
   font-size: 36px;
   line-height: 42px;
-  margin-top: 5px;
 
   /* color: #000000; */
 }
 
 .comment {
+  padding: 10px;
+  margin: 20px 40px;
+  background-color: #6291ac;
+  border-color: #175578;
   border-style: solid;
   border-width: 2px;
-  border-color: #175578;
-  margin: 20px 40px;
-  padding: 10px;
-  background-color: #6291ac;
 }
 
 .commentText {

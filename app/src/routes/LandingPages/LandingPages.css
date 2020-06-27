@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  margin: 0 0;
   padding: 0;
+  margin: 0 0;
 }
 
 .main {
@@ -18,18 +18,18 @@
 
 h1 {
   position: relative;
-  font-size: 48px;
-  line-height: 56px;
-  text-align: center;
-  font-weight: bold;
   margin-top: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 56px;
   color: #175578;
+  text-align: center;
 }
 
 h2 {
   position: relative;
   font-size: 36px;
   line-height: 42px;
-  text-align: center;
   color: #000;
+  text-align: center;
 }

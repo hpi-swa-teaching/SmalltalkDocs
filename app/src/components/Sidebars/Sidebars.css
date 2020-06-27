@@ -1,11 +1,11 @@
 .sidenav {
-  height: 100%;
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
-  overflow-x: hidden;
+  z-index: 1;
+  height: 100%;
   padding-top: 20px;
+  overflow-x: hidden;
   background: #175578;
 }
 
@@ -19,14 +19,14 @@
 
 .secondarySidebarTitle {
   position: relative;
-  font-size: 2rem;
-  text-align: left;
-  margin-left: 15px;
   margin-bottom: 10px;
+  margin-left: 15px;
+  font-size: 2rem;
   color: #fff;
+  text-align: left;
 }
 
 .secondarySidebarTitleLink {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
