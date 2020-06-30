@@ -57,4 +57,5 @@
 		"testGetSearchResultsMethodWithWildcardAtStart" : "max 6/28/2020 12:44",
 		"testGetSearchResultsMethodWithWildcardStartAndEnd" : "max 6/28/2020 12:45",
 		"testGetSearchResultsMethodWithoutWildcard" : "max 6/28/2020 12:43",
-		"testGetSearchResultsMethodWithoutWildcardClassSide" : "max 6/28/2020 12:46" } }
+		"testGetSearchResultsMethodWithoutWildcardClassSide" : "max 6/28/2020 12:46",
+		"testGetUndocumentedClasses" : "max 6/30/2020 12:30" } }
