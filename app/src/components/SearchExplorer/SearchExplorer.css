@@ -1,3 +1,49 @@
 label {
   display: block;
 }
+
+.explorer{
+  padding: 10px;
+  allign-items: left;
+}
+
+.searchBox{
+  padding: 10px;
+  margin: 10px 10px;
+}
+
+.check{
+  position: relative;
+  padding: 3px;
+}
+
+
+.submitbutton{
+  /* Pointer/hand icon */
+  position: relative;
+  width: 200px;
+  height: 41px;
+  margin: 10px 10px;
+  padding: 10px 24px;
+  background: #fff;
+
+
+  /* Some padding */
+  cursor: pointer;
+}
+
+.searchButton {
+  width: 350px;
+  padding: 2px;
+  border: none;
+  background: none;
+  margin: 2px;
+  font-size: 1.2rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #175578;
+}
+
+.searchButton:hover {
+  color: #cfcfcf;
+}

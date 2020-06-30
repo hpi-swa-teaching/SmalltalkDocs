@@ -32,15 +32,16 @@ const SearchExplorer = () => {
     setCurrentResult(
       [].concat(
         fetchedClasses.map(aclass => (
-          <li key={aclass}>
-            <button type="button" onClick={() => history.push(`/doku/classes/${aclass}`)}>
+          <li key={aclass} className="searchList">
+            <button className="searchButton" type="button" onClick={() => history.push(`/doku/classes/${aclass}`)}>
               {aclass}
             </button>
           </li>
         )),
         fetchedMethods.map(method => (
-          <li key={`${method.className}-${method.side}-${method.methodName}`}>
+          <li key={`${method.className}-${method.side}-${method.methodName}`} className="searchList">
             <button
+              className="searchButton"
               type="button"
               onClick={() =>
                 history.push(
@@ -56,9 +57,9 @@ const SearchExplorer = () => {
   };
 
   return (
-    <div>
+    <div className = "explorer">
       <form onSubmit={event => fetchResults(event)}>
-        <input
+        <input className="searchBox"
           type="text"
           id="searchInput"
           onChange={event => setCurrentSearchText(event.target.value)}
@@ -66,7 +67,7 @@ const SearchExplorer = () => {
           size="30"
           value={currentSearchText}
         />
-        <label htmlFor="classSearchCheck">
+        <label htmlFor="classSearchCheck" className = "check">
           <input
             id="classSearchCheck"
             name="classSearch"
@@ -76,7 +77,7 @@ const SearchExplorer = () => {
           />
           Search for classes
         </label>
-        <label htmlFor="methodSearchCheck">
+        <label htmlFor="methodSearchCheck" className = "check">
           <input
             id="methodSearchCheck"
             name="methodSearch"
@@ -86,7 +87,7 @@ const SearchExplorer = () => {
           />
           Search for methods
         </label>
-        <input id="searchSubmit" type="submit" value="Search" />
+        <input className = "submitbutton" id="searchSubmit" type="submit" value="Search" />
       </form>
       <div>{loadingSearchResults ? <CircularProgress /> : <ul>{currentResult}</ul>}</div>
     </div>
