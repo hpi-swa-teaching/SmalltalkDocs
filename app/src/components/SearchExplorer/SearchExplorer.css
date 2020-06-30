@@ -47,3 +47,14 @@ label {
 .searchButton:hover {
   color: #cfcfcf;
 }
+
+.results{
+  height: 400px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.results::-webkit-scrollbar {
+  display: none;
+}

@@ -89,7 +89,7 @@ const SearchExplorer = () => {
         </label>
         <input className = "submitbutton" id="searchSubmit" type="submit" value="Search" />
       </form>
-      <div>{loadingSearchResults ? <CircularProgress /> : <ul>{currentResult}</ul>}</div>
+      <div className="results">{loadingSearchResults ? <CircularProgress /> : <ul>{currentResult}</ul>}</div>
     </div>
   );
 };
