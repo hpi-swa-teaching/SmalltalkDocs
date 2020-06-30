@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testMatchStringWithOneWildcard
 	| searchTerm |
 	searchTerm := 'a%a'.

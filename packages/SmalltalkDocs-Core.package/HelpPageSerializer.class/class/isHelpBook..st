@@ -1,4 +1,4 @@
 checking
 isHelpBook: aClass
 
-	^ CustomHelp subclasses includes: aClass.
+	^ CustomHelp subclasses includes: aClass

@@ -1,3 +1,3 @@
-as yet unclassified
+testing
 testDefaultWildcard
 	self assert: '%' equals: self searchMatcher defaultWildcard.

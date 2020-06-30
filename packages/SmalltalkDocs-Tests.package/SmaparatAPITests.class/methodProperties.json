@@ -13,6 +13,8 @@
 		"nonexistingClassName:" : "phpfs2 6/19/2020 16:25",
 		"setUp" : "phpfs2 6/19/2020 16:26",
 		"tearDown" : "phpfs2 6/19/2020 16:08",
+		"testCharsetHeader" : "max 6/30/2020 11:34",
+		"testCrossOriginHeader" : "max 6/30/2020 11:34",
 		"testErrorGetHelpPageJson" : "max 6/20/2020 14:45",
 		"testErrorGetHelpPagesJson" : "max 6/20/2020 14:45",
 		"testGetAllMethodsInvalidClass" : "phpfs2 6/19/2020 16:49",
@@ -46,4 +48,13 @@
 		"testGetMethodTextInvalidClassInstanceMethod" : "phpfs2 6/19/2020 16:38",
 		"testGetMethodTextInvalidClassMethod" : "max 6/20/2020 14:46",
 		"testGetMethodTextInvalidInstanceMethod" : "max 6/20/2020 14:46",
-		"testGetSearchResults" : "max 6/20/2020 14:47" } }
+		"testGetSearchResultsClassWithWildcardAtEnd" : "max 6/28/2020 13:15",
+		"testGetSearchResultsClassWithWildcardAtStart" : "max 6/28/2020 13:16",
+		"testGetSearchResultsClassWithWildcardAtStartAndEnd" : "max 6/28/2020 13:17",
+		"testGetSearchResultsClassWithWildcardBetween" : "max 6/28/2020 12:49",
+		"testGetSearchResultsClassWithoutWildcard" : "max 6/28/2020 13:18",
+		"testGetSearchResultsMethodWithWildcardAtEnd" : "max 6/28/2020 12:44",
+		"testGetSearchResultsMethodWithWildcardAtStart" : "max 6/28/2020 12:44",
+		"testGetSearchResultsMethodWithWildcardStartAndEnd" : "max 6/28/2020 12:45",
+		"testGetSearchResultsMethodWithoutWildcard" : "max 6/28/2020 12:43",
+		"testGetSearchResultsMethodWithoutWildcardClassSide" : "max 6/28/2020 12:46" } }

@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testSetSearchTerm
 	| searchTerm |
 	searchTerm := 'dasistmein%Super%SchickerSearchTerm%'.

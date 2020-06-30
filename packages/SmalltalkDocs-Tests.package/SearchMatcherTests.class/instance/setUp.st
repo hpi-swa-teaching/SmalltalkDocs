@@ -1,3 +1,3 @@
-as yet unclassified
+running
 setUp
 	self searchMatcher: SearchMatcher new.

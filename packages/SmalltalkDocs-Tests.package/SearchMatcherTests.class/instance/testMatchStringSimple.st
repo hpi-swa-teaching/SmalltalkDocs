@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testMatchStringSimple
 	| searchTerm |
 	searchTerm := 'aa'.

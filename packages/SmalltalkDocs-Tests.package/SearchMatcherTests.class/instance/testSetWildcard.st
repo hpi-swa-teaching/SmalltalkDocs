@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 testSetWildcard
 	self searchMatcher wildcard: '$'.
 	self assert: self searchMatcher wildcard equals: '$'.

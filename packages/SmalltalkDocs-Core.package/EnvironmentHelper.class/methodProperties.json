@@ -1,10 +1,13 @@
 {
 	"class" : {
+		"buildMethodDict" : "max 6/30/2020 11:47",
 		"getCategoriesJson" : "max 6/7/2020 16:44",
 		"getCategoryInfoJsonFrom:" : "phpfs2 6/19/2020 16:46",
 		"getClassInfoJsonFrom:" : "phpfs2 6/19/2020 16:46",
+		"getClassSearchResultsJsonFrom:" : "max 6/30/2020 11:43",
 		"getClassesJson" : "max 5/25/2020 23:26",
-		"getMethodTextFrom:named:" : "max 5/31/2020 21:32",
-		"getMethodsJsonFrom:" : "phpfs2 6/19/2020 17:06" },
+		"getMethodSearchResultsJsonFrom:" : "max 6/30/2020 11:51",
+		"getMethodTextFrom:named:" : "max 6/27/2020 13:56",
+		"getMethodsJsonFrom:" : "max 6/27/2020 13:56" },
 	"instance" : {
 		 } }
