@@ -73,6 +73,14 @@ export const getClass = async className =>
 
 export const isHelpBook = async className => (await getClass(className)).isHelpBook;
 
-// TODO: implement interface to backend for issue 39
-export const searchForClass = searchKey => ['Test1', 'Test2', 'Test3', searchKey];
-export const searchForCategory = searchKey => ['Test4', 'Test5', searchKey];
+export const searchForClasses = async searchKey =>
+  fetch(`${baseURL}/env/search/classes/${searchKey}`)
+    .then(response => response.json())
+    .then(jsonObject => jsonObject.classes)
+    .catch(error => console.log(error));
+
+export const searchForMethods = async searchKey =>
+  fetch(`${baseURL}/env/search/methods/${searchKey}`)
+    .then(response => response.json())
+    .then(jsonObject => jsonObject.methods)
+    .catch(error => console.log(error));
