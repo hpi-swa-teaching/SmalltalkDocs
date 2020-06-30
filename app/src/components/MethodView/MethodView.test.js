@@ -5,11 +5,6 @@ import { baseURL } from '../../config/constants';
 import MethodView from './MethodView';
 import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
 
-jest.mock('react-syntax-highlighter', () => ({
-  __esModule: true,
-  default: () => <div />
-}));
-
 let container = null;
 beforeEach(() => {
   jest.clearAllMocks();
@@ -22,27 +17,35 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-// TODO this test doesnt work because of react-syntax-highlighter, no idea how to solve it already tried using mock
-xdescribe('MethodView', () => {
+describe('MethodView', () => {
   it('should display a current method', async () => {
     const className = 'className';
     const site = 'site';
     const methodName = 'methodName';
 
     const sampleMethodView = {
-      sampleMethodInfoResponse: {
-        hasPrecodeComment: true,
-        precodeComment:
-          'This is the main entry point for the JSON parser. See also readFrom: on the class site.'
-      },
-      sampleMethodName: 'aSampleMethod:'
+      hasPrecodeComment: true,
+      precodeComment:
+        'This is the main entry point for the JSON parser. See also readFrom: on the class site.'
     };
 
-    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleMethodView
-      })
-    );
+    const sampleMethodViewText = `${methodName}\n\t^ 'MethodText-was-shown!'.`;
+
+    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(arg => {
+      switch (arg) {
+        case `${baseURL}/env/classes/${className}/methods/${site}/${methodName}`:
+          return Promise.resolve({
+            json: () => sampleMethodView
+          });
+        case `${baseURL}/env/classes/${className}/methods/${site}/${methodName}/text`:
+          return Promise.resolve({
+            text: () => sampleMethodViewText
+          });
+        default:
+          break;
+      }
+      return null;
+    });
 
     await act(async () => {
       render(
@@ -58,6 +61,7 @@ xdescribe('MethodView', () => {
       `${baseURL}/env/classes/${className}/methods/${site}/${methodName}/text`
     );
     expect(container.querySelector('h1')).toHaveTextContent(methodName);
+    expect(container.querySelector('code')).toHaveTextContent('MethodText-was-shown!');
 
     global.fetch.mockRestore();
   });
