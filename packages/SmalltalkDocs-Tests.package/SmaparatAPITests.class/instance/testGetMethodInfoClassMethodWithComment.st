@@ -1,7 +1,7 @@
 testing GetMethodInfo
 testGetMethodInfoClassMethodWithComment
 	| result contents |
-	result := RPTestHelper get: '/env/classes/MockClass/methods/class/classMethod4:' on: api.
+	result := RPTestHelper get: '/env/classes/SmapratMockClass/methods/class/classMethod4:' on: api.
 	self assert: result contentType = 'application/json'.
 	self assert: result status = #ok.
 	contents := Json readFrom: result contents contents readStream.

@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"searchMatcher" : "max 6/20/2020 12:27",
+		"searchMatcher:" : "max 6/20/2020 12:27",
+		"setUp" : "max 6/20/2020 12:19",
+		"testDefaultWildcard" : "max 6/20/2020 13:39",
+		"testMatchStringSimple" : "max 6/20/2020 14:12",
+		"testMatchStringWithOneWildcard" : "max 6/20/2020 12:50",
+		"testMatchStringWithTwoWildcards" : "max 6/20/2020 12:51",
+		"testMatchStringWithWildcard" : "max 6/20/2020 12:38",
+		"testMatchStringWithWildcardAtEnd" : "max 6/20/2020 14:34",
+		"testSetSearchTerm" : "max 6/20/2020 12:29",
+		"testSetWildcard" : "max 6/30/2020 12:02" } }

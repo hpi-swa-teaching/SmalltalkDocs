@@ -10,5 +10,4 @@ send404WithTitle: aString
 		status: 404;
 		contentType: 'application/error+json';
 		body:  bodyJson contents;
-		headersAt: 'server' put: self name;
-		headersAt: 'Access-Control-Allow-Origin' put: '*'.
+		headersPut: self settings globalHeaders.

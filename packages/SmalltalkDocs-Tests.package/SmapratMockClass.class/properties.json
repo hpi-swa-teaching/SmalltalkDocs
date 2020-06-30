@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "max 6/7/2020 16:18",
+	"instvars" : [
+		 ],
+	"name" : "SmapratMockClass",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
