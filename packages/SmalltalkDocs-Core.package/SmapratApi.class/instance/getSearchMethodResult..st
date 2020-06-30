@@ -1,5 +1,5 @@
 handler
 getSearchMethodResult: aSearchTerm
-	<get: '/env/search/method/([\w:%]+)'>
+	<get: '/env/search/methods/([\w:%]+)'>
 	
 	self sendJson: (EnvironmentHelper getMethodSearchResultsJsonFrom: aSearchTerm).

@@ -1,5 +1,5 @@
 handler
 getSearchClassResult: aSearchTerm
-	<get: '/env/search/class/([\w:%]+)'>
+	<get: '/env/search/classes/([\w:%]+)'>
 	
 	self sendJson: (EnvironmentHelper getClassSearchResultsJsonFrom: aSearchTerm).

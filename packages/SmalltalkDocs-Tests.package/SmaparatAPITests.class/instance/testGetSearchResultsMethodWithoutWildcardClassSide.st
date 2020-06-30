@@ -1,7 +1,7 @@
 testing GetSearchResults
 testGetSearchResultsMethodWithoutWildcardClassSide
 	| result contents methods |	
-	result := RPTestHelper get: '/env/search/method/classMethod1' on: self api.
+	result := RPTestHelper get: '/env/search/methods/classMethod1' on: self api.
 	self assert: result contentType = 'application/json'.
 	self assert: result status = #ok.
 	contents := Json readFrom: result contents contents readStream.
