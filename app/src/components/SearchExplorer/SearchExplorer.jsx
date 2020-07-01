@@ -20,14 +20,14 @@ const SearchExplorer = () => {
       return;
     }
     setloadingSearchResults(true);
-    // const fetchedClasses = shouldSearchClasses
-    //   ? (await searchForClasses(currentSearchText)).sort()
-    //   : [];
-    // const fetchedMethods = shouldSearchMethods
-    //   ? (await searchForMethods(currentSearchText)).sort()
-    //   : [];
-    const fetchedClasses = (await searchForClasses(currentSearchText)).sort();
-    const fetchedMethods = (await searchForMethods(currentSearchText)).sort();
+    const fetchedClasses = shouldSearchClasses
+      ? (await searchForClasses(currentSearchText)).sort()
+      : [];
+    const fetchedMethods = shouldSearchMethods
+      ? (await searchForMethods(currentSearchText)).sort()
+      : [];
+    // const fetchedClasses = (await searchForClasses(currentSearchText)).sort();
+    // const fetchedMethods = (await searchForMethods(currentSearchText)).sort();
     // TODO: We do not store any JSX in component state
     setCurrentResult(
       [].concat(
