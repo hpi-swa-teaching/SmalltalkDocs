@@ -18,8 +18,6 @@ afterEach(() => {
 
 describe('ClassView', () => {
   it('should display fetched books', async () => {
-    const prefixPath = `${baseURL}/help/test/pages`;
-
     const sampleHelpClassPagesResponse = {
       pages: [
         {
@@ -45,13 +43,18 @@ describe('ClassView', () => {
     };
 
     const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(path => {
-      if (path === prefixPath)
-        return Promise.resolve({
-          json: () => sampleHelpClassPagesResponse
-        });
-      return Promise.resolve({
-        json: () => sampleHelpPageResponse
-      });
+      switch (path) {
+        case `${baseURL}/help/testBookName/pages`:
+          return Promise.resolve({
+            json: () => sampleHelpClassPagesResponse
+          });
+        case `${baseURL}/help/testBookName/pages/introduction`:
+          return Promise.resolve({
+            json: () => sampleHelpPageResponse
+          });
+        default:
+          return null;
+      }
     });
 
     await act(async () => {
@@ -59,6 +62,8 @@ describe('ClassView', () => {
     });
 
     expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/help/testBookName/pages`);
+    expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/help/testBookName/pages/introduction`);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
 
     expect(container.querySelector('h1')).toHaveTextContent('testBookName');
 
