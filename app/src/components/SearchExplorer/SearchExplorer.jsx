@@ -28,18 +28,25 @@ const SearchExplorer = () => {
     //   : [];
     const fetchedClasses = (await searchForClasses(currentSearchText)).sort();
     const fetchedMethods = (await searchForMethods(currentSearchText)).sort();
-
+    // TODO: We do not store any JSX in component state
     setCurrentResult(
       [].concat(
         fetchedClasses.map(aclass => (
           <li key={aclass} className="searchList">
-            <button className="searchButton" type="button" onClick={() => history.push(`/doku/classes/${aclass}`)}>
+            <button
+              className="searchButton"
+              type="button"
+              onClick={() => history.push(`/doku/classes/${aclass}`)}
+            >
               {aclass}
             </button>
           </li>
         )),
         fetchedMethods.map(method => (
-          <li key={`${method.className}-${method.side}-${method.methodName}`} className="searchList">
+          <li
+            key={`${method.className}-${method.side}-${method.methodName}`}
+            className="searchList"
+          >
             <button
               className="searchButton"
               type="button"
@@ -57,9 +64,10 @@ const SearchExplorer = () => {
   };
 
   return (
-    <div className = "explorer">
+    <div className="explorer">
       <form onSubmit={event => fetchResults(event)}>
-        <input className="searchBox"
+        <input
+          className="searchBox"
           type="text"
           id="searchInput"
           onChange={event => setCurrentSearchText(event.target.value)}
@@ -67,7 +75,7 @@ const SearchExplorer = () => {
           size="30"
           value={currentSearchText}
         />
-        <label htmlFor="classSearchCheck" className = "check">
+        <label htmlFor="classSearchCheck" className="check">
           <input
             id="classSearchCheck"
             name="classSearch"
@@ -77,7 +85,7 @@ const SearchExplorer = () => {
           />
           Search for classes
         </label>
-        <label htmlFor="methodSearchCheck" className = "check">
+        <label htmlFor="methodSearchCheck" className="check">
           <input
             id="methodSearchCheck"
             name="methodSearch"
@@ -87,9 +95,11 @@ const SearchExplorer = () => {
           />
           Search for methods
         </label>
-        <input className = "submitbutton" id="searchSubmit" type="submit" value="Search" />
+        <input className="submitbutton" id="searchSubmit" type="submit" value="Search" />
       </form>
-      <div className="results">{loadingSearchResults ? <CircularProgress /> : <ul>{currentResult}</ul>}</div>
+      <div className="results">
+        {loadingSearchResults ? <CircularProgress /> : <ul>{currentResult}</ul>}
+      </div>
     </div>
   );
 };
