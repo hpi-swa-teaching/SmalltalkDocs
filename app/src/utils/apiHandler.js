@@ -84,3 +84,9 @@ export const searchForMethods = async searchKey =>
     .then(response => response.json())
     .then(jsonObject => jsonObject.methods)
     .catch(error => console.log(error));
+
+export const getUndocumentedClasses = async () =>
+  fetch(`${baseURL}/statistics/undocumented/classes`)
+    .then(response => response.json())
+    .then(jsonObject => jsonObject.classes)
+    .catch(error => console.log(error));

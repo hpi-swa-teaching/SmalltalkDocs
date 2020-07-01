@@ -14,7 +14,8 @@ import {
   getCategories,
   getClassesOfCategories,
   searchForClasses,
-  searchForMethods
+  searchForMethods,
+  getUndocumentedClasses
 } from './apiHandler';
 
 const sampleClassName = 'SampleClass';
@@ -132,6 +133,11 @@ const sampleMethodSearchResponse = {
       side: 'instance'
     }
   ]
+};
+
+const sampleUndocumentedClassesResponse = {
+  classes: ['GitHelp', 'SWAFrogz', 'SmapratMockClass'],
+  count: 3
 };
 
 describe('Help page system', () => {
@@ -338,6 +344,17 @@ test('Fetch method searchresult of given searchterm', async () => {
   expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/env/search/methods/${sampleMethodSearchterm}`);
   expect(fetchMock).toBeCalledTimes(1);
   expect(fetchedSearchResults).toEqual(sampleMethodSearchResponse.methods);
+});
+
+// related path: /statistics/undocumented/classes
+test('Fetch class searchresult of given searchterm', async () => {
+  const fetchMock = jest
+    .spyOn(global, 'fetch')
+    .mockImplementation(() => Promise.resolve({ json: () => sampleUndocumentedClassesResponse }));
+  const fetchedClasses = await getUndocumentedClasses();
+  expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/statistics/undocumented/classes`);
+  expect(fetchMock).toBeCalledTimes(1);
+  expect(fetchedClasses).toEqual(sampleUndocumentedClassesResponse.classes);
 });
 
 afterEach(() => jest.clearAllMocks());
