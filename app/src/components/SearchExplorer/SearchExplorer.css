@@ -2,23 +2,22 @@ label {
   display: block;
 }
 
-.explorer{
+.explorer {
+  align-items: left;
   padding: 10px;
-  allign-items: left;
 }
 
-.searchBox{
-  padding: 10px;
+.searchBox {
   margin: 10px 10px;
+  padding: 10px;
 }
 
-.check{
+.check {
   position: relative;
   padding: 3px;
 }
 
-
-.submitbutton{
+.submitbutton {
   /* Pointer/hand icon */
   position: relative;
   width: 200px;
@@ -27,30 +26,29 @@ label {
   padding: 10px 24px;
   background: #fff;
 
-
   /* Some padding */
   cursor: pointer;
 }
 
 .searchButton {
   width: 350px;
+  margin: 2px;
   padding: 2px;
   border: none;
-  background: none;
-  margin: 2px;
-  font-size: 1.2rem;
   border-width: 1px;
   border-style: solid;
   border-color: #175578;
+  background: none;
+  font-size: 1.2rem;
 }
 
 .searchButton:hover {
   color: #cfcfcf;
 }
 
-.results{
+.results {
   height: 400px;
-  overflow-y: scroll;
+  overflow-y: auto;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
