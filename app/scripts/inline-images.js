@@ -1,12 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
+/* you can make changes here */
 const buildFolder = 'build';
+const imageTypes = { png: 'data:image/png', ico: 'data:image/x-icon' };
+
+/* don't change anything below this line! */
+const regex = /"(\.?[\w/]+\.(\w{2,5}))"/gm;
 const htmlPath = path.join(buildFolder, './index.html');
 let htmlFile = fs.readFileSync(htmlPath, 'utf8');
-
-const regex = /"(\.?[\w/]+\.(\w{2,5}))"/gm;
-const imageTypes = { png: 'data:image/png', ico: 'data:image/x-icon' };
 
 let grp;
 // eslint-disable-next-line no-cond-assign
