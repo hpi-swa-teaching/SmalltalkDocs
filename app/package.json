@@ -10,6 +10,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "http-server": "^0.12.3",
+    "node-dir": "^0.1.17",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -37,13 +39,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test-auto": "react-scripts test --coverage --watchAll=false",
-    "eject": "react-scripts eject",
     "lint": "npm run jslint && npm run csslint",
     "lint-fix": "npm run jslint-fix && npm run csslint-fix",
     "jslint": "eslint -c ./.eslintrc . --ext jsx,js",
     "jslint-fix": "eslint -c ./.eslintrc . --ext jsx,js --fix",
     "csslint": "stylelint \"src/**/*.css\" --syntax css",
-    "csslint-fix": "stylelint \"src/**/*.css\" --syntax css --fix"
+    "csslint-fix": "stylelint \"src/**/*.css\" --syntax css --fix",
+    "export:squeak": "node scripts/squeak-export.js",
+    "inline:images": "node scripts/inline-images.js"
   },
   "eslintConfig": {
     "extends": "react-app"
