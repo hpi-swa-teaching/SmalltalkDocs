@@ -47,5 +47,5 @@ describe('UncommentedClassView', () => {
   it('should request API only once', () => expect(fetchMock).toBeCalledTimes(1));
 
   it('should request API with correct path', () =>
-    expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/env/statistics/uncommented_classes`));
+    expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/statistics/undocumented/classes`));
 });

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import './UncommentedClassesView.css';
 import { NavLink } from 'react-router-dom';
-import { getUncommentedClasses } from '../../../utils/apiHandler';
+import { getUndocumentedClasses } from '../../../utils/apiHandler';
 
 const UncommentedClassesView = () => {
   const [uncommentedClasses, setUncommentedClasses] = useState([]);
 
   useEffect(() => {
-    const simpleFetch = async () => setUncommentedClasses(await getUncommentedClasses());
+    const simpleFetch = async () => setUncommentedClasses(await getUndocumentedClasses());
     simpleFetch().then();
   }, []);
   return (
