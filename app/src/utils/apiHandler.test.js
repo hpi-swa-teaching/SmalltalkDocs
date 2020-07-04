@@ -15,7 +15,7 @@ import {
   getClassesOfCategories,
   searchForClasses,
   searchForMethods,
-  getUndocumentedClasses
+  getUndocumentedClasses, getUndocumentedMethods
 } from './apiHandler';
 
 const sampleClassName = 'SampleClass';
@@ -137,6 +137,15 @@ const sampleMethodSearchResponse = {
 
 const sampleUndocumentedClassesResponse = {
   classes: ['GitHelp', 'SWAFrogz', 'SmapratMockClass'],
+  count: 3
+};
+
+const sampleUndocumentedMethodsResponse = {
+  methods: [
+    { methodName: 'execute', className: 'Scheduler' },
+    { methodName: 'block', className: 'Scheduler' },
+    { methodName: 'run', className: 'Preprocessor' }
+  ],
   count: 3
 };
 
@@ -347,7 +356,7 @@ test('Fetch method searchresult of given searchterm', async () => {
 });
 
 // related path: /statistics/undocumented/classes
-test('Fetch class searchresult of given searchterm', async () => {
+test('Fetch undocumented classes', async () => {
   const fetchMock = jest
     .spyOn(global, 'fetch')
     .mockImplementation(() => Promise.resolve({ json: () => sampleUndocumentedClassesResponse }));
@@ -355,6 +364,17 @@ test('Fetch class searchresult of given searchterm', async () => {
   expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/statistics/undocumented/classes`);
   expect(fetchMock).toBeCalledTimes(1);
   expect(fetchedClasses).toEqual(sampleUndocumentedClassesResponse.classes);
+});
+
+// related path: /statistics/undocumented/methods
+test('Fetch undocumented methods', async () => {
+  const fetchMock = jest
+    .spyOn(global, 'fetch')
+    .mockImplementation(() => Promise.resolve({ json: () => sampleUndocumentedMethodsResponse }));
+  const fetchedMethods = await getUndocumentedMethods();
+  expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/statistics/undocumented/methods`);
+  expect(fetchMock).toBeCalledTimes(1);
+  expect(fetchedMethods).toEqual(sampleUndocumentedMethodsResponse.methods);
 });
 
 afterEach(() => jest.clearAllMocks());
