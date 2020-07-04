@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
+import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
 import UncommentedMethodsView from './UncommentedMethodsView';
 
 let container = null;
