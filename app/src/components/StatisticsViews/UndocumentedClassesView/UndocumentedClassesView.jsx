@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { getUndocumentedClasses } from '../../../utils/apiHandler';
 
-const UncommentedClassesView = () => {
+const UndocumentedClassesView = () => {
   const [uncommentedClasses, setUncommentedClasses] = useState([]);
 
   useEffect(() => {
@@ -23,4 +23,4 @@ const UncommentedClassesView = () => {
   );
 };
 
-export default UncommentedClassesView;
+export default UndocumentedClassesView;

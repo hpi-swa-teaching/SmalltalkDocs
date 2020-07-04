@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
-import UncommentedMethodsView from './UncommentedMethodsView';
+import UndocumentedMethodsView from './UndocumentedMethodsView';
 
 let container = null;
 beforeEach(() => {
@@ -16,12 +16,12 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('UncommentedMethodsView', () => {
+describe('UndocumentedMethodsView', () => {
   it('should display a list of classes', () => {
     act(() => {
       render(
         <Router>
-          <UncommentedMethodsView />
+          <UndocumentedMethodsView />
         </Router>,
         container
       );
@@ -37,7 +37,7 @@ describe('UncommentedMethodsView', () => {
     act(() => {
       render(
         <Router>
-          <MetricsSidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+          <UndocumentedMethodsView isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
         </Router>,
         container
       );
