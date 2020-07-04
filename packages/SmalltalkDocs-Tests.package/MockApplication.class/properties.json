@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "SmalltalkDocsTestsServiceProvider",
+	"name" : "MockApplication",
 	"pools" : [
 		 ],
-	"super" : "ServiceProvider",
+	"super" : "RPApplicationFix",
 	"type" : "normal" }

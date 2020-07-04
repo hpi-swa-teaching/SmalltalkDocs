@@ -1,7 +1,6 @@
 {
 	"class" : {
-		"newStarted" : "phpfs2 6/13/2020 21:40",
-		"newStartedOn:" : "phpfs2 6/13/2020 21:40" },
+		 },
 	"instance" : {
 		"allowedDomains" : "max 6/28/2020 15:14",
 		"getCategories" : "max 6/7/2020 16:43",
@@ -19,7 +18,6 @@
 		"getSearchClassResult:" : "max 6/30/2020 18:43",
 		"getSearchMethodResult:" : "max 6/30/2020 18:43",
 		"getUndocumentedClasses" : "max 6/30/2020 12:32",
-		"helloWorld:" : "max 5/19/2020 13:04",
 		"initializeSettings" : "max 6/30/2020 11:33",
 		"send404WithTitle:" : "max 6/30/2020 11:31",
 		"sendErrorNoSuchCategory" : "max 6/7/2020 17:21",
