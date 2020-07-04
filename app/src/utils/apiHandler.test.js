@@ -15,7 +15,8 @@ import {
   getClassesOfCategories,
   searchForClasses,
   searchForMethods,
-  getUndocumentedClasses, getUndocumentedMethods
+  getUndocumentedClasses,
+  getUndocumentedMethods
 } from './apiHandler';
 
 const sampleClassName = 'SampleClass';
