@@ -10,4 +10,4 @@ getMethodsJsonFrom: aClass
  	^ (Dictionary newFrom: { 
 		'count' -> count. 
 		'instanceMethods' -> instanceMethods. 
-		'classMethods' -> classMethods}) asJsonString.
+		'classMethods' -> classMethods}) asJsonString

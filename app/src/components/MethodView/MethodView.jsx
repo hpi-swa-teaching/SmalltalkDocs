@@ -16,7 +16,7 @@ const MethodView = ({ currentClass, site, currentMethod }) => {
     const simpleFetch = async () => {
       const methodResponse = await getMethodInfo(currentClass, site, currentMethod);
       const methodTextResponse = await getMethodText(currentClass, site, currentMethod);
-      // console.log(methodTextResponse)
+      // console.log(methodResponse);
       setMethodText(methodTextResponse);
       setHasPrecodeComment(methodResponse.hasPrecodeComment);
       setPrecodeComment(methodResponse.precodeComment);

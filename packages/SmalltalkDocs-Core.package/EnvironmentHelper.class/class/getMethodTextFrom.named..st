@@ -1,3 +1,3 @@
 serializer
 getMethodTextFrom: aClass named: aSymbol
-	^ (aClass sourceCodeAt: aSymbol) asString.
+	^ (aClass sourceCodeAt: aSymbol) asString

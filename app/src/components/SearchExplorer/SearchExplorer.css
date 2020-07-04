@@ -1,0 +1,58 @@
+label {
+  display: block;
+}
+
+.explorer {
+  align-items: left;
+  padding: 10px;
+}
+
+.searchBox {
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+.check {
+  position: relative;
+  padding: 3px;
+}
+
+.submitbutton {
+  /* Pointer/hand icon */
+  position: relative;
+  width: 200px;
+  height: 41px;
+  margin: 10px 10px;
+  padding: 10px 24px;
+  background: #fff;
+
+  /* Some padding */
+  cursor: pointer;
+}
+
+.searchButton {
+  width: 350px;
+  margin: 2px;
+  padding: 2px;
+  border: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #175578;
+  background: none;
+  font-size: 1.2rem;
+}
+
+.searchButton:hover {
+  color: #cfcfcf;
+}
+
+.results {
+  height: 400px;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.results::-webkit-scrollbar {
+  display: none;
+}

@@ -45,4 +45,90 @@ describe('CategoriesSidebar', () => {
 
     global.fetch.mockRestore();
   });
+
+  it('should displayed closed sidebar', async () => {
+    const isOpen = false;
+    const toggleIsOpen = () => {};
+
+    const sampleCategoriesResponse = {
+      categories: ['SmapratCore', 'SmapratAPI', 'SmapratApp'],
+      count: 3
+    };
+
+    jest.spyOn(global, 'fetch').mockImplementation(() =>
+      Promise.resolve({
+        json: () => sampleCategoriesResponse
+      })
+    );
+
+    await act(async () => {
+      render(
+        <Router>
+          <CategoriesSidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+        </Router>,
+        container
+      );
+    });
+
+    expect(container.querySelector('#closedSidebarBox')).toBeInTheDocument();
+    expect(container.querySelector('#openedSidebarBox')).toBeNull();
+
+    global.fetch.mockRestore();
+  });
+  it('should displayed category list', async () => {
+    const isOpen = true;
+    const toggleIsOpen = () => {};
+
+    const sampleCategoriesResponse = {
+      categories: ['SmapratCore', 'SmapratAPI', 'SmapratApp'],
+      count: 3
+    };
+
+    jest.spyOn(global, 'fetch').mockImplementation(() =>
+      Promise.resolve({
+        json: () => sampleCategoriesResponse
+      })
+    );
+
+    await act(async () => {
+      render(
+        <Router>
+          <CategoriesSidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+        </Router>,
+        container
+      );
+    });
+
+    expect(container.querySelector('.secondarySidebarTitle')).toBeInTheDocument();
+
+    global.fetch.mockRestore();
+  });
+  it('should not displayed category list', async () => {
+    const isOpen = false;
+    const toggleIsOpen = () => {};
+
+    const sampleCategoriesResponse = {
+      categories: ['SmapratCore', 'SmapratAPI', 'SmapratApp'],
+      count: 3
+    };
+
+    jest.spyOn(global, 'fetch').mockImplementation(() =>
+      Promise.resolve({
+        json: () => sampleCategoriesResponse
+      })
+    );
+
+    await act(async () => {
+      render(
+        <Router>
+          <CategoriesSidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+        </Router>,
+        container
+      );
+    });
+
+    expect(container.querySelector('.secondarySidebarTitle')).toBeNull();
+
+    global.fetch.mockRestore();
+  });
 });

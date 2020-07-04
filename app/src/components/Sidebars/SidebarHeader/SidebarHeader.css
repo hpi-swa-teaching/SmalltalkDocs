@@ -1,75 +1,74 @@
-.closedHead{
-    width: 50px;
-    height: 50px;
-    margin-top: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    background: #175578;
+.closedHead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  margin-top: 50px;
+  overflow-x: hidden;
+  background: #175578;
 }
 
-.openedHead{
-    position: relative;
-    height: 90px;
-    display: flex;
-    align-items: row;
+.openedHead {
+  display: flex;
+  position: relative;
+  align-items: row;
+  height: 90px;
 }
 
 .logo {
-    position: relative;
-    width: 90px;
-    height: 63px;
-    margin: 5px;
-    margin-left: 20px;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+  width: 90px;
+  height: 63px;
+  margin: 5px;
+  margin-left: 20px;
 }
 
-.headTitle{
-    position: relative;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 56px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-top: -65px;
-    margin-left: 130px;
-    margin-bottom: 20px;
-    color: #FFFFFF;
+.headTitle {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-top: -65px;
+  margin-bottom: 20px;
+  margin-left: 130px;
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 56px;
+  text-align: center;
 }
 
-.openButton{
-    margin-top: 7px;
-    margin-left: 7px;
-    height: 36px;
-    width: 36px;
-    background: #FFFFFF;
+.openButton {
+  width: 36px;
+  height: 36px;
+  margin-top: 7px;
+  margin-left: 7px;
+  background: #fff;
 }
 
-.closeButton{
-    margin-left: 20px;
-    margin-bottom: 30px;
-    margin-top: 22px;
-    height: 36px;
-    width: 36px;
-    background: #FFFFFF;
+.closeButton {
+  width: 36px;
+  height: 36px;
+  margin-top: 22px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  background: #fff;
 }
 
 .openPic {
-    position: relative;
-    top: -1px;
-    left: -2px;
-    width: 36px;
-    height: 36px;
-    transform: rotate(180deg);
+  position: relative;
+  top: -1px;
+  left: -2px;
+  width: 36px;
+  height: 36px;
+  transform: rotate(180deg);
 }
 
 .closePic {
-    position: relative;
-    top: -3px;
-    left: -2px;
-    width: 36px;
-    height: 36px;
+  position: relative;
+  top: -3px;
+  left: -2px;
+  width: 36px;
+  height: 36px;
 }

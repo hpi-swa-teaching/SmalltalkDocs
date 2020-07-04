@@ -32,4 +32,21 @@ describe('MetricsSidebar', () => {
 
     expect(container.querySelector('#openSidebarBox')).toBeInTheDocument();
   });
+
+  it('should display not display the metrics title', () => {
+    const isOpen = false;
+    const toggleIsOpen = () => {};
+
+    act(() => {
+      render(
+        <Router>
+          <MetricsSidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+        </Router>,
+        container
+      );
+    });
+
+    expect(container.querySelector('#closedSidebarBox')).toBeInTheDocument();
+    expect(container.querySelector('.secondarySidebarTitle')).toBeNull();
+  });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import MethodSidebar from './MethodSidebar';
@@ -47,9 +47,9 @@ describe('MethodSidebar', () => {
 
     await act(async () => {
       render(
-        <Router>
+        <BrowserRouter>
           <MethodSidebar currentClass="test" toggleIsOpen={toggleIsOpen} isOpen={isOpen} />
-        </Router>,
+        </BrowserRouter>,
         container
       );
     });
