@@ -1,5 +1,43 @@
 import { baseURL } from '../config/constants';
 import {
+  getHelpPageInfoMock,
+  getUndocumentedMethodsAPIMock,
+  getSampleClassName,
+  getSampleHelpClassInfoResponse,
+  getPagesOfBookMock,
+  getContentOfPageMock,
+  getSampleHelpPageResponse,
+  getPrefixPathOfSampleBook,
+  getFetchMethodsMock,
+  getSampleMethodsOfClassResponse,
+  getSampleInstanceMethods,
+  getSampleClassMethods,
+  getFetchMethodInfoMock,
+  getSampleMethodInfoResponse,
+  getFetchMethodCodeMock,
+  getSampleMethodCodeResponse,
+  getFetchCategoriesMock,
+  getSampleCategoriesResponse,
+  getFetchClassesOfCategoriesMock,
+  getSampleCategoryName,
+  getSampleAllClassesResponse,
+  getFetchClassesMock,
+  getIsHelpBookMock,
+  getSampleClassInfoResponse,
+  getSampleUndocumentedMethodsResponse,
+  getSearchForClassMock,
+  getSampleClassSearchTerm,
+  getSampleClassSearchResponse,
+  getSearchForMethodMock,
+  getSampleMethodSearchTerm,
+  getSampleMethodSearchResponse,
+  getUndocumentedClassesAPIMock,
+  getSampleUndocumentedClassesResponse,
+  getSortedSampleAllClasses,
+  getSampleHelpPagesGivenByClass,
+  getContentOfBookMock
+} from '../test-utils/apiMocks';
+import {
   getContentOfBook,
   getContentOfPage,
   getInstanceMethods,
@@ -19,363 +57,182 @@ import {
   getUndocumentedMethods
 } from './apiHandler';
 
-const sampleClassName = 'SampleClass';
-const sampleCategorieName = 'Smaprat';
-const sampleClassSearchterm = 'Smaprat%';
-const sampleMethodSearchterm = 'allSati%';
-
-const sampleHelpClassInfoResponse = {
-  bookName: 'Help on Help',
-  priority: 9999
-};
-
-const sampleHelpClassPagesResponse = {
-  pages: [
-    {
-      pageName: 'introduction',
-      isGivenByClass: true
-    },
-    {
-      pageName: 'HelpHowToHelpTopics',
-      isGivenByClass: false
-    },
-    {
-      pageName: 'HelpAPIDocumentation',
-      isGivenByClass: false
-    }
-  ]
-};
-
-const sampleHelpPageResponse = {
-  content:
-    'WELCOME TO THE HELP SYSTEM\r\rThe help system is a simple user interface to display help contents to the user. It can be accessed from the world menu using "Tools" -> "Help Browser" or by evaluating \'HelpBrowser open\' in a workspace.\r\rThere is a predefined mechanism allowing you to have help contents stored as source code using methods in specific help provider classes. This allows you to manage the help texts using the standard development tools. But this is only one possible representation.\r',
-  pageName: 'introduction',
-  title: 'Introduction'
-};
-
-const sampleAllClassesResponse = {
-  classes: ['RPTestClass', 'X509TBSCertificate', 'MetacelloAllowProjectUpgrade'],
-  count: 3
-};
-
-const sampleCategoriesResponse = {
-  categories: ['SmapratCore', 'SmapratAPI', 'SmapratApp'],
-  count: 3
-};
-
-const sortedSampleAllClasses = [
-  'MetacelloAllowProjectUpgrade',
-  'RPTestClass',
-  'X509TBSCertificate'
-];
-
-const sampleClassInfoResponse = {
-  isHelpBook: true
-};
-
-const sampleMethodsOfClassResponse = {
-  classMethods: ['newStarted', 'newStartedOn:'],
-  count: { classMethods: 2, total: 12, instanceMethods: 10 },
-  instanceMethods: [
-    'getHelpPagesFrom:',
-    'getClassMethodTextFrom:named:',
-    'getInstanceMethodFrom:named:',
-    'getMethods:',
-    'getClasses',
-    'getHelpPageFrom:at:',
-    'helloWorld:',
-    'getClassMethodFrom:named:',
-    'getHelpBookFrom:',
-    'getInstanceMethodTextFrom:named:'
-  ]
-};
-
-const sampleClassMethods = sampleMethodsOfClassResponse.classMethods;
-const sampleInstanceMethods = sampleMethodsOfClassResponse.instanceMethods;
-
-const sampleMethodInfoResponse = {
-  hasPrecodeComment: true,
-  precodeComment:
-    'This is the main entry point for the JSON parser. See also readFrom: on the class side.'
-};
-
-const sampleMethodCodeResponse = 'readFrom: aStream\n\t^ self new readFrom: aStream.';
-
-const sampleClassSearchResponse = {
-  classes: ['SmapratAPI', 'SmapratMockClass', 'SmapratTests'],
-  count: 3
-};
-
-const sampleMethodSearchResponse = {
-  methods: [
-    {
-      className: 'Collection',
-      methodName: 'allSatisfy:',
-      side: 'instance'
-    },
-    {
-      className: 'UiItemModelFinder',
-      methodName: 'allSatisfy:',
-      side: 'instance'
-    },
-    {
-      className: 'UiItemModelFinder',
-      methodName: 'allSatisfy:startingAt:',
-      side: 'instance'
-    },
-    {
-      className: 'UiListWidget',
-      methodName: 'allSatisfy:',
-      side: 'instance'
-    },
-    {
-      className: 'GitSetWrapper',
-      methodName: 'allSatisfy:',
-      side: 'instance'
-    }
-  ]
-};
-
-const sampleUndocumentedClassesResponse = {
-  classes: ['GitHelp', 'SWAFrogz', 'SmapratMockClass'],
-  count: 3
-};
-
-const sampleUndocumentedMethodsResponse = {
-  methods: [
-    { methodName: 'execute', className: 'Scheduler' },
-    { methodName: 'block', className: 'Scheduler' },
-    { methodName: 'run', className: 'Preprocessor' }
-  ],
-  count: 3
-};
-
 describe('Help page system', () => {
-  let fetchMock;
   afterEach(() => jest.clearAllMocks());
 
   // related API route: /help/<HelpClass>
   test('Fetch information about an help class', async () => {
-    fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleHelpClassInfoResponse
-      })
-    );
-    const jsonResponse = await getBookInfo(sampleClassName);
-    expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/help/${sampleClassName}`);
+    const fetchMock = getHelpPageInfoMock();
+    const jsonResponse = await getBookInfo(getSampleClassName());
+    expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/help/${getSampleClassName()}`);
     expect(fetchMock).toBeCalledTimes(1);
-    expect(jsonResponse).toEqual(sampleHelpClassInfoResponse);
+    expect(jsonResponse).toEqual(getSampleHelpClassInfoResponse());
   });
 
   // related API route: /help/<HelpClass>/pages
   test('Fetch pages of a sample book', async () => {
-    fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleHelpClassPagesResponse
-      })
-    );
-    const jsonResponse = await getPagesOfBook(sampleClassName);
-    expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/help/${sampleClassName}/pages`);
+    const fetchMock = getPagesOfBookMock();
+    const jsonResponse = await getPagesOfBook(getSampleClassName());
+    expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/help/${getSampleClassName()}/pages`);
     expect(fetchMock).toBeCalledTimes(1);
-    expect(jsonResponse).toEqual(['introduction']);
+    expect(jsonResponse).toEqual(getSampleHelpPagesGivenByClass());
   });
 
   // related API route: /help/<HelpClass>/pages/<page_name>
   test('Fetch content of a sample page', async () => {
-    fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleHelpPageResponse
-      })
-    );
+    const fetchMock = getContentOfPageMock();
     const samplePageName = 'introduction';
-    const jsonResponse = await getContentOfPage(sampleClassName, samplePageName);
+    const jsonResponse = await getContentOfPage(getSampleClassName(), samplePageName);
     expect(fetchMock).toHaveBeenCalledWith(
-      `${baseURL}/help/${sampleClassName}/pages/${samplePageName}`
+      `${baseURL}/help/${getSampleClassName()}/pages/${samplePageName}`
     );
     expect(fetchMock).toBeCalledTimes(1);
-    expect(jsonResponse).toEqual(sampleHelpPageResponse.content);
+    expect(jsonResponse).toEqual(getSampleHelpPageResponse().content);
   });
 
   test('Fetch content of a sample book', async () => {
-    const prefixPath = `${baseURL}/help/${sampleClassName}/pages`;
-    fetchMock = jest.spyOn(global, 'fetch').mockImplementation(path => {
-      if (path === prefixPath)
-        return Promise.resolve({
-          json: () => sampleHelpClassPagesResponse
-        });
-      return Promise.resolve({
-        json: () => sampleHelpPageResponse
-      });
-    });
-    const pageContents = await getContentOfBook(sampleClassName);
-    expect(fetchMock).toHaveBeenCalledWith(prefixPath);
-    expect(fetchMock).toHaveBeenCalledWith(`${prefixPath}/introduction`);
+    const fetchMock = getContentOfBookMock();
+    const pageContents = await getContentOfBook(getSampleClassName());
+    expect(fetchMock).toHaveBeenCalledWith(getPrefixPathOfSampleBook());
+    expect(fetchMock).toHaveBeenCalledWith(`${getPrefixPathOfSampleBook()}/introduction`);
     expect(fetchMock).toBeCalledTimes(2);
-    expect(pageContents).toEqual(sampleHelpPageResponse.content);
+    expect(pageContents).toEqual(getSampleHelpPageResponse().content);
   });
 });
 
 // related path: /env/classes/<ClassName>/methods
 describe('Fetch methods', () => {
-  const path = `${baseURL}/env/classes/${sampleClassName}/methods`;
+  const path = `${baseURL}/env/classes/${getSampleClassName()}/methods`;
   let fetchMock;
   beforeAll(() => {
-    fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleMethodsOfClassResponse
-      })
-    );
+    fetchMock = getFetchMethodsMock();
   });
   afterEach(() => jest.clearAllMocks());
 
   test('Fetch methods overview of class', async () => {
-    const fetchedOverview = await getAllMethodsOf(sampleClassName);
+    const fetchedOverview = await getAllMethodsOf(getSampleClassName());
     expect(fetchMock).toBeCalledTimes(1);
     expect(fetchMock).toHaveBeenCalledWith(path);
-    expect(fetchedOverview).toEqual(sampleMethodsOfClassResponse);
+    expect(fetchedOverview).toEqual(getSampleMethodsOfClassResponse());
   });
 
   test('Fetch instance methods of class', async () => {
-    const fetchedMethods = await getInstanceMethods(sampleClassName);
+    const fetchedMethods = await getInstanceMethods(getSampleClassName());
     expect(fetchMock).toBeCalledTimes(1);
     expect(fetchMock).toHaveBeenCalledWith(path);
-    expect(fetchedMethods).toEqual(sampleInstanceMethods);
+    expect(fetchedMethods).toEqual(getSampleInstanceMethods());
   });
 
   test('Fetch class methods of class', async () => {
-    const fetchedMethods = await getClassMethods(sampleClassName);
+    const fetchedMethods = await getClassMethods(getSampleClassName());
     expect(fetchMock).toBeCalledTimes(1);
     expect(fetchMock).toHaveBeenCalledWith(path);
-    expect(fetchedMethods).toEqual(sampleClassMethods);
+    expect(fetchedMethods).toEqual(getSampleClassMethods());
   });
 });
 
 // related path: /env/classes/<ClassName>/methods/<instance|class>/<methodName>
 describe('Fetch method info', () => {
   const sampleMethodName = 'aSampleMethod:';
-  const path = `${baseURL}/env/classes/${sampleClassName}/methods/instance/${sampleMethodName}`;
-  let fetchMock;
-  beforeAll(() => {
-    fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleMethodInfoResponse
-      })
-    );
-  });
+  const path = `${baseURL}/env/classes/${getSampleClassName()}/methods/instance/${sampleMethodName}`;
   afterEach(() => jest.clearAllMocks());
   test('Fetch whole method info', async () => {
-    const fetchedOverview = await getMethodInfo(sampleClassName, 'instance', sampleMethodName);
+    const fetchMock = getFetchMethodInfoMock();
+    const fetchedOverview = await getMethodInfo(getSampleClassName(), 'instance', sampleMethodName);
     expect(fetchMock).toBeCalledTimes(1);
     expect(fetchMock).toHaveBeenCalledWith(path);
-    expect(fetchedOverview).toEqual(sampleMethodInfoResponse);
+    expect(fetchedOverview).toEqual(getSampleMethodInfoResponse());
   });
 });
 
 // related path: /env/classes/<ClassName>/methods/<instance|class>/<methodName>/text
 describe('Fetch method code', () => {
   const sampleMethodName = 'aSampleMethod:';
-  const path = `${baseURL}/env/classes/${sampleClassName}/methods/instance/${sampleMethodName}/text`;
-  let fetchMock;
-  beforeAll(() => {
-    fetchMock = jest
-      .spyOn(global, 'fetch')
-      .mockImplementation(() => Promise.resolve({ text: () => sampleMethodCodeResponse }));
-  });
+  const path = `${baseURL}/env/classes/${getSampleClassName()}/methods/instance/${sampleMethodName}/text`;
   afterEach(() => jest.clearAllMocks());
   test('Fetch method code', async () => {
-    const fetchedCode = await getMethodText(sampleClassName, 'instance', sampleMethodName);
+    const fetchMock = getFetchMethodCodeMock();
+    const fetchedCode = await getMethodText(getSampleClassName(), 'instance', sampleMethodName);
     expect(fetchMock).toBeCalledTimes(1);
     expect(fetchMock).toHaveBeenCalledWith(path);
-    expect(fetchedCode).toEqual(sampleMethodCodeResponse);
+    expect(fetchedCode).toEqual(getSampleMethodCodeResponse());
   });
 });
 
 // related path: /env/categories
 test('Fetch categories', async () => {
-  const fetchMock = jest
-    .spyOn(global, 'fetch')
-    .mockImplementation(() => Promise.resolve({ json: () => sampleCategoriesResponse }));
+  const fetchMock = getFetchCategoriesMock();
   const fetchedCategories = await getCategories();
   expect(fetchMock).toBeCalledTimes(1);
   expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/env/categories`);
-  expect(fetchedCategories).toEqual(sampleCategoriesResponse.categories);
+  expect(fetchedCategories).toEqual(getSampleCategoriesResponse().categories.sort());
 });
 
 // related path: /env/categories/<CategorieName>/classes
 test('Fetch classes of categorie', async () => {
-  const fetchMock = jest
-    .spyOn(global, 'fetch')
-    .mockImplementation(() => Promise.resolve({ json: () => sampleAllClassesResponse }));
-  const fetchedClasses = await getClassesOfCategories(sampleCategorieName);
+  const fetchMock = getFetchClassesOfCategoriesMock();
+  const fetchedClasses = await getClassesOfCategories(getSampleCategoryName());
   expect(fetchMock).toBeCalledTimes(1);
-  expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/env/categories/${sampleCategorieName}`);
-  expect(fetchedClasses).toEqual(sampleAllClassesResponse.classes);
+  expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/env/categories/${getSampleCategoryName()}`);
+  expect(fetchedClasses).toEqual(getSampleAllClassesResponse().classes);
 });
 
 // related path: /env/classes
 test('Fetch classes', async () => {
-  const fetchMock = jest
-    .spyOn(global, 'fetch')
-    .mockImplementation(() => Promise.resolve({ json: () => sampleAllClassesResponse }));
+  const fetchMock = getFetchClassesMock();
   const fetchedClasses = await getClasses();
   expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/env/classes`);
   expect(fetchMock).toBeCalledTimes(1);
-  expect(fetchedClasses).toEqual(sortedSampleAllClasses);
+  expect(fetchedClasses).toEqual(getSortedSampleAllClasses());
 });
 
 // related path: /env/classes/<ClassName>
 test('Proof if class is help book', async () => {
-  const fetchMock = jest
-    .spyOn(global, 'fetch')
-    .mockImplementation(() => Promise.resolve({ json: () => sampleClassInfoResponse }));
-  const fetchedInfo = await isHelpBook(sampleClassName);
-  expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/env/classes/${sampleClassName}`);
+  const fetchMock = getIsHelpBookMock();
+  const fetchedInfo = await isHelpBook(getSampleClassName());
+  expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/env/classes/${getSampleClassName()}`);
   expect(fetchMock).toBeCalledTimes(1);
-  expect(fetchedInfo).toEqual(sampleClassInfoResponse.isHelpBook);
+  expect(fetchedInfo).toEqual(getSampleClassInfoResponse().isHelpBook);
 });
 
 // related path: /env/search/classes/<SearchTerm>
 test('Fetch class searchresult of given searchterm', async () => {
-  const fetchMock = jest
-    .spyOn(global, 'fetch')
-    .mockImplementation(() => Promise.resolve({ json: () => sampleClassSearchResponse }));
-  const fetchedSearchResults = await searchForClasses(sampleClassSearchterm);
-  expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/env/search/classes/${sampleClassSearchterm}`);
+  const fetchMock = getSearchForClassMock();
+  const fetchedSearchResults = await searchForClasses(getSampleClassSearchTerm());
+  expect(fetchMock).toHaveBeenCalledWith(
+    `${baseURL}/env/search/classes/${getSampleClassSearchTerm()}`
+  );
   expect(fetchMock).toBeCalledTimes(1);
-  expect(fetchedSearchResults).toEqual(sampleClassSearchResponse.classes);
+  expect(fetchedSearchResults).toEqual(getSampleClassSearchResponse().classes);
 });
 
 // related path: /env/search/methods/<SearchTerm>
 test('Fetch method searchresult of given searchterm', async () => {
-  const fetchMock = jest
-    .spyOn(global, 'fetch')
-    .mockImplementation(() => Promise.resolve({ json: () => sampleMethodSearchResponse }));
-  const fetchedSearchResults = await searchForMethods(sampleMethodSearchterm);
-  expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/env/search/methods/${sampleMethodSearchterm}`);
+  const fetchMock = getSearchForMethodMock();
+  const fetchedSearchResults = await searchForMethods(getSampleMethodSearchTerm());
+  expect(fetchMock).toHaveBeenCalledWith(
+    `${baseURL}/env/search/methods/${getSampleMethodSearchTerm()}`
+  );
   expect(fetchMock).toBeCalledTimes(1);
-  expect(fetchedSearchResults).toEqual(sampleMethodSearchResponse.methods);
+  expect(fetchedSearchResults).toEqual(getSampleMethodSearchResponse().methods);
 });
 
 // related path: /statistics/undocumented/classes
 test('Fetch undocumented classes', async () => {
-  const fetchMock = jest
-    .spyOn(global, 'fetch')
-    .mockImplementation(() => Promise.resolve({ json: () => sampleUndocumentedClassesResponse }));
+  const fetchMock = getUndocumentedClassesAPIMock();
   const fetchedClasses = await getUndocumentedClasses();
   expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/statistics/undocumented/classes`);
   expect(fetchMock).toBeCalledTimes(1);
-  expect(fetchedClasses).toEqual(sampleUndocumentedClassesResponse.classes);
+  expect(fetchedClasses).toEqual(getSampleUndocumentedClassesResponse().classes);
 });
 
 // related path: /statistics/undocumented/methods
 test('Fetch undocumented methods', async () => {
-  const fetchMock = jest
-    .spyOn(global, 'fetch')
-    .mockImplementation(() => Promise.resolve({ json: () => sampleUndocumentedMethodsResponse }));
+  const fetchMock = getUndocumentedMethodsAPIMock();
   const fetchedMethods = await getUndocumentedMethods();
   expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/statistics/undocumented/methods`);
   expect(fetchMock).toBeCalledTimes(1);
-  expect(fetchedMethods).toEqual(sampleUndocumentedMethodsResponse.methods);
+  expect(fetchedMethods).toEqual(getSampleUndocumentedMethodsResponse().methods);
 });
 
 afterEach(() => jest.clearAllMocks());

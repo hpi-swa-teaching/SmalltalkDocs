@@ -2,6 +2,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { BrowserRouter as Router } from 'react-router-dom';
+import {
+  getUndocumentedMethodsAPIMock,
+  getSampleUndocumentedMethodsResponse
+} from '../../../test-utils/apiMocks';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
 import UndocumentedMethodsView from './UndocumentedMethodsView';
 
@@ -17,7 +21,9 @@ afterEach(() => {
 });
 
 describe('UndocumentedMethodsView', () => {
-  it('should display a list of classes', () => {
+  const fetchMock = getUndocumentedMethodsAPIMock();
+
+  it('Should display the correct title', () => {
     act(() => {
       render(
         <Router>
@@ -27,23 +33,20 @@ describe('UndocumentedMethodsView', () => {
       );
     });
 
-    expect(container.querySelector('#openSidebarBox')).toBeInTheDocument();
+    expect(container.querySelector('h1')).toBeInTheDocument();
   });
 
-  it('should display not display the metrics title', () => {
-    const isOpen = false;
-    const toggleIsOpen = () => {};
-
+  it('should display all undocumented methods', () => {
     act(() => {
       render(
         <Router>
-          <UndocumentedMethodsView isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+          <UndocumentedMethodsView />
         </Router>,
         container
       );
     });
-
-    expect(container.querySelector('#closedSidebarBox')).toBeInTheDocument();
-    expect(container.querySelector('.secondarySidebarTitle')).toBeNull();
+    expect(container.querySelectorAll('li').length).toBe(
+      getSampleUndocumentedMethodsResponse().count
+    );
   });
 });
