@@ -7,6 +7,9 @@ SmalltalkCISpec {
     }
   ],
   #testing : {
-    #categories : [ 'SmalltalkDocs-Tests' ]
+    #categories : [ 'SmalltalkDocs-Tests' ],
+    #coverage : {
+      #categories : [ 'SmalltalkDocs-Core' ]
+    }
   }
 }

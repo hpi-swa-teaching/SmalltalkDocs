@@ -1,14 +1,16 @@
-![Backend CI](https://github.com/hpi-swa-teaching/SmalltalkDocs/workflows/Backend%20CI/badge.svg?branch=dev) ![Frontend CI](https://github.com/hpi-swa-teaching/SmalltalkDocs/workflows/Frontend%20CI/badge.svg?branch=dev)
 # 🗄️ SmalltalkDocs
+
+![Backend CI](https://github.com/hpi-swa-teaching/SmalltalkDocs/workflows/Backend%20CI/badge.svg?branch=dev) [![Backend Coverage Status](https://coveralls.io/repos/github/hpi-swa-teaching/SmalltalkDocs/badge.svg?branch=dev)](https://coveralls.io/github/hpi-swa-teaching/SmalltalkDocs?branch=dev) ![Frontend CI](https://github.com/hpi-swa-teaching/SmalltalkDocs/workflows/Frontend%20CI/badge.svg?branch=dev)
 
 ## Squeak API
 
 ### How to install
-```
+
+``` smalltalk
 Metacello new
-	baseline: 'SmalltalkDocs';
-	repository: 'github://hpi-swa-teaching/SmalltalkDocs:dev/packages';
-	load.
+    baseline: 'SmalltalkDocs';
+    repository: 'github://hpi-swa-teaching/SmalltalkDocs:dev/packages';
+    load.
 ```
 
 ## React App: småprat
@@ -18,12 +20,13 @@ Metacello new
 * Do not forget to install Jest Plugin for Webstorm (Preferences - Languages & Frameworks - JavaScript - Libraries - Download - 'jest' - Download and Install)
 * Only use functional code style
 * If you use VS Code add following statement to settings.json  
-```
+
+``` json
 {
-	"eslint.alwaysShowStatus": true,
-	"eslint.workingDirectories": [
-		"./app"
-	]
+    "eslint.alwaysShowStatus": true,
+    "eslint.workingDirectories": [
+        "./app"
+    ]
 }
 ```
 
@@ -36,7 +39,6 @@ Run `SmapratApi newStarted` to start the Api on port 4567, or specify a port usi
 #### Start the frontend
 
 Run `npm install` if you have not already done so. Now you can start the developement version of the frontend using `npm start`.
-
 
 ### Available Scripts
 
