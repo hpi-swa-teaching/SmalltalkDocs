@@ -2,51 +2,30 @@ import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { BrowserRouter as Router } from 'react-router-dom';
-import {
-  getUndocumentedMethodsAPIMock,
-  getSampleUndocumentedMethodsResponse
-} from '../../../test-utils/apiMocks';
-import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
+import { getUndocumentedMethodsAPIMock } from '../../../test-utils/apiMocks';
 import UndocumentedMethodsView from './UndocumentedMethodsView';
 
-let container = null;
+let container;
+
 beforeEach(() => {
-  // setup a DOM element as a render target
-  container = prepareContainer(container);
+  container = document.createElement('div');
+  document.body.appendChild(container);
 });
 
 afterEach(() => {
-  // cleanup on exiting
-  container = cleanUpContainer(container);
+  document.body.removeChild(container);
+  container = null;
 });
 
-describe('UndocumentedMethodsView', () => {
-  const fetchMock = getUndocumentedMethodsAPIMock();
-
-  it('Should display the correct title', () => {
-    act(() => {
-      render(
-        <Router>
-          <UndocumentedMethodsView />
-        </Router>,
-        container
-      );
-    });
-
-    expect(container.querySelector('h1')).toBeInTheDocument();
-  });
-
-  it('should display all undocumented methods', () => {
-    act(() => {
-      render(
-        <Router>
-          <UndocumentedMethodsView />
-        </Router>,
-        container
-      );
-    });
-    expect(container.querySelectorAll('li').length).toBe(
-      getSampleUndocumentedMethodsResponse().count
-    );
-  });
+test('Should display the correct title', async () => {
+  getUndocumentedMethodsAPIMock();
+  await act(async () =>
+    render(
+      <Router>
+        <UndocumentedMethodsView />
+      </Router>,
+      container
+    )
+  );
+  expect(container).toHaveTextContent('Undocumented Methods');
 });

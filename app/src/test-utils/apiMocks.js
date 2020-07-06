@@ -112,9 +112,9 @@ export const getSampleUndocumentedClassesResponse = () => ({
 });
 export const getSampleUndocumentedMethodsResponse = () => ({
   methods: [
-    { methodName: 'execute', className: 'Scheduler' },
-    { methodName: 'block', className: 'Scheduler' },
-    { methodName: 'run', className: 'Preprocessor' }
+    { methodName: 'execute', className: 'Scheduler', side: 'class' },
+    { methodName: 'block', className: 'Scheduler', side: 'instance' },
+    { methodName: 'run', className: 'Preprocessor', side: 'class' }
   ],
   count: 3
 });

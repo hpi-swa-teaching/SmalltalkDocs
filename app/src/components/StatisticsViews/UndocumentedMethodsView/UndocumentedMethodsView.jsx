@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { getUndocumentedMethods } from '../../../utils/apiHandler';
+import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
 import ToggleSwitch from '../../ToggleSwitch/ToggleSwitch';
 
 import './UndocumentedMethodsView.css';
+import ResultEnumeration from '../ResultEnumeration/ResultEnumeration';
 
 const UndocumentedMethodsView = () => {
   const [fetchedMethods, setFetchedMethods] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   // sortBy=false --> sort by className, sortBy=true --> sort by methodName
   const [sortBy, setSortBy] = useState(false);
 
@@ -20,20 +23,28 @@ const UndocumentedMethodsView = () => {
 
   useEffect(() => {
     const simpleFetch = async () => setFetchedMethods(await getUndocumentedMethods());
-    simpleFetch().then();
+    simpleFetch().then(() => setIsLoading(false));
   }, []);
 
+  // TODO: style component
   return (
     <div>
       <h1>Undocumented Methods</h1>
       <ToggleSwitch isActive={sortBy} toggleChange={() => changeToggleSortBy()} />
-      <ul>
-        {fetchedMethods.sort(chooseSortByFunction()).map(aMethodInfo => (
-          <li>
-            {aMethodInfo.className}:{aMethodInfo.methodName}
-          </li>
-        ))}
-      </ul>
+      {isLoading ? (
+        <LoadingIndicator />
+      ) : (
+        <ul>
+          {fetchedMethods
+            .sort((methodInfoA, methodInfoB) => chooseSortByFunction()(methodInfoA, methodInfoB))
+            .map(aMethodInfo => (
+              <ResultEnumeration
+                linkText={`${aMethodInfo.className}:${aMethodInfo.methodName}`}
+                linkPath={`/doku/classes/${aMethodInfo.className}/methods/${aMethodInfo.side}/${aMethodInfo.methodName}`}
+              />
+            ))}
+        </ul>
+      )}
     </div>
   );
 };
