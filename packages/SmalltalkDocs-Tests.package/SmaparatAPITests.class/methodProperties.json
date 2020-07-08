@@ -17,7 +17,7 @@
 		"testCrossOriginHeader" : "max 6/30/2020 11:34",
 		"testErrorGetHelpPageJson" : "max 6/20/2020 14:45",
 		"testErrorGetHelpPagesJson" : "max 6/20/2020 14:45",
-		"testGetAllMethodsInvalidClass" : "phpfs2 6/19/2020 16:49",
+		"testGetAllMethodsInvalidClass" : "max 7/8/2020 15:33",
 		"testGetAllMethodsValid" : "max 6/20/2020 14:44",
 		"testGetCategories" : "phpfs2 6/19/2020 15:46",
 		"testGetCategoryClassesInvalidCategory" : "phpfs2 6/19/2020 15:48",
@@ -58,4 +58,6 @@
 		"testGetSearchResultsMethodWithWildcardStartAndEnd" : "max 6/30/2020 18:44",
 		"testGetSearchResultsMethodWithoutWildcard" : "max 6/30/2020 18:44",
 		"testGetSearchResultsMethodWithoutWildcardClassSide" : "max 6/30/2020 18:44",
-		"testGetUndocumentedClasses" : "max 6/30/2020 12:30" } }
+		"testGetUndocumentedClasses" : "max 6/30/2020 12:30",
+		"testGetUndocumentedMethods" : "max 7/8/2020 15:34",
+		"testGetUndocumentedMethodsInvalidClass" : "max 7/8/2020 15:34" } }
