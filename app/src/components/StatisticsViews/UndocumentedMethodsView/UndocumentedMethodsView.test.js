@@ -17,7 +17,7 @@ afterEach(() => {
   container = null;
 });
 
-test('Should display the correct title', async () => {
+xtest('Should display the correct title', async () => {
   getUndocumentedMethodsAPIMock();
   await act(async () =>
     render(

@@ -15,7 +15,7 @@ const MetricsSidebar = props => {
       {/* TODO: Style elements */}
       <ul>
         {getStatisticsNavigationMapping().map(aStatistics => (
-          <li>
+          <li key={`${aStatistics.caption}`}>
             <NavLink to={`/statistics/${aStatistics.path}`}>{aStatistics.caption}</NavLink>
           </li>
         ))}
