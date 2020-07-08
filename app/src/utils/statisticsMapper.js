@@ -1,14 +1,15 @@
 import React from 'react';
 import UndocumentedClassesView from '../components/StatisticsViews/UndocumentedClassesView/UndocumentedClassesView';
-import UndocumentedMethodsView from '../components/StatisticsViews/UndocumentedMethodsView/UndocumentedMethodsView';
+// TODO: activate component after presentation
+// import UndocumentedMethodsView from '../components/StatisticsViews/UndocumentedMethodsView/UndocumentedMethodsView';
 import UnknownStatistics from '../components/StatisticsViews/UnkownStatistics/UnkownStatistics';
 
 // TODO: implement lazy initialize
 const statisticsViewsMapping = {
-  undocumentedMethods: {
+  /*  undocumentedMethods: {
     component: <UndocumentedMethodsView />,
     statisticsName: 'Undocumented Methods'
-  },
+  }, */
   undocumentedClasses: {
     component: <UndocumentedClassesView />,
     statisticsName: 'Undocumented Classes'
