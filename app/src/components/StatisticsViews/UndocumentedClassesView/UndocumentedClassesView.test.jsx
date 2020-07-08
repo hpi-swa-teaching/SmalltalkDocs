@@ -4,7 +4,7 @@ import { act } from 'react-dom/test-utils';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { baseURL } from '../../../config/constants';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
-import UncommentedClassesView from './UncommentedClassesView';
+import UndocumentedClassesView from './UndocumentedClassesView';
 
 describe('UncommentedClassView', () => {
   const sampleUncommentedClassesResponse = { classes: ['Class1', 'Class2', 'Class3'] };
@@ -22,7 +22,7 @@ describe('UncommentedClassView', () => {
     await act(async () => {
       render(
         <Router>
-          <UncommentedClassesView />
+          <UndocumentedClassesView />
         </Router>,
         container
       );

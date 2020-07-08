@@ -8,6 +8,7 @@
 		"getClassesJson" : "max 5/25/2020 23:26",
 		"getMethodSearchResultsJsonFrom:" : "max 6/30/2020 11:51",
 		"getMethodTextFrom:named:" : "max 6/27/2020 13:56",
-		"getMethodsJsonFrom:" : "max 6/27/2020 13:56" },
+		"getMethodsJsonFrom:" : "max 6/27/2020 13:56",
+		"getUndocumentedMethodsJsonFrom:" : "max 7/8/2020 15:33" },
 	"instance" : {
 		 } }

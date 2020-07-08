@@ -2,13 +2,12 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
+const NotFound = lazy(() => import('../NotFound/NotFound'));
 const RootLandingPage = lazy(() => import('../LandingPages/RootLandingPage/RootLandingPage'));
-const StatisticsLandingPage = lazy(() =>
-  import('../LandingPages/StatisticsLandingPage/StatisticsLandingPage')
-);
+const StatisticsView = lazy(() => import('../StatisticsView/StatisticsView'));
+// TODO: merge DokuLandingPage & ExplorationView like Statistics pages schema
 const DokuLandingPage = lazy(() => import('../LandingPages/DokuLandingPage/DokuLandingPage'));
 const ExplorationView = lazy(() => import('../ExplorationView/ExplorationView'));
-const NotFound = lazy(() => import('../NotFound/NotFound'));
 
 const App = () => (
   <Router>
@@ -16,7 +15,8 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={RootLandingPage} />
         <Route exact path="/doku" component={DokuLandingPage} />
-        <Route exact path="/statistics" component={StatisticsLandingPage} />
+        <Route exact path="/statistics" component={StatisticsView} />
+        <Route exact path="/statistics/:currentMetric" component={StatisticsView} />
         <Route
           exact
           path="/doku/help/:currentClass"
