@@ -3,6 +3,8 @@ import { getUndocumentedClasses } from '../../../utils/apiHandler';
 import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
 import ResultEnumeration from '../ResultEnumeration/ResultEnumeration';
 
+import './UndocumentedClassesView.css';
+
 const UndocumentedClassesView = () => {
   const [uncommentedClasses, setUncommentedClasses] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -17,7 +19,7 @@ const UndocumentedClassesView = () => {
       <h1>Uncommented Classes</h1>
       {!isLoading ? (
         <div>
-          <ul>
+          <ul className="undocumentedList">
             {uncommentedClasses.map(aClassName => (
               <ResultEnumeration
                 key={aClassName}
