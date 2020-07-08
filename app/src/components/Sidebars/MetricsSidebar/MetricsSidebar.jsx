@@ -5,6 +5,7 @@ import { getStatisticsNavigationMapping } from '../../../utils/statisticsMapper'
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 
 import '../Sidebars.css';
+import './MetricsSidebar.css';
 
 const MetricsSidebar = props => {
   const { isOpen, toggleIsOpen } = props;
@@ -12,11 +13,18 @@ const MetricsSidebar = props => {
     <div id={isOpen ? 'openSidebarBox' : 'closedSidebarBox'} className="sidenav">
       <SidebarHeader isOpen={isOpen} toggleOpen={toggleIsOpen} />
       {isOpen ? <p className="secondarySidebarTitle">Metrics</p> : null}
-      {/* TODO: Style elements */}
       <ul>
         {getStatisticsNavigationMapping().map(aStatistics => (
-          <li key={`${aStatistics.caption}`}>
-            <NavLink to={`/statistics/${aStatistics.path}`}>{aStatistics.caption}</NavLink>
+          <li className="metricsList" key={`${aStatistics.caption}`}>
+            <div className="metricsLinkBox">
+              <NavLink
+                className="metricsLink"
+                hidden={!isOpen}
+                to={`/statistics/${aStatistics.path}`}
+              >
+                {aStatistics.caption}
+              </NavLink>
+            </div>
           </li>
         ))}
       </ul>

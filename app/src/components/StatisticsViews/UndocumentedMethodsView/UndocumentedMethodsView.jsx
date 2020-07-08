@@ -26,7 +26,6 @@ const UndocumentedMethodsView = () => {
     simpleFetch().then(() => setIsLoading(false));
   }, []);
 
-  // TODO: style component
   return (
     <div>
       <h1>Undocumented Methods</h1>
@@ -34,7 +33,7 @@ const UndocumentedMethodsView = () => {
       {isLoading ? (
         <LoadingIndicator />
       ) : (
-        <ul>
+        <ul className="undocumentedList">
           {fetchedMethods
             .sort((methodInfoA, methodInfoB) => chooseSortByFunction()(methodInfoA, methodInfoB))
             .map(aMethodInfo => (
