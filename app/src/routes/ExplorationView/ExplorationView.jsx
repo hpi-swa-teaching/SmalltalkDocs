@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router';
-import ClassView from '../../components/ClassView/ClassView';
-import HelpView from '../../components/HelpView/HelpView';
-import MethodView from '../../components/MethodView/MethodView';
+import ClassView from '../../components/ExplorationViews/ClassView/ClassView';
+import HelpView from '../../components/ExplorationViews/HelpView/HelpView';
+import MethodView from '../../components/ExplorationViews/MethodView/MethodView';
 import MethodSidebar from '../../components/Sidebars/MethodSidebar/MethodSidebar';
 import './ExplorationView.css';
 

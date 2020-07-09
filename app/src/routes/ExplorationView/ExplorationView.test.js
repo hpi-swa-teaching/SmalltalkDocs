@@ -4,11 +4,17 @@ import { act } from 'react-dom/test-utils';
 import { MemoryRouter } from 'react-router';
 import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
 
-jest.doMock('../../components/ClassView/ClassView', () => () => <div id="classViewMock" />);
+jest.doMock('../../components/ExplorationViews/ClassView/ClassView', () => () => (
+  <div id="classViewMock" />
+));
 
-jest.doMock('../../components/MethodView/MethodView', () => () => <div id="methodViewMock" />);
+jest.doMock('../../components/ExplorationViews/MethodView/MethodView', () => () => (
+  <div id="methodViewMock" />
+));
 
-jest.doMock('../../components/HelpView/HelpView', () => () => <div id="helpViewMock" />);
+jest.doMock('../../components/ExplorationViews/HelpView/HelpView', () => () => (
+  <div id="helpViewMock" />
+));
 
 let container = null;
 beforeEach(() => {
