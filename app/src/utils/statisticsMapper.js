@@ -1,17 +1,32 @@
-import React from 'react';
-import UndocumentedClassesView from '../components/StatisticsViews/UndocumentedClassesView/UndocumentedClassesView';
-// TODO: activate component after presentation
-// import UndocumentedMethodsView from '../components/StatisticsViews/UndocumentedMethodsView/UndocumentedMethodsView';
+import React, { lazy, Suspense } from 'react';
+// base component are small enough to load immediately
+import LoadingIndicator from '../components/LoadingIndicator/LoadingIndicator';
 import UnknownStatistics from '../components/StatisticsViews/UnkownStatistics/UnkownStatistics';
 
-// TODO: implement lazy initialize
+// use lazy import for complex components
+const UndocumentedClassesView = lazy(() =>
+  import('../components/StatisticsViews/UndocumentedClassesView/UndocumentedClassesView')
+);
+
+const UndocumentedMethodsView = lazy(() =>
+  import('../components/StatisticsViews/UndocumentedMethodsView/UndocumentedMethodsView')
+);
+
 const statisticsViewsMapping = {
-  /*  undocumentedMethods: {
-    component: <UndocumentedMethodsView />,
+  undocumentedMethods: {
+    component: (
+      <Suspense fallback={<LoadingIndicator />}>
+        <UndocumentedMethodsView />{' '}
+      </Suspense>
+    ),
     statisticsName: 'Undocumented Methods'
-  }, */
+  },
   undocumentedClasses: {
-    component: <UndocumentedClassesView />,
+    component: (
+      <Suspense fallback={<LoadingIndicator />}>
+        <UndocumentedClassesView />{' '}
+      </Suspense>
+    ),
     statisticsName: 'Undocumented Classes'
   }
 };
