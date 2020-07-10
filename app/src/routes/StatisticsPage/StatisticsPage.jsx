@@ -4,9 +4,9 @@ import MetricsSidebar from '../../components/Sidebars/MetricsSidebar/MetricsSide
 import StatisticsLandingView from '../../components/StatisticsViews/StatisticsLandingView/StatisticsLandingView';
 import { getStatisticsViewFromParameter } from '../../utils/statisticsMapper';
 
-import './StatisticsView.css';
+import './StatisticsPage.css';
 
-const StatisticsView = () => {
+const StatisticsPage = () => {
   const pathParams = useParams();
   const [isSideOpen, setIsSideOpen] = useState(true);
   const toggleIsSideOpen = () => setIsSideOpen(!isSideOpen);
@@ -26,4 +26,4 @@ const StatisticsView = () => {
   );
 };
 
-export default StatisticsView;
+export default StatisticsPage;
