@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { baseURL } from '../../config/constants';
+import { baseURL } from '../../../config/constants';
 import MethodView from './MethodView';
-import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
+import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
 
 let container = null;
 beforeEach(() => {

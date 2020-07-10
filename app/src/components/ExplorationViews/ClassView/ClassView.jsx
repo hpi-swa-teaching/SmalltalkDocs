@@ -1,7 +1,7 @@
 import { CircularProgress } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { getAllMethodsOf, getClass } from '../../utils/apiHandler';
+import { getAllMethodsOf, getClass } from '../../../utils/apiHandler';
 import './ClassView.css';
 
 const ClassView = ({ currentClass }) => {

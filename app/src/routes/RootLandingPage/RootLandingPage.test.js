@@ -5,7 +5,7 @@ import { Router } from 'react-router';
 import { createMemoryHistory } from 'history';
 import { fireEvent } from '@testing-library/react';
 import RootLandingPage from './RootLandingPage';
-import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
+import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
 
 const history = createMemoryHistory();
 const pushSpy = jest.spyOn(history, 'push');
