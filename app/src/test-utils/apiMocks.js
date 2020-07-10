@@ -110,13 +110,14 @@ export const getSampleUndocumentedClassesResponse = () => ({
   classes: ['GitHelp', 'SWAFrogz', 'SmapratMockClass'],
   count: 3
 });
-export const getSampleUndocumentedMethodsResponse = () => ({
-  methods: [
-    { methodName: 'execute', className: 'Scheduler', side: 'class' },
-    { methodName: 'block', className: 'Scheduler', side: 'instance' },
-    { methodName: 'run', className: 'Preprocessor', side: 'class' }
-  ],
-  count: 3
+export const getSampleUndocumentedMethodsOfClassResponse = () => ({
+  classMethods: ['fromSton:'],
+  count: {
+    classMethods: 1,
+    total: 24,
+    instanceMethods: 23
+  },
+  instanceMethods: ['addInstVarNames:', 'asClassDefinition', 'asHelpTopic', 'withClassVersion:']
 });
 
 // mock implementations
@@ -208,9 +209,9 @@ export const getUndocumentedClassesAPIMock = () =>
       Promise.resolve({ json: () => getSampleUndocumentedClassesResponse() })
     );
 
-export const getUndocumentedMethodsAPIMock = () =>
+export const getUndocumentedMethodsOfClassAPIMock = () =>
   jest
     .spyOn(global, 'fetch')
     .mockImplementation(() =>
-      Promise.resolve({ json: () => getSampleUndocumentedMethodsResponse() })
+      Promise.resolve({ json: () => getSampleUndocumentedMethodsOfClassResponse() })
     );
