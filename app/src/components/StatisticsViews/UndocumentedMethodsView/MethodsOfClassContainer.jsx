@@ -31,13 +31,13 @@ const MethodsOfClassContainer = props => {
         <div>
           {!isLoading ? (
             <div>
-              <h2>Undocumented Class Methods</h2>
+              <h2 className="listHeading">Undocumented Class Methods</h2>
               <UndocumentedMethodsList
                 currentClass={theClassName}
                 methodList={undocumentedClassMethods}
                 site="class"
               />
-              <h2>Undocumented Instance Methods</h2>
+              <h2 className="listHeading">Undocumented Instance Methods</h2>
               <UndocumentedMethodsList
                 methodList={undocumentedInstanceMethods}
                 currentClass={theClassName}

@@ -9,9 +9,13 @@ import { getPathToMethod } from '../../../utils/pathMapper';
 const UndocumentedMethodsList = props => {
   const { methodList, site, currentClass } = props;
   return (
-    <div>
+    <div className="navListContainer">
       {methodList.map(aMethod => (
-        <NavLink key={aMethod} to={getPathToMethod(aMethod, currentClass, site)}>
+        <NavLink
+          className="navButton"
+          key={aMethod}
+          to={getPathToMethod(aMethod, currentClass, site)}
+        >
           {aMethod}
         </NavLink>
       ))}

@@ -1,3 +1,22 @@
-.undocumentedList {
-  text-align: center;
+.classListItem {
+  list-style-type: none;
+}
+
+.classListButton {
+  width: 80%;
+  margin-top: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #809aa8;
+  background-color: #fff;
+  color: #175578;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.classListButton:hover {
+  background: #a3c1cf;
+  color: #175578;
 }

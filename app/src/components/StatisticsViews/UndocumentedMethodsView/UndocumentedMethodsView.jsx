@@ -23,8 +23,14 @@ const UndocumentedMethodsView = () => {
       ) : (
         <ul className="classList">
           {allClasses.map(aClassName => (
-            <li key={aClassName}>
-              <button type="button" onClick={() => setCurrentClass(aClassName)}>
+            <li className="classListItem" key={aClassName}>
+              <button
+                className="classListButton"
+                type="button"
+                onClick={() =>
+                  currentClass === aClassName ? setCurrentClass('') : setCurrentClass(aClassName)
+                }
+              >
                 {aClassName}
               </button>
               {aClassName === currentClass ? (
