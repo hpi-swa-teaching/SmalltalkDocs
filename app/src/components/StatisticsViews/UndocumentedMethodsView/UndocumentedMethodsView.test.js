@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { getUndocumentedMethodsAPIMock } from '../../../test-utils/apiMocks';
+import { getUndocumentedMethodsOfClassAPIMock } from '../../../test-utils/apiMocks';
 import UndocumentedMethodsView from './UndocumentedMethodsView';
 
 let container;
@@ -18,7 +18,7 @@ afterEach(() => {
 });
 
 xtest('Should display the correct title', async () => {
-  getUndocumentedMethodsAPIMock();
+  getUndocumentedMethodsOfClassAPIMock();
   await act(async () =>
     render(
       <Router>

@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import HelpView from './HelpView';
-import { baseURL } from '../../config/constants';
-import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
+import { baseURL } from '../../../config/constants';
+import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
 
 let container = null;
 beforeEach(() => {

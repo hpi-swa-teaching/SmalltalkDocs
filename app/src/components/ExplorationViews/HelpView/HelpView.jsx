@@ -1,7 +1,7 @@
 import { CircularProgress } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { getContentOfBook } from '../../utils/apiHandler';
+import { getContentOfBook } from '../../../utils/apiHandler';
 
 const HelpView = ({ bookName }) => {
   const [loading, setLoading] = useState(true);

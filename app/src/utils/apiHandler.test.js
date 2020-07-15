@@ -1,7 +1,7 @@
 import { baseURL } from '../config/constants';
 import {
   getHelpPageInfoMock,
-  getUndocumentedMethodsAPIMock,
+  getUndocumentedMethodsOfClassAPIMock,
   getSampleClassName,
   getSampleHelpClassInfoResponse,
   getPagesOfBookMock,
@@ -24,7 +24,6 @@ import {
   getFetchClassesMock,
   getIsHelpBookMock,
   getSampleClassInfoResponse,
-  getSampleUndocumentedMethodsResponse,
   getSearchForClassMock,
   getSampleClassSearchTerm,
   getSampleClassSearchResponse,
@@ -35,7 +34,8 @@ import {
   getSampleUndocumentedClassesResponse,
   getSortedSampleAllClasses,
   getSampleHelpPagesGivenByClass,
-  getContentOfBookMock
+  getContentOfBookMock,
+  getSampleUndocumentedMethodsOfClassResponse
 } from '../test-utils/apiMocks';
 import {
   getContentOfBook,
@@ -54,7 +54,7 @@ import {
   searchForClasses,
   searchForMethods,
   getUndocumentedClasses,
-  getUndocumentedMethods
+  getUndocumentedMethodsOfClass
 } from './apiHandler';
 
 describe('Help page system', () => {
@@ -228,11 +228,13 @@ test('Fetch undocumented classes', async () => {
 
 // related path: /statistics/undocumented/methods
 test('Fetch undocumented methods', async () => {
-  const fetchMock = getUndocumentedMethodsAPIMock();
-  const fetchedMethods = await getUndocumentedMethods();
-  expect(fetchMock).toHaveBeenCalledWith(`${baseURL}/statistics/undocumented/methods`);
+  const fetchMock = getUndocumentedMethodsOfClassAPIMock();
+  const fetchedMethods = await getUndocumentedMethodsOfClass(getSampleClassName());
+  expect(fetchMock).toHaveBeenCalledWith(
+    `${baseURL}/statistics/undocumented/methods/${getSampleClassName()}`
+  );
   expect(fetchMock).toBeCalledTimes(1);
-  expect(fetchedMethods).toEqual(getSampleUndocumentedMethodsResponse().methods);
+  expect(fetchedMethods).toEqual(getSampleUndocumentedMethodsOfClassResponse());
 });
 
 afterEach(() => jest.clearAllMocks());
