@@ -27,11 +27,13 @@ const UndocumentedMethodsView = () => {
               <button type="button" onClick={() => setCurrentClass(aClassName)}>
                 {aClassName}
               </button>
-              <MethodsOfClassContainer
-                key={aClassName}
-                theClassName={aClassName}
-                isActive={aClassName === currentClass}
-              />
+              {aClassName === currentClass ? (
+                <MethodsOfClassContainer
+                  key={aClassName}
+                  theClassName={aClassName}
+                  isActive={aClassName === currentClass}
+                />
+              ) : null}
             </li>
           ))}
         </ul>

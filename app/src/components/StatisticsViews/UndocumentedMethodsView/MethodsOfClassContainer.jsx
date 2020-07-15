@@ -6,7 +6,7 @@ import UndocumentedMethodsList from './UndocumentedMethodsList';
 
 import './MethodsOfClassContainer.css';
 
-// TODO: style component
+// TODO: style component and remove isActive prop if not needed
 const MethodsOfClassContainer = props => {
   const { theClassName, isActive } = props;
 
