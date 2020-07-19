@@ -1,6 +1,6 @@
-import { CircularProgress } from '@material-ui/core';
-import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
 import { getAllMethodsOf, getClass } from '../../../utils/apiHandler';
 import './ClassView.css';
 
@@ -26,7 +26,7 @@ const ClassView = ({ currentClass }) => {
     <div>
       <h1>{currentClass}</h1>
       {loading ? (
-        <CircularProgress />
+        <LoadingIndicator />
       ) : (
         <div className="description">
           <h3>This class has a total of {count} methods.</h3>

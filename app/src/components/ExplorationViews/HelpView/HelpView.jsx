@@ -1,7 +1,7 @@
-import { CircularProgress } from '@material-ui/core';
-import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { getContentOfBook } from '../../../utils/apiHandler';
+import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
 
 const HelpView = ({ bookName }) => {
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ const HelpView = ({ bookName }) => {
   return (
     <div>
       <h1>{bookName}</h1>
-      {loading ? <CircularProgress /> : null}
+      {loading ? <LoadingIndicator /> : null}
       <code>{content}</code>
     </div>
   );
