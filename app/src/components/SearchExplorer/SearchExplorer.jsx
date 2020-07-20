@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { CircularProgress } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
+import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import { searchForClasses, searchForMethods } from '../../utils/apiHandler';
 import './SearchExplorer.css';
 
@@ -98,7 +98,7 @@ const SearchExplorer = () => {
         <input className="submitbutton" id="searchSubmit" type="submit" value="Search" />
       </form>
       <div className="results">
-        {loadingSearchResults ? <CircularProgress /> : <ul>{currentResult}</ul>}
+        {loadingSearchResults ? <LoadingIndicator /> : <ul>{currentResult}</ul>}
       </div>
     </div>
   );
