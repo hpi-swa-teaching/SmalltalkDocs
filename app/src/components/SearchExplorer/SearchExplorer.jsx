@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { getLinkToClass, getLinkToMethod } from '../../utils/pathMapper';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import { searchForClasses, searchForMethods } from '../../utils/apiHandler';
 import './SearchExplorer.css';
@@ -8,10 +9,14 @@ const SearchExplorer = () => {
   const history = useHistory();
 
   const [currentSearchText, setCurrentSearchText] = useState('');
-  const [loadingSearchResults, setloadingSearchResults] = useState(false);
-  const [currentResult, setCurrentResult] = useState([]);
   const [shouldSearchClasses, setShouldSearchClass] = useState(true);
   const [shouldSearchMethods, setShouldSearchMethod] = useState(true);
+
+  const [foundClasses, setFoundClasses] = useState([]);
+  const [foundMethods, setFoundMethods] = useState([]);
+
+  const [loadingSearchResults, setloadingSearchResults] = useState(false);
+  const [currentResult, setCurrentResult] = useState([]);
 
   const fetchResults = async event => {
     event.preventDefault();
@@ -36,7 +41,7 @@ const SearchExplorer = () => {
             <button
               className="searchButton"
               type="button"
-              onClick={() => history.push(`/doku/classes/${aclass}`)}
+              onClick={() => history.push(getLinkToClass(aclass))}
             >
               {aclass}
             </button>
@@ -51,9 +56,7 @@ const SearchExplorer = () => {
               className="searchButton"
               type="button"
               onClick={() =>
-                history.push(
-                  `/doku/classes/${method.className}/methods/${method.side}/${method.methodName}`
-                )
+                history.push(getLinkToMethod(method.methodName, method.className, method.side))
               }
             >{`${method.className} ${method.methodName}`}</button>
           </li>

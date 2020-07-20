@@ -1,5 +1,14 @@
 import { baseURL } from '../config/constants';
 
-// eslint-disable-next-line import/prefer-default-export
+/*
+ * a path is a full qualified location
+ * a link is a location given relatively to the origin of the React app
+ */
+
+export const getLinkToClass = aClassName => `/doku/classes/${aClassName}`;
+
+export const getLinkToMethod = (aMethodName, aClassName, theSite) =>
+  `/doku/classes/${aClassName}/methods/${theSite}/${aMethodName}`;
+
 export const getPathToMethod = (aMethodName, aClassName, theSite) =>
-  `${baseURL}/doku/classes/${aClassName}/methods/${theSite}/${aMethodName}`;
+  `${baseURL}${getLinkToMethod(aMethodName, aClassName, theSite)}`;
