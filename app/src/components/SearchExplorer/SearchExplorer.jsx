@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { getLinkToClass, getLinkToMethod } from '../../utils/pathMapper';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
+import ResultEnumerationItem from '../ResultEnumerationItem/ResultEnumerationItem';
+import { getLinkToClass, getLinkToMethod } from '../../utils/pathMapper';
 import { searchForClasses, searchForMethods } from '../../utils/apiHandler';
 import './SearchExplorer.css';
 
 const SearchExplorer = () => {
-  const history = useHistory();
-
   const [currentSearchText, setCurrentSearchText] = useState('');
   const [shouldSearchClasses, setShouldSearchClass] = useState(true);
   const [shouldSearchMethods, setShouldSearchMethod] = useState(true);
@@ -15,60 +13,27 @@ const SearchExplorer = () => {
   const [foundClasses, setFoundClasses] = useState([]);
   const [foundMethods, setFoundMethods] = useState([]);
 
-  const [loadingSearchResults, setloadingSearchResults] = useState(false);
-  const [currentResult, setCurrentResult] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const fetchResults = async event => {
+  const doSearch = async event => {
     event.preventDefault();
     if (currentSearchText.length <= 0) {
-      setCurrentResult(<li>Nothing found due to empty search string!</li>);
+      setErrorMessage('Nothing found due to empty search string!');
       return;
     }
-    setloadingSearchResults(true);
-    const fetchedClasses = shouldSearchClasses
-      ? (await searchForClasses(currentSearchText)).sort()
-      : [];
-    const fetchedMethods = shouldSearchMethods
-      ? (await searchForMethods(currentSearchText)).sort()
-      : [];
-    // const fetchedClasses = (await searchForClasses(currentSearchText)).sort();
-    // const fetchedMethods = (await searchForMethods(currentSearchText)).sort();
-    // TODO: We do not store any JSX in component state
-    setCurrentResult(
-      [].concat(
-        fetchedClasses.map(aclass => (
-          <li key={aclass} className="searchList">
-            <button
-              className="searchButton"
-              type="button"
-              onClick={() => history.push(getLinkToClass(aclass))}
-            >
-              {aclass}
-            </button>
-          </li>
-        )),
-        fetchedMethods.map(method => (
-          <li
-            key={`${method.className}-${method.side}-${method.methodName}`}
-            className="searchList"
-          >
-            <button
-              className="searchButton"
-              type="button"
-              onClick={() =>
-                history.push(getLinkToMethod(method.methodName, method.className, method.side))
-              }
-            >{`${method.className} ${method.methodName}`}</button>
-          </li>
-        ))
-      )
-    );
-    setloadingSearchResults(false);
+    setErrorMessage('');
+    setIsLoading(true);
+    setFoundClasses(shouldSearchClasses ? (await searchForClasses(currentSearchText)).sort() : []);
+    setFoundMethods(shouldSearchMethods ? (await searchForMethods(currentSearchText)).sort() : []);
+    setIsLoading(false);
   };
+
+  const existsError = () => errorMessage !== '';
 
   return (
     <div className="explorer">
-      <form onSubmit={event => fetchResults(event)}>
+      <form onSubmit={event => doSearch(event)}>
         <input
           className="searchBox"
           type="text"
@@ -98,10 +63,35 @@ const SearchExplorer = () => {
           />
           Search for methods
         </label>
-        <input className="submitbutton" id="searchSubmit" type="submit" value="Search" />
+        <input className="submitButton" id="searchSubmit" type="submit" value="Search" />
       </form>
-      <div className="results">
-        {loadingSearchResults ? <LoadingIndicator /> : <ul>{currentResult}</ul>}
+      <div className="resultBox">
+        {/* TODO: style error message */}
+        {existsError() ? <div>{errorMessage}</div> : null}
+        {isLoading ? (
+          <LoadingIndicator />
+        ) : (
+          <ul>
+            {foundClasses.map(aClass => (
+              <ResultEnumerationItem
+                key={`classResult-${aClass}`}
+                linkText={aClass}
+                linkPath={getLinkToClass(aClass)}
+              />
+            ))}
+            {foundMethods.map(aMethodAnswer => (
+              <ResultEnumerationItem
+                key={`${aMethodAnswer.className}-${aMethodAnswer.side}-${aMethodAnswer.methodName}`}
+                linkText={`${aMethodAnswer.className}:${aMethodAnswer.methodName}`}
+                linkPath={getLinkToMethod(
+                  aMethodAnswer.methodName,
+                  aMethodAnswer.className,
+                  aMethodAnswer.side
+                )}
+              />
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

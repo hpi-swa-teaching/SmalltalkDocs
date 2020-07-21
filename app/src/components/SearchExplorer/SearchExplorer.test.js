@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { fireEvent } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import SearchExplorer from './SearchExplorer';
 import { baseURL } from '../../config/constants';
 import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
@@ -60,7 +61,12 @@ describe('SearchExplorer', () => {
     });
 
     await act(async () => {
-      render(<SearchExplorer />, container);
+      render(
+        <Router>
+          <SearchExplorer />
+        </Router>,
+        container
+      );
     });
 
     fireEvent.change(container.querySelector('input[id=searchInput]'), {
