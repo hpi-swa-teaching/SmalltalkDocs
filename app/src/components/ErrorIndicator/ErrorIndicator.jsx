@@ -20,7 +20,7 @@ const ErrorIndicator = props => {
           .map(({ decisionFunction, decisionValues }) => decisionFunction(decisionValues))
           .includes(true)
       ),
-    [errorConditions, existsError]
+    [errorConditions, existsError, setExistsError]
   );
 
   return existsError ? <div>{errorMessage}</div> : null;
