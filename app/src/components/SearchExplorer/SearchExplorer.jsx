@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ErrorIndicator from '../ErrorIndicator/ErrorIndicator';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import ResultEnumerationItem from '../ResultEnumerationItem/ResultEnumerationItem';
 import { getLinkToClass, getLinkToMethod } from '../../utils/pathMapper';
@@ -14,22 +15,20 @@ const SearchExplorer = () => {
   const [foundMethods, setFoundMethods] = useState([]);
 
   const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [existsError, setExistsError] = useState(false);
+
+  const isEmptySearchString = searchString => searchString.length <= 0;
 
   const doSearch = async event => {
     event.preventDefault();
-    if (currentSearchText.length <= 0) {
-      setErrorMessage('Nothing found due to empty search string!');
+    if (existsError) {
       return;
     }
-    setErrorMessage('');
     setIsLoading(true);
     setFoundClasses(shouldSearchClasses ? (await searchForClasses(currentSearchText)).sort() : []);
     setFoundMethods(shouldSearchMethods ? (await searchForMethods(currentSearchText)).sort() : []);
     setIsLoading(false);
   };
-
-  const existsError = () => errorMessage !== '';
 
   return (
     <div className="explorer">
@@ -67,7 +66,14 @@ const SearchExplorer = () => {
       </form>
       <div className="resultBox">
         {/* TODO: style error message */}
-        {existsError() ? <div>{errorMessage}</div> : null}
+        <ErrorIndicator
+          errorState={existsError}
+          errorStateSetter={setExistsError}
+          errorMessage="Nothing found due to empty search string!"
+          errorConditions={[
+            { decisionFunction: isEmptySearchString, decisionValues: currentSearchText }
+          ]}
+        />
         {isLoading ? (
           <LoadingIndicator />
         ) : (
