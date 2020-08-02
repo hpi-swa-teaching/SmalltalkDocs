@@ -2,7 +2,10 @@
 	"class" : {
 		"defaultName" : "max 8/2/2020 12:41" },
 	"instance" : {
-		"allowedDomains" : "max 7/2/2020 20:44",
+		"allowedDomains" : "max 8/2/2020 17:35",
+		"getFileFrom:" : "max 8/2/2020 17:32",
 		"initializeSettings" : "max 7/2/2020 20:42",
-		"mainHTML" : "max 7/3/2020 11:50",
-		"sendMainHTML:" : "max 7/3/2020 15:20" } }
+		"internalError" : "max 8/2/2020 17:34",
+		"sendFile:" : "max 8/2/2020 17:35",
+		"sendMainHTML" : "max 8/2/2020 17:34",
+		"sendNonHtmlNamed:withContent:" : "max 8/2/2020 17:34" } }
