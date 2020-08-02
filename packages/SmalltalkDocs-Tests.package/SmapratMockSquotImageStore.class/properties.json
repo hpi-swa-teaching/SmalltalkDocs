@@ -1,14 +1,14 @@
 {
-	"category" : "SmalltalkDocs-Core",
+	"category" : "SmalltalkDocs-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"store" ],
-	"name" : "SmapratApp",
+		 ],
+	"name" : "SmapratMockSquotImageStore",
 	"pools" : [
 		 ],
-	"super" : "RPApplicationFix",
+	"super" : "Object",
 	"type" : "normal" }

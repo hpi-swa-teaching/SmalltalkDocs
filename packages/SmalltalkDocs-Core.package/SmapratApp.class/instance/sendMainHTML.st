@@ -1,7 +1,7 @@
 handler
 sendMainHTML
-	(SquotWorkingCopy registered last includesObjectAt: 'frontend/index.html') 
-		ifTrue: [self sendHtml: (SquotWorkingCopy registered last objectAt: 'frontend/index.html')]
+	(self store includesObjectAt: 'frontend/index.html') 
+		ifTrue: [self sendHtml: (self store objectAt: 'frontend/index.html')]
 		ifFalse: [^ self internalError]
 	
 	

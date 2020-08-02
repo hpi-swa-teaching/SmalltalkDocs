@@ -4,8 +4,12 @@
 	"instance" : {
 		"allowedDomains" : "max 8/2/2020 17:35",
 		"getFileFrom:" : "max 8/2/2020 17:32",
-		"initializeSettings" : "max 7/2/2020 20:42",
-		"internalError" : "max 8/2/2020 17:34",
-		"sendFile:" : "max 8/2/2020 17:35",
-		"sendMainHTML" : "max 8/2/2020 17:34",
-		"sendNonHtmlNamed:withContent:" : "max 8/2/2020 17:34" } }
+		"getSmapratStore" : "max 8/2/2020 18:13",
+		"initializeSettings" : "max 8/2/2020 17:48",
+		"internalError" : "max 8/2/2020 18:20",
+		"sendFile:" : "max 8/2/2020 18:21",
+		"sendMainHTML" : "max 8/2/2020 18:21",
+		"sendNonHtmlNamed:withContent:" : "max 8/2/2020 17:34",
+		"start" : "max 8/2/2020 18:14",
+		"store" : "max 8/2/2020 17:54",
+		"store:" : "max 8/2/2020 17:54" } }

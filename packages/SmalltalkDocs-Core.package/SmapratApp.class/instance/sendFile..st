@@ -1,5 +1,5 @@
 handler
 sendFile: aString
-	(SquotWorkingCopy registered last includesObjectAt: 'frontend/',aString)
-		ifTrue: [self sendNonHtmlNamed: aString withContent: SquotWorkingCopy registered last objectAt: aString]
+	(self store includesObjectAt: 'frontend/',aString)
+		ifTrue: [self sendNonHtmlNamed: aString withContent: self store objectAt: aString]
 		ifFalse: [self notFound].

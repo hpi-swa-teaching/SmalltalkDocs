@@ -1,0 +1,4 @@
+constants
+includesObjectAt: path
+
+	^ true
