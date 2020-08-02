@@ -1,4 +1,4 @@
-removing
+actions
 sendJS: aJsString
 	
 	self

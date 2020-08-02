@@ -1,4 +1,4 @@
-removing
+actions
 sendHtml: aHtmlString 
 	
 	self
