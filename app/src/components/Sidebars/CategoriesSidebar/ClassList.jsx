@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { getClassesOfCategories } from '../../../utils/apiHandler';
+import { getPathToClass } from '../../../utils/pathMapper';
 import './ClassList.css';
 
 const ClassList = props => {
@@ -21,7 +22,7 @@ const ClassList = props => {
         : relatedClasses.map(aClassName => (
             <li className="classList" key={`${aClassName}`}>
               <div className="classLinkBox">
-                <NavLink className="classLink" to={`/doku/classes/${aClassName}`}>
+                <NavLink className="classLink" to={getPathToClass(aClassName)}>
                   {aClassName}
                 </NavLink>
               </div>

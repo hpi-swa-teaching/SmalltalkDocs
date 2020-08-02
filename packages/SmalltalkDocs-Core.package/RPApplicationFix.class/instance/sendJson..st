@@ -1,4 +1,4 @@
-removing
+actions
 sendJson: aString 
 	
 	self

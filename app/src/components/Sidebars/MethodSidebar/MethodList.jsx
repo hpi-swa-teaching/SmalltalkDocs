@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-
+import { getPathToMethod } from '../../../utils/pathMapper';
 import './MethodList.css';
 
 const MethodList = props => {
@@ -11,10 +11,7 @@ const MethodList = props => {
     <div className="methodList">
       {methodNames.map(aMethodName => (
         <li key={`${side}-${aMethodName}`}>
-          <NavLink
-            className="LinkText"
-            to={`/doku/classes/${currentClass}/methods/${side}/${aMethodName}`}
-          >
+          <NavLink className="LinkText" to={getPathToMethod(aMethodName, currentClass, side)}>
             {aMethodName}
           </NavLink>
         </li>

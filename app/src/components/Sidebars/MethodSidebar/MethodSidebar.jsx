@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { getClass, getClassMethods, getInstanceMethods } from '../../../utils/apiHandler';
+import { getPathToClass, getPathToDokuRoot, getPathToHelpClass } from '../../../utils/pathMapper';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import MethodList from './MethodList';
 
@@ -37,19 +38,19 @@ const MethodSidebar = props => {
             className="backToCategoriesBtn"
             type="button"
             key="goBack"
-            onClick={() => history.push('/doku')}
+            onClick={() => history.push(getPathToDokuRoot())}
           >
             Categories
           </button>
           <NavLink
             className="secondarySidebarTitle secondarySidebarTitleLink"
-            to={`/doku/classes/${currentClass}`}
+            to={getPathToClass(currentClass)}
           >
             {currentClass}
           </NavLink>
 
           {hasHelpPage ? (
-            <NavLink className="secondarySidebarTitle" to={`/doku/help/${currentClass}`}>
+            <NavLink className="secondarySidebarTitle" to={getPathToHelpClass(currentClass)}>
               Help Page
             </NavLink>
           ) : null}

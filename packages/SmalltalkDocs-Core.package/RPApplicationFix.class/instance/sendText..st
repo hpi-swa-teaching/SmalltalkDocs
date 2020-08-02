@@ -1,4 +1,4 @@
-removing
+actions
 sendText: aString 
 	
 	self
