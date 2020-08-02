@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import './ResultEnumeration.css';
+import './ResultEnumerationItem.css';
 
-const ResultEnumeration = props => {
+const ResultEnumerationItem = props => {
   const { linkText, linkPath } = props;
   return (
     <li className="resultEnumerationList">
@@ -14,9 +14,9 @@ const ResultEnumeration = props => {
   );
 };
 
-ResultEnumeration.propTypes = {
+ResultEnumerationItem.propTypes = {
   linkText: PropTypes.string.isRequired,
   linkPath: PropTypes.string.isRequired
 };
 
-export default ResultEnumeration;
+export default ResultEnumerationItem;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getUndocumentedClasses } from '../../../utils/apiHandler';
 import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
-import ResultEnumeration from '../ResultEnumeration/ResultEnumeration';
+import ResultEnumerationItem from '../../ResultEnumerationItem/ResultEnumerationItem';
 
 import './UndocumentedClassesView.css';
 
@@ -21,7 +21,7 @@ const UndocumentedClassesView = () => {
         <div>
           <ul className="undocumentedList">
             {uncommentedClasses.map(aClassName => (
-              <ResultEnumeration
+              <ResultEnumerationItem
                 key={aClassName}
                 linkText={aClassName}
                 linkPath={`/doku/classes/${aClassName}`}

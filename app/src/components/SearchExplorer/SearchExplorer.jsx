@@ -1,71 +1,38 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import ErrorIndicator from '../ErrorIndicator/ErrorIndicator';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
+import ResultEnumerationItem from '../ResultEnumerationItem/ResultEnumerationItem';
+import { getLinkToClass, getLinkToMethod } from '../../utils/pathMapper';
 import { searchForClasses, searchForMethods } from '../../utils/apiHandler';
 import './SearchExplorer.css';
 
 const SearchExplorer = () => {
-  const history = useHistory();
-
   const [currentSearchText, setCurrentSearchText] = useState('');
-  const [loadingSearchResults, setloadingSearchResults] = useState(false);
-  const [currentResult, setCurrentResult] = useState([]);
   const [shouldSearchClasses, setShouldSearchClass] = useState(true);
   const [shouldSearchMethods, setShouldSearchMethod] = useState(true);
 
-  const fetchResults = async event => {
+  const [foundClasses, setFoundClasses] = useState([]);
+  const [foundMethods, setFoundMethods] = useState([]);
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [existsError, setExistsError] = useState(false);
+
+  const isEmptySearchString = searchString => searchString.length <= 0;
+
+  const doSearch = async event => {
     event.preventDefault();
-    if (currentSearchText.length <= 0) {
-      setCurrentResult(<li>Nothing found due to empty search string!</li>);
+    if (existsError) {
       return;
     }
-    setloadingSearchResults(true);
-    const fetchedClasses = shouldSearchClasses
-      ? (await searchForClasses(currentSearchText)).sort()
-      : [];
-    const fetchedMethods = shouldSearchMethods
-      ? (await searchForMethods(currentSearchText)).sort()
-      : [];
-    // const fetchedClasses = (await searchForClasses(currentSearchText)).sort();
-    // const fetchedMethods = (await searchForMethods(currentSearchText)).sort();
-    // TODO: We do not store any JSX in component state
-    setCurrentResult(
-      [].concat(
-        fetchedClasses.map(aclass => (
-          <li key={aclass} className="searchList">
-            <button
-              className="searchButton"
-              type="button"
-              onClick={() => history.push(`/doku/classes/${aclass}`)}
-            >
-              {aclass}
-            </button>
-          </li>
-        )),
-        fetchedMethods.map(method => (
-          <li
-            key={`${method.className}-${method.side}-${method.methodName}`}
-            className="searchList"
-          >
-            <button
-              className="searchButton"
-              type="button"
-              onClick={() =>
-                history.push(
-                  `/doku/classes/${method.className}/methods/${method.side}/${method.methodName}`
-                )
-              }
-            >{`${method.className} ${method.methodName}`}</button>
-          </li>
-        ))
-      )
-    );
-    setloadingSearchResults(false);
+    setIsLoading(true);
+    setFoundClasses(shouldSearchClasses ? (await searchForClasses(currentSearchText)).sort() : []);
+    setFoundMethods(shouldSearchMethods ? (await searchForMethods(currentSearchText)).sort() : []);
+    setIsLoading(false);
   };
 
   return (
     <div className="explorer">
-      <form onSubmit={event => fetchResults(event)}>
+      <form onSubmit={event => doSearch(event)}>
         <input
           className="searchBox"
           type="text"
@@ -95,10 +62,42 @@ const SearchExplorer = () => {
           />
           Search for methods
         </label>
-        <input className="submitbutton" id="searchSubmit" type="submit" value="Search" />
+        <input className="submitButton" id="searchSubmit" type="submit" value="Search" />
       </form>
-      <div className="results">
-        {loadingSearchResults ? <LoadingIndicator /> : <ul>{currentResult}</ul>}
+      <div className="resultBox">
+        {/* TODO: style error message */}
+        <ErrorIndicator
+          errorState={existsError}
+          errorStateSetter={setExistsError}
+          errorMessage="Nothing found due to empty search string!"
+          errorConditions={[
+            { decisionFunction: isEmptySearchString, decisionValues: currentSearchText }
+          ]}
+        />
+        {isLoading ? (
+          <LoadingIndicator />
+        ) : (
+          <ul>
+            {foundClasses.map(aClass => (
+              <ResultEnumerationItem
+                key={`classResult-${aClass}`}
+                linkText={aClass}
+                linkPath={getLinkToClass(aClass)}
+              />
+            ))}
+            {foundMethods.map(aMethodAnswer => (
+              <ResultEnumerationItem
+                key={`${aMethodAnswer.className}-${aMethodAnswer.side}-${aMethodAnswer.methodName}`}
+                linkText={`${aMethodAnswer.className}:${aMethodAnswer.methodName}`}
+                linkPath={getLinkToMethod(
+                  aMethodAnswer.methodName,
+                  aMethodAnswer.className,
+                  aMethodAnswer.side
+                )}
+              />
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

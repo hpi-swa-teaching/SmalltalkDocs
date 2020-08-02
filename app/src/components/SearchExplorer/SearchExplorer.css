@@ -17,7 +17,7 @@ label {
   padding: 3px;
 }
 
-.submitbutton {
+.submitButton {
   /* Pointer/hand icon */
   position: relative;
   width: 200px;
@@ -30,29 +30,13 @@ label {
   cursor: pointer;
 }
 
-.searchButton {
-  width: 350px;
-  margin: 2px;
-  padding: 2px;
-  border: none;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #175578;
-  background: none;
-  font-size: 1.2rem;
-}
-
-.searchButton:hover {
-  color: #cfcfcf;
-}
-
-.results {
+.resultBox {
   height: 400px;
   overflow-y: auto;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
 
-.results::-webkit-scrollbar {
+.resultBox::-webkit-scrollbar {
   display: none;
 }

@@ -1,7 +1,7 @@
-import { baseURL } from '../config/constants';
+export const getLinkToClass = aClassName => `/doku/classes/${aClassName}`;
 
-export const getPathToMethod = (aMethodName, aClassName, theSite) =>
-  `${baseURL}/doku/classes/${aClassName}/methods/${theSite}/${aMethodName}`;
+export const getLinkToMethod = (aMethodName, aClassName, theSite) =>
+  `/doku/classes/${aClassName}/methods/${theSite}/${aMethodName}`;
 
 export const getPathToClass = aClassName => `/doku/classes/${aClassName}`;
 
