@@ -12,7 +12,7 @@ const getURLParameterFromKey = key => `:${key}`;
 const metricsKey = () => 'currentMetric';
 const classKey = () => 'currentClass';
 const methodKey = () => 'currentMethod';
-const methodSideKey = () => 'methodSide';
+const methodSideKey = () => 'site';
 
 export const getSpecificMetricsURLBluePrint = () =>
   getPathToMetrics(getURLParameterFromKey(metricsKey()));
