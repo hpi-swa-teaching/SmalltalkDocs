@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ErrorIndicator from '../ErrorIndicator/ErrorIndicator';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import ResultEnumerationItem from '../ResultEnumerationItem/ResultEnumerationItem';
-import { getLinkToClass, getLinkToMethod } from '../../utils/pathMapper';
+import { getPathToMethod, getPathToClass } from '../../utils/pathMapper';
 import { searchForClasses, searchForMethods } from '../../utils/apiHandler';
 import './SearchExplorer.css';
 
@@ -82,14 +82,14 @@ const SearchExplorer = () => {
               <ResultEnumerationItem
                 key={`classResult-${aClass}`}
                 linkText={aClass}
-                linkPath={getLinkToClass(aClass)}
+                linkPath={getPathToClass(aClass)}
               />
             ))}
             {foundMethods.map(aMethodAnswer => (
               <ResultEnumerationItem
                 key={`${aMethodAnswer.className}-${aMethodAnswer.side}-${aMethodAnswer.methodName}`}
                 linkText={`${aMethodAnswer.className}:${aMethodAnswer.methodName}`}
-                linkPath={getLinkToMethod(
+                linkPath={getPathToMethod(
                   aMethodAnswer.methodName,
                   aMethodAnswer.className,
                   aMethodAnswer.side

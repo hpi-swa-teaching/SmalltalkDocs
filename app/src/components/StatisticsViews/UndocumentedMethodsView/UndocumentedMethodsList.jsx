@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './UndocumentedMethodsList.css';
 import { NavLink } from 'react-router-dom';
-import { getLinkToMethod } from '../../../utils/pathMapper';
+import { getPathToMethod } from '../../../utils/pathMapper';
 
 // TODO: style component
 // TODO: is it possible to use ResultEnumerationItem?
@@ -15,7 +15,7 @@ const UndocumentedMethodsList = props => {
         <NavLink
           className="navButton"
           key={aMethod}
-          to={getLinkToMethod(aMethod, currentClass, site)}
+          to={getPathToMethod(aMethod, currentClass, site)}
         >
           {aMethod}
         </NavLink>
