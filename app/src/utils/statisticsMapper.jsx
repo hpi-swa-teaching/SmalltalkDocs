@@ -16,7 +16,7 @@ const statisticsViewsMapping = {
   undocumentedMethods: {
     component: (
       <Suspense fallback={<LoadingIndicator />}>
-        <UndocumentedMethodsView />{' '}
+        <UndocumentedMethodsView />
       </Suspense>
     ),
     statisticsName: 'Undocumented Methods'
@@ -24,7 +24,7 @@ const statisticsViewsMapping = {
   undocumentedClasses: {
     component: (
       <Suspense fallback={<LoadingIndicator />}>
-        <UndocumentedClassesView />{' '}
+        <UndocumentedClassesView />
       </Suspense>
     ),
     statisticsName: 'Undocumented Classes'
