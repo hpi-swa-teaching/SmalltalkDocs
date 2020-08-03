@@ -65,7 +65,7 @@ const SearchExplorer = () => {
         <input className="submitButton" id="searchSubmit" type="submit" value="Search" />
       </form>
       <div className="resultBox">
-        {/* TODO: style error message */}
+        {/* TODO: style error message (use css of component) */}
         <ErrorIndicator
           errorState={existsError}
           errorStateSetter={setExistsError}
