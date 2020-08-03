@@ -8,11 +8,10 @@ export const getPathToStatisticsRoot = () => '/statistics';
 export const getPathToMetrics = aMetrics => `/statistics/:${aMetrics}`;
 
 const getURLParameterFromKey = key => `:${key}`;
-
-const metricsKey = () => 'currentMetric';
-const classKey = () => 'currentClass';
-const methodKey = () => 'currentMethod';
-const methodSideKey = () => 'site';
+export const metricsKey = () => 'currentMetric';
+export const classKey = () => 'currentClass';
+export const methodKey = () => 'currentMethod';
+export const methodSideKey = () => 'site';
 
 export const getSpecificMetricsURLBluePrint = () =>
   getPathToMetrics(getURLParameterFromKey(metricsKey()));

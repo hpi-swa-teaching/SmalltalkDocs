@@ -20,6 +20,7 @@ const ExplorationPage = () => {
   const MethodView = lazy(() => import('../../components/ExplorationViews/MethodView/MethodView'));
 
   // TODO: write tests for matchers
+  // TODO: decide, should it be part of the pathMappers?
   const isLandingPath = () => /^\/doku$/.test(pathLocation.pathname);
   const isHelpBookPath = () =>
     /^\/doku\/help\//.test(pathLocation.pathname) && pathParams.currentClass != null;
