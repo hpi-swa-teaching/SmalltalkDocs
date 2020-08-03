@@ -17,6 +17,7 @@ const MetricsSidebar = props => {
         {getStatisticsNavigationMapping().map(aStatistics => (
           <li className="metricsList" key={`${aStatistics.caption}`}>
             <div className="metricsLinkBox">
+              {/* TODO introduce path Mappers */}
               <NavLink
                 className="metricsLink"
                 hidden={!isOpen}

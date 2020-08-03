@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import { getPathToRoot } from '../../../utils/pathMapper';
 
 import './SidebarHeader.css';
 
@@ -13,7 +14,7 @@ const SidebarHeader = props => {
     <div className={isOpen ? 'openedHead' : 'closedHead'}>
       {isOpen ? (
         <div>
-          <NavLink to="/">
+          <NavLink to={getPathToRoot()}>
             <img alt="" className="logo" src={logo} />
           </NavLink>
           <p className="headTitle">Småprat</p>
