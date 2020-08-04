@@ -1,7 +1,5 @@
 testing GetMethodText
 testGetMethodTextInstanceMethodWithArgument
-	| result contents |
-	result := RPTestHelper get: '/env/classes/SmapratMockClass/methods/instance/method3:/text' on: api.
-	self assertOkTextResponse: result.
-	contents := result contents contents.
+	| contents |
+	contents := self checkOkTextResponseAt: '/env/classes/SmapratMockClass/methods/instance/method3:/text'.
 	self assert: contents = (SmapratMockClass methodDict at: #method3:) getSource asString withUnixLineEndings.

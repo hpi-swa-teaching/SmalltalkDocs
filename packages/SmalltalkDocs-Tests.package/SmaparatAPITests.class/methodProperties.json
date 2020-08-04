@@ -48,7 +48,7 @@
 		"testGetMethodTextClassMethodNoArgument" : "max 8/4/2020 12:34",
 		"testGetMethodTextClassMethodWithArgument" : "max 8/4/2020 12:34",
 		"testGetMethodTextInstanceMethodNoArgument" : "max 8/4/2020 12:34",
-		"testGetMethodTextInstanceMethodWithArgument" : "max 8/4/2020 12:06",
+		"testGetMethodTextInstanceMethodWithArgument" : "max 8/4/2020 15:03",
 		"testGetMethodTextInvalidClassClassMethod" : "phpfs2 6/19/2020 16:40",
 		"testGetMethodTextInvalidClassInstanceMethod" : "phpfs2 6/19/2020 16:38",
 		"testGetMethodTextInvalidClassMethod" : "max 6/20/2020 14:46",

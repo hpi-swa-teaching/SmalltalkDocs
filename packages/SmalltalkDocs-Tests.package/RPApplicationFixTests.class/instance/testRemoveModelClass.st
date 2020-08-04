@@ -1,6 +1,6 @@
 accessing
 testRemoveModelClass
-
+	"Copied from RatPack-Testing"
 	self app registerModel: RPTestModel.
 	self assert: (self app getRegisteredModel: 'RPTestModel') equals: RPTestModel.
 	app removeModel: RPTestModel.
