@@ -19,6 +19,7 @@ const ExplorationPage = () => {
   const HelpView = lazy(() => import('../../components/ExplorationViews/HelpView/HelpView'));
   const MethodView = lazy(() => import('../../components/ExplorationViews/MethodView/MethodView'));
 
+  // TODO: move it to an exporationMapper.jsx
   // TODO: write tests for matchers
   // TODO: decide, should it be part of the pathMappers?
   const isLandingPath = () => /^\/doku$/.test(pathLocation.pathname);
