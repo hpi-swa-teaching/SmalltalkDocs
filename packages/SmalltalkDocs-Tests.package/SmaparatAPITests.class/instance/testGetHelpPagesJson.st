@@ -1,10 +1,8 @@
 testing GetHelpPages
 testGetHelpPagesJson
-
-	| result |
-	result := RPTestHelper get: '/help/MockHelpBook/pages' on: api.
-	self assert: result contentType = 'application/json'.
-	self assert: result status = #ok.
-	self assert: result contents contents = '{"pages":[{"pageName":"first","isGivenByClass":true},{"pageName":"second","isGivenByClass":true},{"pageName":"MockSubHelpBook","isGivenByClass":false}]}'.
+	| contents |
+	self flag: 'Refactor Json Object.'.
+	contents := self checkOkJsonResponseAt: '/help/MockHelpBook/pages'.
+	self assert: contents = (Json readFrom: '{"pages":[{"pageName":"first","isGivenByClass":true},{"pageName":"second","isGivenByClass":true},{"pageName":"MockSubHelpBook","isGivenByClass":false}]}' readStream).
 	
 	

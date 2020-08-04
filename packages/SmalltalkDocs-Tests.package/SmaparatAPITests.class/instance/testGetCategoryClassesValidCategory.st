@@ -1,11 +1,9 @@
 testing GetCategoryClasses
 testGetCategoryClassesValidCategory
-	| category result contents classes |
+	| category contents classes |
+	self flag: 'Refactor implementation in test'.
 	category := self class category asString.
-	result := RPTestHelper get: '/env/categories/', category on: api.
-	self assert: result contentType = 'application/json'.
-	self assert: result status = #ok.
-	contents := Json readFrom: result contents contents readStream.
+	contents := self checkOkJsonResponseAt:  '/env/categories/', category.
 	classes := (Environment current packageOrganizer 
 		packageNamed: category ifAbsent: [] ) classes collect: [
 			:class | class name asString].

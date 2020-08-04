@@ -1,10 +1,7 @@
 testing GetSearchResults
 testGetSearchResultsClassWithoutWildcard
-	| result contents classes |
-	result := RPTestHelper get: '/env/search/classes/SmapratMockClass' on: self api.
-	self assert: result contentType = 'application/json'.
-	self assert: result status = #ok.
-	contents := Json readFrom: result contents contents readStream.
+	| contents classes |
+	contents := self checkOkJsonResponseAt: '/env/search/classes/SmapratMockClass'.
 	classes := (contents at: 'classes').
 	self deny: (classes includes: 'MockClassNoComment').
 	self assert: (classes includes: 'SmapratMockClass').
