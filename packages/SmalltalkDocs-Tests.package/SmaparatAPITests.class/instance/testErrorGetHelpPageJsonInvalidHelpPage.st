@@ -1,0 +1,3 @@
+testing GetHelpPages
+testErrorGetHelpPageJsonInvalidHelpPage
+	self assertNoSuchHelpPageAt: '/help/MockHelpBook/pages/theAnswerToLife'

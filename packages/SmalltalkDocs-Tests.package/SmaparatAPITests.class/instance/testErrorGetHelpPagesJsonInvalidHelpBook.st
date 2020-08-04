@@ -1,0 +1,3 @@
+testing GetHelpPages
+testErrorGetHelpPagesJsonInvalidHelpBook
+	self assertNotAHelpBookAt: '/help/SmapratMockClass/pages'
