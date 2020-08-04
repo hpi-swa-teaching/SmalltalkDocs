@@ -1,3 +1,3 @@
-handler
+error response
 sendErrorNoSuchClass
-	self send404WithTitle: 'The requested class does not exist.'.
+	self sendNotFoundResponseWithTitle: 'The requested class does not exist.'.

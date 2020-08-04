@@ -1,13 +1,13 @@
-handler
-send404WithTitle: aString
+error response
+sendErrorResponseWithStatusCode: aStatusCode andTitle: aString
 	| bodyJson |
 	bodyJson := Dictionary newFrom: {
-		'status' -> 404. 
-		'title' ->aString. 
+		'status' -> aStatusCode. 
+		'title' -> aString. 
 		'type' -> 'about:blank'}.
 	bodyJson := bodyJson asJsonString.
 	self
-		status: 404;
+		status: aStatusCode;
 		contentType: 'application/error+json';
 		body:  bodyJson contents;
 		headersPut: self settings globalHeaders.

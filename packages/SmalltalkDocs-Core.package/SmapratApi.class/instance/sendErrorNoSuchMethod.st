@@ -1,3 +1,3 @@
-handler
+error response
 sendErrorNoSuchMethod
-	self send404WithTitle: 'The requested method does not exist.'.
+	self sendNotFoundResponseWithTitle: 'The requested method does not exist.'.
