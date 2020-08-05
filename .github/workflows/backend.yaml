@@ -31,6 +31,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Inform Coveralls about build completion
+    - name: Notify Coveralls that parallel builds have finished
       run: |
         curl https://coveralls.io/webhook?repo_token=${{ secrets.COVERALLS_REPO_TOKEN }} -d "payload[build_num]=${{ github.run_id }}&payload[status]=done"
