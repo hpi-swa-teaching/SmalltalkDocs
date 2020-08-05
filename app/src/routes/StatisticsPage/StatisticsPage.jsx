@@ -11,7 +11,7 @@ const StatisticsPage = () => {
   const [isSideOpen, setIsSideOpen] = useState(true);
   const toggleIsSideOpen = () => setIsSideOpen(!isSideOpen);
 
-  // TODO: style component
+
   return (
     <div className="bigBox">
       <MetricsSidebar isOpen={isSideOpen} toggleIsOpen={toggleIsSideOpen} />

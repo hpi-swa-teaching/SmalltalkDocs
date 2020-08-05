@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import './ErrorIndicator.css';
 
-// TODO: style component
 // TODO: do we need any tests for this component?
+// TODO: Fix error message is shown when reloading the page without searching
 const ErrorIndicator = props => {
   const {
     errorConditions,
@@ -23,7 +23,7 @@ const ErrorIndicator = props => {
     [errorConditions, existsError, setExistsError]
   );
 
-  return existsError ? <div>{errorMessage}</div> : null;
+  return existsError ? <div className="errorText">{errorMessage}</div> : null;
 };
 
 ErrorIndicator.propTypes = {
