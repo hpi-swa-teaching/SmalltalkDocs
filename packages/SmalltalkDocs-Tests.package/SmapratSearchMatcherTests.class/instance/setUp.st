@@ -1,3 +1,3 @@
 running
 setUp
-	self searchMatcher: SearchMatcher new.
+	self searchMatcher: SmapratSearchMatcher new.

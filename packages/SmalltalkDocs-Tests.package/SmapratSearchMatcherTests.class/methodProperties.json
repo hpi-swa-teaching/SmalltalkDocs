@@ -4,7 +4,7 @@
 	"instance" : {
 		"searchMatcher" : "max 6/20/2020 12:27",
 		"searchMatcher:" : "max 6/20/2020 12:27",
-		"setUp" : "max 6/20/2020 12:19",
+		"setUp" : "max 8/5/2020 17:05",
 		"testDefaultWildcard" : "max 6/20/2020 13:39",
 		"testMatchStringSimple" : "max 6/20/2020 14:12",
 		"testMatchStringWithOneWildcard" : "max 6/20/2020 12:50",
