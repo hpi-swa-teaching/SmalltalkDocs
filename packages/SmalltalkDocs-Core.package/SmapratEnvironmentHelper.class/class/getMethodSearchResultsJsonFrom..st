@@ -1,7 +1,7 @@
 serializer
 getMethodSearchResultsJsonFrom: aSearchString
 	| result matcher matchedMethods allMethods |
-	matcher := SearchMatcher new.
+	matcher := SmapratSearchMatcher new.
 	matcher searchTerm: aSearchString.
 	allMethods := self buildMethodDict.
 	matchedMethods := allMethods select: [:method | matcher matches: (method at: 'methodName')].

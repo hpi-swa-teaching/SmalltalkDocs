@@ -4,4 +4,4 @@ getCategoryClassesFrom: aCategoryName
 	| category |
 	category := Environment current packageOrganizer 
 		packageNamed: aCategoryName ifAbsent:  [self sendErrorNoSuchCategory. ^ nil].
-	self sendJson: (EnvironmentHelper getCategoryInfoJsonFrom: category).
+	self sendJson: (SmapratEnvironmentHelper getCategoryInfoJsonFrom: category).

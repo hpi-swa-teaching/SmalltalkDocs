@@ -4,6 +4,6 @@ getHelpPageFrom: aClassName at: aPageName
 	| class |
 	(Environment current hasClassNamed: aClassName) ifFalse: [self sendErrorNoSuchClass. ^ nil].
 	class := (Environment current classNamed: aClassName).
-	(HelpPageSerializer isHelpBook: class) ifFalse: [self sendErrorNotAHelpBook. ^ nil.].
+	(SmapratHelpPageSerializer isHelpBook: class) ifFalse: [self sendErrorNotAHelpBook. ^ nil.].
 	(class class includesSelector: aPageName asSymbol) ifFalse: [self sendErrorNoSuchHelpPage. ^ nil].
-	self sendJson: (HelpPageSerializer bookPageJsonFrom: class readFrom: aPageName).
+	self sendJson: (SmapratHelpPageSerializer bookPageJsonFrom: class readFrom: aPageName).

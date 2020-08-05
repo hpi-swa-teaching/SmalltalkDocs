@@ -4,4 +4,4 @@ getMethods: aClassName
 	|class|
 	(Environment current hasClassNamed: aClassName) ifFalse: [self sendErrorNoSuchClass. ^ nil].
 	class := (Environment current classNamed: aClassName).
-	self sendJson: (EnvironmentHelper getMethodsJsonFrom: class).
+	self sendJson: (SmapratEnvironmentHelper getMethodsJsonFrom: class).

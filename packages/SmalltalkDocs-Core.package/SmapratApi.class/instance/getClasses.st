@@ -1,4 +1,4 @@
 handler
 getClasses
 	<get: '/env/classes'>
-	self sendJson: EnvironmentHelper getClassesJson.
+	self sendJson: SmapratEnvironmentHelper getClassesJson.

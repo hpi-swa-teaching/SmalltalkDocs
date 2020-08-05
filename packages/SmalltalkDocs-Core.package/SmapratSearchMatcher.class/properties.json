@@ -8,7 +8,7 @@
 	"instvars" : [
 		"searchTerm",
 		"wildcard" ],
-	"name" : "SearchMatcher",
+	"name" : "SmapratSearchMatcher",
 	"pools" : [
 		 ],
 	"super" : "Object",

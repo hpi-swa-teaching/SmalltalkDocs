@@ -4,4 +4,4 @@ getClassInfoFrom: aClassName
 	| class |
 	(Environment current hasClassNamed: aClassName) ifFalse: [self sendErrorNoSuchClass. ^ nil].
 	class := (Environment current classNamed: aClassName).
-	self sendJson: (EnvironmentHelper getClassInfoJsonFrom: class).
+	self sendJson: (SmapratEnvironmentHelper getClassInfoJsonFrom: class).

@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MockClassNoComment",
+		"mockHelpBook",
+		"helpPageSerializer" ],
+	"name" : "SmapratHelpPageSerializerTests",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TestCase",
 	"type" : "normal" }
