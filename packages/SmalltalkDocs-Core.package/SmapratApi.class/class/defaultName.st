@@ -1,3 +1,3 @@
 constants
 defaultName
-	^'SmapratApi'
+	^ 'SmapratApi'

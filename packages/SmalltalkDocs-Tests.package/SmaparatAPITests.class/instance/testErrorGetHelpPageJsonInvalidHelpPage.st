@@ -1,3 +1,3 @@
 testing GetHelpPages
 testErrorGetHelpPageJsonInvalidHelpPage
-	self assertNoSuchHelpPageAt: '/help/MockHelpBook/pages/theAnswerToLife'
+	self assertNoSuchHelpPageAt: '/help/SmapratMockHelpBook/pages/theAnswerToLife'

@@ -5,4 +5,4 @@ setUp
 	self mockHelpBook: SmapratMockHelpBook.
 	self mockHelpBook superclass: CustomHelp.
 	CustomHelp addSubclass: self mockHelpBook.
-	self helpPageSerializer: HelpPageSerializer.
+	self helpPageSerializer: SmapratHelpPageSerializer.
