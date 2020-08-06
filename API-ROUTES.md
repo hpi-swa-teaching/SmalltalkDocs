@@ -153,7 +153,7 @@ Returns information on a method. `hasPrecodeComment` thereby specifies, wether a
 
 ### GET `/env/classes/<ClassName>/methods/<instance|class>/<methodName>/text`
 
-Returns the source code of the designated method as `text/plain`. _(methodName may include a :)_
+Returns the source code of the designated method as `text/plain`. _(methodName may include a `:)_
 
 **Example:**
 
