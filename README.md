@@ -38,13 +38,11 @@ The artifact is named "smaprat-frontend.zip" and contains a compiled version of 
 
 Next, you can place these files within the `www` folder of a supported webserver.  
 One popular solution is [`serve`](github.com/vercel/serve) - install it via `npm i -g serve` and then run `serve -s .` inside the unzipped artifact directory (containing the `index.html` file).
-*Alternatively, ou can use e.g. Nginx with the provided file in `app/nginx.example`. This is recommended for larger scale deployments.*
+*Alternatively, one can use e.g. Nginx with the provided file in `app/nginx.example`. This is recommended for larger scale deployments.*
 
 #### Advanced installation
 
-If you want to change things within the frontend or participate in development, please clone this repository with the git command line utility into a directory on your file system. Afterwards, you'll need to install a LTS version of NodeJS and update your NPM version. Then, open the repository's `./app` directory on your file system and run `npm install`. This will install all required packages locally inside then `./app/node_modules`. A simple `npm start` will run start up the development server.
-
-Please see [`./app/README.md`](./app/README.md) for more information.
+If you want to change things within the frontend or participate in development, please see [`./app/README.md`](./app/README.md) for more information.
 
 ## License
 
