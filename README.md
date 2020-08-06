@@ -36,8 +36,9 @@ Since the Smaprat frontend uses React, there are two fundamental ways to get a l
 Download the latest artifact .zip from the Github Actions page of this repository - e.g. for [branch:dev](https://github.com/hpi-swa-teaching/SmalltalkDocs/actions?query=workflow%3A%22Frontend+CI%22+branch%3Adev).
 The artifact is named "smaprat-frontend.zip" and contains a compiled version of the React `.jsx` code.
 
-Next, you can place these files within the `www` folder of a supported webserver - or use the Smaprat APP server that comes with SmalltalkDocs API (place files with folder `frontend`).  
-*Alternatively, you can use e.g. Nginx with the provided file in `app/nginx.example`. This is recommended for larger scale deployments.*
+Next, you can place these files within the `www` folder of a supported webserver.  
+One popular solution is [`serve`](github.com/vercel/serve) - install it via `npm i -g serve` and then run `serve -s .` inside the unzipped artifact directory (containing the `index.html` file).
+*Alternatively, ou can use e.g. Nginx with the provided file in `app/nginx.example`. This is recommended for larger scale deployments.*
 
 #### Advanced installation
 
