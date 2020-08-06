@@ -27,6 +27,8 @@ Afterwards, you can open the "RatPack Control Panel" to start the API itself.
 
 To be able to actively develop for SmalltalkDocs Smaprat, please clone this GitHub repository with the "Git Browser" and checkout all objects afterwards. _(You may have to switch the baseline from above to the "dev" branch first!)_
 
+*All API routes are definied within the [`./API-ROUTES.md`](./API-ROUTES.md).*
+
 ### Smaprat Frontend
 
 Since the Smaprat frontend uses React, there are two fundamental ways to get a local copy running.
