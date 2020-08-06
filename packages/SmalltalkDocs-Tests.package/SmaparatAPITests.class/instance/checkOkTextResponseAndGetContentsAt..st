@@ -1,5 +1,5 @@
 helper-functions
-checkOkTextResponseAt: anURL
+checkOkTextResponseAndGetContentsAt: anURL
 	| response |
 	response := self getFrom: anURL.
 	self assertOkTextResponse: response.

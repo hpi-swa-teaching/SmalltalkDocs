@@ -1,7 +1,7 @@
 testing GetSearchResults
 testGetSearchResultsClassWithWildcardBetween
 	| contents classes |
-	contents := self checkOkJsonResponseAt:'/env/search/classes/SmapratMockClass%mment'.
+	contents := self checkOkJsonResponseAndGetContentsAt:'/env/search/classes/SmapratMockClass%mment'.
 	classes := (contents at: 'classes').
 	self assert: (classes includes: 'SmapratMockClassNoComment').
 	self deny: (classes includes: 'SmapratMockClass').

@@ -1,7 +1,7 @@
 testing GetClassInfo
 testGetClassInfoForHelpBook
 	| contents |
-	contents := self checkOkJsonResponseAt: '/env/classes/SmapratMockHelpBook'.
+	contents := self checkOkJsonResponseAndGetContentsAt: '/env/classes/SmapratMockHelpBook'.
 	self assert: (contents at: 'isHelpBook') = true.
 	self assert: (contents at: 'hasClassComment') = false.
 	self assert: (contents at: 'classComment') = nil.

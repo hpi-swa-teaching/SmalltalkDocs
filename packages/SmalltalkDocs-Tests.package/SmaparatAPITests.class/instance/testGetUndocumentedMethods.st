@@ -1,7 +1,7 @@
 testing GetUndocumentedMethods
 testGetUndocumentedMethods
 	| contents |
-	contents := self checkOkJsonResponseAt: '/statistics/undocumented/methods/SmapratMockClass'.
+	contents := self checkOkJsonResponseAndGetContentsAt: '/statistics/undocumented/methods/SmapratMockClass'.
 	self assert: ((contents at: 'instanceMethods') includesAllOf: #('bestmethodever' 'method1' 'method3:')).
 	self deny: ((contents at: 'instanceMethods') includesAllOf: #('method2' 'mockMainmethod' 'mockMethod')).
 	self assert: ((contents at: 'classMethods') includesAllOf: #('classMethod1' 'classMethod2' 'classMethod3')).

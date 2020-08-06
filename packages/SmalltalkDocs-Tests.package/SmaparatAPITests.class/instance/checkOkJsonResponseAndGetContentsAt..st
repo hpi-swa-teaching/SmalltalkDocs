@@ -1,5 +1,5 @@
 helper-functions
-checkOkJsonResponseAt: anURL
+checkOkJsonResponseAndGetContentsAt: anURL
 	| response |
 	response := self getFrom: anURL.
 	self assertOkJsonResponse: response.
