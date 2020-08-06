@@ -9,9 +9,9 @@ For larger deployments, an example Nginx config is provided as [nginx.example](.
 
 Not only deployments require special treatment - also development comes with some specialties. Since the raw source code files within this directory are not executable by themselves, you'll need a React development server in order to serve the local source code. You can find notes on this below.
 
-## Setup
+## Developemnt Setup
 
-### IDE configuration
+### IDE Configuration
 
 * Do not forget to install Jest Plugin for Webstorm (Preferences - Languages & Frameworks - JavaScript - Libraries - Download - 'jest' - Download and Install)
 * If you use VS Code add following statement to settings.json  
@@ -31,7 +31,7 @@ Clone the designated branch of this repository to a local directory. Next, open 
 
 Since React depends on NodeJS and NPM, you'll have to install a current version of both. The latest NodeJS LTS 12 and the most recent version of NPM are recommended. Then, install all node modules by running `npm install` - this will make sure to statify all development dependencies within the `./package.lock`. You can now use the React scripts below to run and build the code.
 
-### Available React scripts
+### Available React Scripts
 
 In the project directory, you can run:
 
@@ -84,7 +84,7 @@ In order to sustain a high code quality, automatic continuous integration is use
 2. In parallel, `npm test` runs all Jest tests. If a test fails, the whole CI build will fail.
 3. Finally, a React production build will be issued with `npm run build` and its artifact provided as `smaprat-frontend.zip`.
 
-## Code overview
+## Code Overview
 
 The source code is mainly contained within the `./src` directory. The `./public` directory only contains some assets and static html files with e.g. the site title. All content is generated dynamically by JS.
 
