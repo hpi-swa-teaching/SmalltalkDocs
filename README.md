@@ -12,7 +12,7 @@ Please follow these steps to run a SmalltalkDocs Smaprat on your own computer/se
 
 ### Smaprat API
 
-Open your Squeak image and run the following code from within a workspace:
+Open your Squeak image and run the following code from within a workspace. This will install the API with all its dependencies.
 
 ``` smalltalk
 Metacello new
@@ -25,13 +25,13 @@ Afterwards, you can open the "RatPack Control Panel" to start the API itself.
 
 #### Development
 
-To be able to actively develop for SmalltalkDocs Smaprat, please clone this GitHub repository with the "Git Browser" and checkout all objects afterwards. (You may have to switch the baseline from above to the "dev" branch first!)
+To be able to actively develop for SmalltalkDocs Smaprat, please clone this GitHub repository with the "Git Browser" and checkout all objects afterwards. _(You may have to switch the baseline from above to the "dev" branch first!)_
 
 ### Smaprat Frontend
 
 Since the Smaprat frontend uses React, there are two fundamental ways to get a local copy running.
 
-#### Easy installation
+#### Easy Installation
 
 Download the latest artifact .zip from the Github Actions page of this repository - e.g. for [branch:dev](https://github.com/hpi-swa-teaching/SmalltalkDocs/actions?query=workflow%3A%22Frontend+CI%22+branch%3Adev).
 The artifact is named "smaprat-frontend.zip" and contains a compiled version of the React `.jsx` code.
@@ -40,7 +40,7 @@ Next, you can place these files within the `www` folder of a supported webserver
 One popular solution is [`serve`](github.com/vercel/serve) - install it via `npm i -g serve` and then run `serve -s .` inside the unzipped artifact directory (containing the `index.html` file).
 *Alternatively, one can use e.g. Nginx with the provided file in `app/nginx.example`. This is recommended for larger scale deployments.*
 
-#### Advanced installation
+#### Advanced Installation
 
 If you want to change things within the frontend or participate in development, please see [`./app/README.md`](./app/README.md) for more information.
 
