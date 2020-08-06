@@ -60,7 +60,7 @@ jobs:
     - name: Run npm install
       run: npm install
     - name: Run tests
-      run: npm test
+      run: npm run test-cov
 
   build:
     needs: test
