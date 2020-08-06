@@ -138,7 +138,7 @@ Returns the total count of methods within a class and list of these on both side
 
 ### GET `/env/classes/<ClassName>/methods/<instance|class>/<methodName>`
 
-Returns information on a method. `hasPrecodeComment` thereby specifies, wether a method comment was specified _(default is null)_.
+Returns information on a method. `hasPrecodeComment` thereby specifies, wether a method comment was specified _(default is `null`)_.
 
 **Example:**
 
@@ -153,7 +153,7 @@ Returns information on a method. `hasPrecodeComment` thereby specifies, wether a
 
 ### GET `/env/classes/<ClassName>/methods/<instance|class>/<methodName>/text`
 
-Returns the source code of the designated method as `text/plain`. _(methodName may include a `:)_
+Returns the source code of the designated method as `text/plain`. _(methodName may include a `:`)_
 
 **Example:**
 
