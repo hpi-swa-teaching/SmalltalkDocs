@@ -1,3 +1,3 @@
 testing StandardConfiguration
 testDefaultName
-	self assert: self api name = 'a SmapratApi'.
+	self assert: self api class defaultName = 'SmapratApi'.
