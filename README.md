@@ -47,4 +47,4 @@ Please see [`./app/README.md`](./app/README.md) for more information.
 
 ## License
 
-tbd
+MIT License - see [`LICENSE`](./LICENSE)
