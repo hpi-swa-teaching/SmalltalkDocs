@@ -10,7 +10,7 @@ SmalltalkDocs is a REST API for your Squeak image - it comes with the Smaprat we
 
 Please follow these steps to run a SmalltalkDocs Smaprat on your own computer/server.
 
-### Smalltalk API
+### Smaprat API
 
 Open your Squeak image and run the following code from within a workspace:
 
@@ -25,7 +25,7 @@ Afterwards, you can open the "RatPack Control Panel" to start the API itself.
 
 #### Development
 
-To be able to actively develop for SmalltalkDocs, please clone this GitHub repository with the "Git Browser" and checkout all objects afterwards. (You may have to switch the baseline from above to the "dev" branch first!)
+To be able to actively develop for SmalltalkDocs Smaprat, please clone this GitHub repository with the "Git Browser" and checkout all objects afterwards. (You may have to switch the baseline from above to the "dev" branch first!)
 
 ### Smaprat Frontend
 
