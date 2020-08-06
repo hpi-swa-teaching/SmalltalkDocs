@@ -28,6 +28,7 @@ jobs:
           COVERALLS_PARALLEL: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   finish:
+    name: Notify Coveralls
     needs: build
     runs-on: ubuntu-latest
     if: always()
