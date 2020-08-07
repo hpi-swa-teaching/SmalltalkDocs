@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import './ErrorIndicator.css';
 
-// TODO: do we need any tests for this component?
 const ErrorIndicator = props => {
   const {
     errorConditions,
