@@ -42,21 +42,23 @@ const SearchExplorer = () => {
           size="30"
           value={currentSearchText}
         />
-        <label htmlFor="classSearchCheck" className="check">
+        <label htmlFor="classSearchCheck" className="checkClasses">
           <input
             id="classSearchCheck"
             name="classSearch"
             type="checkbox"
+            className="checkBox"
             checked={shouldSearchClasses}
             onChange={() => setShouldSearchClass(!shouldSearchClasses)}
           />
           Search for classes
         </label>
-        <label htmlFor="methodSearchCheck" className="check">
+        <label htmlFor="methodSearchCheck" className="checkMethods">
           <input
             id="methodSearchCheck"
             name="methodSearch"
             type="checkbox"
+            className="checkBox"
             checked={shouldSearchMethods}
             onChange={() => setShouldSearchMethod(!shouldSearchMethods)}
           />
