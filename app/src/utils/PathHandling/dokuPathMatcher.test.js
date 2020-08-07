@@ -13,9 +13,8 @@ import {
   getPathToMethod
 } from './pathMapper';
 
-// TODO: think about descriptions
-describe('Test path matchers for documentation', () => {
-  test('Test matcher for exploration landing page', () => {
+describe('Test wether the documentation\'s path matchers detect as expected', () => {
+  test('Test matching the landing page', () => {
     expect(
       isLandingPath(buildLocationObj(getPathToDokuRoot()), buildEmptyPathParamsObj())
     ).toBeTruthy();
@@ -30,7 +29,7 @@ describe('Test path matchers for documentation', () => {
     ).toBeFalsy();
   });
 
-  test('Test matcher for page of a help book', () => {
+  test('Test matching a help book', () => {
     expect(
       isHelpBookPath(
         buildLocationObj(getPathToHelpClass(getSampleClassName())),
@@ -48,7 +47,7 @@ describe('Test path matchers for documentation', () => {
     ).toBeFalsy();
   });
 
-  test('Test matcher for the page of a class', () => {
+  test('Test matching a class page', () => {
     expect(
       isClassRootPath(
         buildLocationObj(getPathToClass(getSampleClassName())),
@@ -66,7 +65,7 @@ describe('Test path matchers for documentation', () => {
     ).toBeFalsy();
   });
 
-  test('Test matcher for the page of a method', () => {
+  test('Test matching a method page', () => {
     expect(
       isMethodPath(
         buildLocationObj(
