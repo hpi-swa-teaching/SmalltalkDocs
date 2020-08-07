@@ -12,7 +12,7 @@ import {
 
 const NotFound = lazy(() => import('../NotFound/NotFound'));
 const RootLandingPage = lazy(() => import('../RootLandingPage/RootLandingPage'));
-const StatisticsView = lazy(() => import('../StatisticsPage/StatisticsPage'));
+const StatisticsView = lazy(() => import('../MetricsPage/MetricsPage'));
 const ExplorationView = lazy(() => import('../ExplorationPage/ExplorationPage'));
 
 const App = () => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './UnkownStatistics.css';
+import './UnknownMetrics.css';
 
 // TODO: style component
 const UnknownStatistics = props => {

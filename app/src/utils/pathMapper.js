@@ -5,10 +5,10 @@ export const getPathToDokuRoot = () => '/doku';
 export const getPathToHelpClass = aClassName => `/doku/help/${aClassName}`;
 export const getPathToRoot = () => '/';
 export const getPathToStatisticsRoot = () => '/statistics';
-export const getPathToMetrics = aMetrics => `/statistics/:${aMetrics}`;
+export const getPathToMetrics = aMetrics => `/statistics/${aMetrics}`;
 
 const getURLParameterFromKey = key => `:${key}`;
-export const metricsKey = () => 'currentMetric';
+export const metricsKey = () => 'currentMetrics';
 export const classKey = () => 'currentClass';
 export const methodKey = () => 'currentMethod';
 export const methodSideKey = () => 'site';

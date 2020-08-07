@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import MetricsSidebar from '../../components/Sidebars/MetricsSidebar/MetricsSidebar';
-import StatisticsLandingView from '../../components/StatisticsViews/StatisticsLandingView/StatisticsLandingView';
-import { getStatisticsViewFromParameter } from '../../utils/statisticsMapper';
+import MetricsLandingView from '../../components/MetricsViews/MetricsLandingView/MetricsLandingView';
+import { getMetricsViewFromParameter } from '../../components/Sidebars/MetricsSidebar/metricsMapper';
 
-import './StatisticsPage.css';
+import './MetricsPage.css';
 
-const StatisticsPage = () => {
+const MetricsPage = () => {
   const pathParams = useParams();
   const [isSideOpen, setIsSideOpen] = useState(true);
   const toggleIsSideOpen = () => setIsSideOpen(!isSideOpen);
@@ -15,14 +15,14 @@ const StatisticsPage = () => {
     <div className="bigBox">
       <MetricsSidebar isOpen={isSideOpen} toggleIsOpen={toggleIsSideOpen} />
       <div id={isSideOpen ? 'openedSidebar' : 'closedSidebar'} className="main">
-        {'currentMetric' in pathParams ? (
-          getStatisticsViewFromParameter(pathParams.currentMetric)
+        {'currentMetrics' in pathParams ? (
+          getMetricsViewFromParameter(pathParams.currentMetrics)
         ) : (
-          <StatisticsLandingView />
+          <MetricsLandingView />
         )}
       </div>
     </div>
   );
 };
 
-export default StatisticsPage;
+export default MetricsPage;

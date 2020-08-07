@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import StatisticsLandingView from './StatisticsLandingView';
+import UnknownStatistics from './UnknownMetrics';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
 
 let container = null;
@@ -15,15 +15,14 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('StatisticsLandingView', () => {
-  it('should display the statistics landing view site', () => {
+describe('UnknownStatistics', () => {
+  it('should display UnknownStatistics site', () => {
+    const testStatisticsName = 'test';
+
     act(() => {
-      render(<StatisticsLandingView />, container);
+      render(<UnknownStatistics statisticsName={testStatisticsName} />, container);
     });
 
-    expect(container.querySelector('h1')).toHaveTextContent('Welcome to Smaprat!');
-    expect(container.querySelector('h2')).toHaveTextContent(
-      'Start by selecting a metric from the list on the left :)'
-    );
+    expect(container).toHaveTextContent(`Statistics ${testStatisticsName} not found`);
   });
 });
