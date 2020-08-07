@@ -89,6 +89,7 @@ export const getUndocumentedClasses = async () =>
   fetch(`${baseURL}/statistics/undocumented/classes`)
     .then(response => response.json())
     .then(jsonObject => jsonObject.classes)
+    .then(classes => classes.sort())
     .catch(error => console.log(error));
 
 export const getUndocumentedMethodsOfClass = async aClass =>
