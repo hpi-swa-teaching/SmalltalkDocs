@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { getCategories } from '../../../utils/apiHandler';
+import { getCategories } from '../../../utils/BackendHandling/apiHandler';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import CategoriesList from './CategoriesList';
 

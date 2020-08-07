@@ -15,12 +15,12 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('LoadingIndicator', () => {
+describe('Loading Indicator', () => {
   it('should display LoadingIndicator', () => {
     act(() => {
       render(<LoadingIndicator />, container);
     });
 
-    expect(container.querySelector('.loadingText')).toBeInTheDocument();
+    expect(container.querySelector('.lds-ellipsis')).toBeInTheDocument();
   });
 });

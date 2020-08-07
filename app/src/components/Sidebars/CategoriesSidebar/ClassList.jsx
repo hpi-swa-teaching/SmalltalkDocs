@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { getClassesOfCategories } from '../../../utils/apiHandler';
-import { getPathToClass } from '../../../utils/pathMapper';
+import { getClassesOfCategories } from '../../../utils/BackendHandling/apiHandler';
+import { getPathToClass } from '../../../utils/PathHandling/pathMapper';
 import './ClassList.css';
 
 const ClassList = props => {

@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import SearchExplorer from './SearchExplorer';
 import { baseURL } from '../../config/constants';
 import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
+import { getSearchedMethodsOrClasses } from '../../test-utils/apiMocks';
 
 let container = null;
 const sampleSearchTerm = 'test%test';
@@ -21,7 +22,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('SearchExplorer', () => {
+describe('Search Explorer', () => {
   it('should display search form', async () => {
     await act(async () => {
       render(<SearchExplorer />, container);
@@ -30,35 +31,8 @@ describe('SearchExplorer', () => {
     expect(container.querySelector('form')).toBeInTheDocument();
   });
 
-  // TODO Test must be finished together with component SearchExplorer
   it('should search for classes and methods on submit', async () => {
-    const sampleMethods = {
-      methods: [
-        { className: 'TestClassName1', methodName: 'test1test1', side: 'instance' },
-        { className: 'TestClassName2', methodName: 'testThistestMe', side: 'class' },
-        { className: 'ThisIsAtestClass', methodName: 'testtest', side: 'instance' }
-      ]
-    };
-
-    const sampleClasses = {
-      classes: ['Test1', 'Test2']
-    };
-
-    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(arg => {
-      switch (arg) {
-        case `${baseURL}/env/search/methods/${sampleSearchTerm}`:
-          return Promise.resolve({
-            json: () => sampleMethods
-          });
-        case `${baseURL}/env/search/classes/${sampleSearchTerm}`:
-          return Promise.resolve({
-            json: () => sampleClasses
-          });
-        default:
-          break;
-      }
-      return null;
-    });
+    const fetchMock = getSearchedMethodsOrClasses(sampleSearchTerm);
 
     await act(async () => {
       render(

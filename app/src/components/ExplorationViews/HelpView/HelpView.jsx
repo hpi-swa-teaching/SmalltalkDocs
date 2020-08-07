@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { getContentOfBook } from '../../../utils/apiHandler';
+import { getContentOfBook } from '../../../utils/BackendHandling/apiHandler';
 import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
 
 const HelpView = ({ bookName }) => {

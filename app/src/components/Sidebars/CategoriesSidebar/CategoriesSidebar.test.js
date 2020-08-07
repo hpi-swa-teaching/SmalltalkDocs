@@ -4,6 +4,7 @@ import { act } from 'react-dom/test-utils';
 import { BrowserRouter as Router } from 'react-router-dom';
 import CategoriesSidebar from './CategoriesSidebar';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
+import { getFetchCategoriesMock } from '../../../test-utils/apiMocks';
 
 let container = null;
 beforeEach(() => {
@@ -16,21 +17,12 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('CategoriesSidebar', () => {
+describe('Categories Sidebar', () => {
   it('should displayed buttons with fetched categories', async () => {
     const isOpen = true;
     const toggleIsOpen = () => {};
 
-    const sampleCategoriesResponse = {
-      categories: ['SmapratCore', 'SmapratAPI', 'SmapratApp'],
-      count: 3
-    };
-
-    jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleCategoriesResponse
-      })
-    );
+    getFetchCategoriesMock();
 
     await act(async () => {
       render(
@@ -50,16 +42,7 @@ describe('CategoriesSidebar', () => {
     const isOpen = false;
     const toggleIsOpen = () => {};
 
-    const sampleCategoriesResponse = {
-      categories: ['SmapratCore', 'SmapratAPI', 'SmapratApp'],
-      count: 3
-    };
-
-    jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleCategoriesResponse
-      })
-    );
+    getFetchCategoriesMock();
 
     await act(async () => {
       render(
@@ -79,16 +62,7 @@ describe('CategoriesSidebar', () => {
     const isOpen = true;
     const toggleIsOpen = () => {};
 
-    const sampleCategoriesResponse = {
-      categories: ['SmapratCore', 'SmapratAPI', 'SmapratApp'],
-      count: 3
-    };
-
-    jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleCategoriesResponse
-      })
-    );
+    getFetchCategoriesMock();
 
     await act(async () => {
       render(
@@ -107,16 +81,7 @@ describe('CategoriesSidebar', () => {
     const isOpen = false;
     const toggleIsOpen = () => {};
 
-    const sampleCategoriesResponse = {
-      categories: ['SmapratCore', 'SmapratAPI', 'SmapratApp'],
-      count: 3
-    };
-
-    jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleCategoriesResponse
-      })
-    );
+    getFetchCategoriesMock();
 
     await act(async () => {
       render(

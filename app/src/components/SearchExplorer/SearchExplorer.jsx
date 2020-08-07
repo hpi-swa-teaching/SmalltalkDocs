@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import ErrorIndicator from '../ErrorIndicator/ErrorIndicator';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import ResultEnumerationItem from '../ResultEnumerationItem/ResultEnumerationItem';
-import { getPathToMethod, getPathToClass } from '../../utils/pathMapper';
-import { searchForClasses, searchForMethods } from '../../utils/apiHandler';
+import { getPathToMethod, getPathToClass } from '../../utils/PathHandling/pathMapper';
+import { searchForClasses, searchForMethods } from '../../utils/BackendHandling/apiHandler';
 import './SearchExplorer.css';
 
 const SearchExplorer = () => {
@@ -16,6 +16,7 @@ const SearchExplorer = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [existsError, setExistsError] = useState(false);
+  const [isUsed, setIsUsed] = useState(false);
 
   const isEmptySearchString = searchString => searchString.length <= 0;
 
@@ -32,7 +33,7 @@ const SearchExplorer = () => {
 
   return (
     <div className="explorer">
-      <form onSubmit={event => doSearch(event)}>
+      <form onSubmit={event => doSearch(event)} onChange={() => setIsUsed(true)}>
         <input
           className="searchBox"
           type="text"
@@ -42,21 +43,23 @@ const SearchExplorer = () => {
           size="30"
           value={currentSearchText}
         />
-        <label htmlFor="classSearchCheck" className="check">
+        <label htmlFor="classSearchCheck" className="checkClasses">
           <input
             id="classSearchCheck"
             name="classSearch"
             type="checkbox"
+            className="checkBox"
             checked={shouldSearchClasses}
             onChange={() => setShouldSearchClass(!shouldSearchClasses)}
           />
           Search for classes
         </label>
-        <label htmlFor="methodSearchCheck" className="check">
+        <label htmlFor="methodSearchCheck" className="checkMethods">
           <input
             id="methodSearchCheck"
             name="methodSearch"
             type="checkbox"
+            className="checkBox"
             checked={shouldSearchMethods}
             onChange={() => setShouldSearchMethod(!shouldSearchMethods)}
           />
@@ -72,6 +75,7 @@ const SearchExplorer = () => {
           errorConditions={[
             { decisionFunction: isEmptySearchString, decisionValues: currentSearchText }
           ]}
+          isActive={isUsed}
         />
         {isLoading ? (
           <LoadingIndicator />

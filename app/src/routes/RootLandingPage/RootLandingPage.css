@@ -16,31 +16,13 @@
   margin-left: 50px;
 }
 
-h1 {
-  position: relative;
-  margin-top: 20px;
-  color: #175578;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 56px;
-  text-align: center;
-}
-
-h2 {
-  position: relative;
-  color: #000;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-}
-
 .frame {
   text-align: center;
 }
 
 .heading {
   position: relative;
-  margin-top: 10%;
+  margin-top: 3%;
   color: #175578;
   font-size: 3.5rem;
   font-weight: bold;
@@ -58,7 +40,7 @@ h2 {
 .enterbutton {
   display: inline-block;
   width: 300px;
-  margin-top: 100px;
+  margin-top: 35px;
   margin-right: 50px;
   margin-left: 50px;
   padding: 10px;

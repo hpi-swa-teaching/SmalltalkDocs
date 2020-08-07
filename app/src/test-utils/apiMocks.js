@@ -2,6 +2,8 @@ import { baseURL } from '../config/constants';
 
 // mock results
 export const getSampleClassName = () => 'SampleClass';
+export const getSampleMethodName = () => 'getSmaprat';
+export const getSampleSide = () => 'instance';
 export const getSampleCategoryName = () => 'Smaprat';
 export const getSampleClassSearchTerm = () => 'Smaprat%';
 export const getSampleMethodSearchTerm = () => 'allSati%';
@@ -119,6 +121,11 @@ export const getSampleUndocumentedMethodsOfClassResponse = () => ({
   },
   instanceMethods: ['addInstVarNames:', 'asClassDefinition', 'asHelpTopic', 'withClassVersion:']
 });
+export const getSampleClassResponse = () => ({
+  count: { classMethods: 2, total: 12, instanceMethods: 10 },
+  hasClassComment: true,
+  classComment: 'this is a class comment'
+});
 
 // mock implementations
 export const getHelpPageInfoMock = () =>
@@ -151,6 +158,30 @@ export const getContentOfBookMock = () =>
     return Promise.resolve({
       json: () => getSampleHelpPageResponse()
     });
+  });
+
+export const getFetchMethodInfoAndCodeMock = (className, site, methodName) =>
+  jest.spyOn(global, 'fetch').mockImplementation(path => {
+    if (path === `${baseURL}/env/classes/${className}/methods/${site}/${methodName}`)
+      return Promise.resolve({
+        json: () => getSampleMethodInfoResponse()
+      });
+    return Promise.resolve({
+      text: () => getSampleMethodCodeResponse()
+    });
+  });
+
+export const getSearchedMethodsOrClasses = sampleSearchTerm =>
+  jest.spyOn(global, 'fetch').mockImplementation(path => {
+    if (path === `${baseURL}/env/search/methods/${sampleSearchTerm}`)
+      return Promise.resolve({
+        json: () => getSampleMethodSearchResponse()
+      });
+    if (path === `${baseURL}/env/search/classes/${sampleSearchTerm}`)
+      return Promise.resolve({
+        json: () => getSampleClassSearchResponse()
+      });
+    return null;
   });
 
 export const getFetchMethodsMock = () =>
@@ -215,3 +246,10 @@ export const getUndocumentedMethodsOfClassAPIMock = () =>
     .mockImplementation(() =>
       Promise.resolve({ json: () => getSampleUndocumentedMethodsOfClassResponse() })
     );
+
+export const getClassMock = () =>
+  jest.spyOn(global, 'fetch').mockImplementation(() =>
+    Promise.resolve({
+      json: () => getSampleClassResponse()
+    })
+  );

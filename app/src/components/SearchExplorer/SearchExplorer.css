@@ -3,7 +3,7 @@ label {
 }
 
 .explorer {
-  align-items: left;
+  margin-top: 30px;
   padding: 10px;
 }
 
@@ -12,8 +12,16 @@ label {
   padding: 10px;
 }
 
-.check {
-  position: relative;
+.checkBox {
+  margin-right: 10px;
+}
+
+.checkClasses {
+  margin-left: -9px;
+  padding: 3px;
+}
+
+.checkMethods {
   padding: 3px;
 }
 
@@ -31,7 +39,7 @@ label {
 }
 
 .resultBox {
-  height: 400px;
+  height: 500px;
   overflow-y: auto;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */

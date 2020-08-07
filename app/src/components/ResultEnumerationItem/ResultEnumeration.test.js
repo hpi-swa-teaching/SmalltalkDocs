@@ -16,7 +16,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('ResultEnumeration', () => {
+describe('Result Enumeration', () => {
   it('should display the result enumeration site', () => {
     const testLinkText = 'test';
     const testLinkPath = 'test';

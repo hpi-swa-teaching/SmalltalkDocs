@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { getPathToRoot } from '../../../utils/pathMapper';
+import { getPathToRoot } from '../../../utils/PathHandling/pathMapper';
 
 import './SidebarHeader.css';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { getStatisticsNavigationMapping } from '../../../utils/statisticsMapper';
+import { getMetricsNavigationMapping } from '../../../utils/ViewMappers/metricsMapper';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 
 import '../Sidebars.css';
@@ -14,16 +14,11 @@ const MetricsSidebar = props => {
       <SidebarHeader isOpen={isOpen} toggleOpen={toggleIsOpen} />
       {isOpen ? <p className="secondarySidebarTitle">Metrics</p> : null}
       <ul>
-        {getStatisticsNavigationMapping().map(aStatistics => (
-          <li className="metricsList" key={`${aStatistics.caption}`}>
+        {getMetricsNavigationMapping().map(aMetrics => (
+          <li className="metricsList" key={`${aMetrics.caption}`}>
             <div className="metricsLinkBox">
-              {/* TODO introduce path Mappers */}
-              <NavLink
-                className="metricsLink"
-                hidden={!isOpen}
-                to={`/statistics/${aStatistics.path}`}
-              >
-                {aStatistics.caption}
+              <NavLink className="metricsLink" hidden={!isOpen} to={`/statistics/${aMetrics.path}`}>
+                {aMetrics.caption}
               </NavLink>
             </div>
           </li>
