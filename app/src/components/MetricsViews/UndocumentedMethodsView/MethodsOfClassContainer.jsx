@@ -6,7 +6,7 @@ import UndocumentedMethodsList from './UndocumentedMethodsList';
 
 import './MethodsOfClassContainer.css';
 
-// TODO: style component and remove isActive prop if not needed
+// TODO: remove isActive prop if not needed
 const MethodsOfClassContainer = props => {
   const { theClassName, isActive } = props;
 
@@ -26,7 +26,7 @@ const MethodsOfClassContainer = props => {
   }, [isActive, theClassName]);
 
   return (
-    <div>
+    <div className="listContainer">
       {isActive ? (
         <div>
           {!isLoading ? (

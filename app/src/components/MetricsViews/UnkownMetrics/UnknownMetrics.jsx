@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './UnknownMetrics.css';
 
-// TODO: style component
+
 const UnknownStatistics = props => {
   const { statisticsName } = props;
-  return <div>Statistics {statisticsName} not found</div>;
+  return <h1>Statistics {statisticsName} not found</h1>;
 };
 
 UnknownStatistics.propTypes = {
