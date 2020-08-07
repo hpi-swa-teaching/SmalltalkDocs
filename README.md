@@ -21,11 +21,11 @@ Metacello new
     load.
 ```
 
-Afterwards, you can open the "RatPack Control Panel" to start the API itself.
+Afterwards, you can open the "RatPack Browser Window" with the "Apps" drawer and start the API itself by clicking on the white space and adding "SmapratApi".
 
 #### Development
 
-To be able to actively develop for SmalltalkDocs Smaprat, please clone this GitHub repository with the "Git Browser" and checkout all objects afterwards. _(You may have to switch the baseline from above to the "dev" branch first!)_
+To be able to actively develop for SmalltalkDocs Smaprat, please clone this GitHub repository with the "Git Browser" and checkout all objects afterwards. _(You may have to switch the baseline from above to the "dev" (or a different) branch first!)_
 
 *All API routes are definied within the [`./API-ROUTES.md`](./API-ROUTES.md).*
 
