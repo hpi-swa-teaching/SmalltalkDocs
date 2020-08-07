@@ -1,7 +1,6 @@
 testing GetCategoryClasses
 testGetCategoryClassesValidCategory
 	| category contents classes |
-	self flag: 'Refactor implementation in test'.
 	category := self class category asString.
 	contents := self checkOkJsonResponseAndGetContentsAt:  '/env/categories/', category.
 	classes := (Environment current packageOrganizer 
