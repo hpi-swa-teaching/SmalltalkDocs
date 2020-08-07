@@ -13,7 +13,7 @@ const UndocumentedClassesView = () => {
     const simpleFetch = async () => setUncommentedClasses(await getUndocumentedClasses());
     simpleFetch().then(() => setIsLoading(false));
   }, []);
-  // TODO: style component
+
   return (
     <div>
       <h1>Uncommented Classes</h1>

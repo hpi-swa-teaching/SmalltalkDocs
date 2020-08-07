@@ -5,7 +5,7 @@ import './UndocumentedMethodsList.css';
 import { NavLink } from 'react-router-dom';
 import { getPathToMethod } from '../../../utils/PathHandling/pathMapper';
 
-// TODO: style component
+
 // TODO: is it possible to use ResultEnumerationItem?
 const UndocumentedMethodsList = props => {
   const { methodList, site, currentClass } = props;
