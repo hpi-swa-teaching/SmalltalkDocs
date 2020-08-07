@@ -62,7 +62,7 @@ export const getExplorationViewByPath = (locationObj, paramsObj) =>
         <Suspense fallback={<LoadingIndicator />}>
           <MethodView
             currentClass={paramsObj[classKey()]}
-            site={paramsObj[methodSideKey()]}
+            side={paramsObj[methodSideKey()]}
             currentMethod={paramsObj[methodKey()]}
           />
         </Suspense>

@@ -17,7 +17,7 @@ afterEach(() => {
 });
 
 describe('Result Enumeration', () => {
-  it('should display the result enumeration site', () => {
+  it('should display the result enumeration side', () => {
     const testLinkText = 'test';
     const testLinkPath = 'test';
 

@@ -17,9 +17,9 @@ afterEach(() => {
 });
 
 describe('Undocumented Methods List', () => {
-  it('should display the UndocumentedMethodsList site', () => {
+  it('should display the UndocumentedMethodsList side', () => {
     const methodList = ['test1', 'test2'];
-    const site = 'test';
+    const side = 'test';
     const currentClass = 'test';
 
     act(() => {
@@ -27,7 +27,7 @@ describe('Undocumented Methods List', () => {
         <Router>
           <UndocumentedMethodsList
             currentClass={currentClass}
-            site={site}
+            side={side}
             methodList={methodList}
           />
         </Router>,

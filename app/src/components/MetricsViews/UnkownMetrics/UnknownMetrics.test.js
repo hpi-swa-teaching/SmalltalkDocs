@@ -16,7 +16,7 @@ afterEach(() => {
 });
 
 describe('Unknown Statistics', () => {
-  it('should display UnknownStatistics site', () => {
+  it('should display UnknownStatistics side', () => {
     const testStatisticsName = 'test';
 
     act(() => {

@@ -37,7 +37,7 @@ describe('Method View', () => {
       render(
         <MethodView
           currentClass={getSampleClassName()}
-          site={getSampleSide()}
+          side={getSampleSide()}
           currentMethod={getSampleMethodName()}
         />,
         container

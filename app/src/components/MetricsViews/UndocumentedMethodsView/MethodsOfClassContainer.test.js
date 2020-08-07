@@ -22,7 +22,7 @@ afterEach(() => {
 });
 
 describe('Methods Of Class Container', () => {
-  it('should display the MethodsOfClassContainer site', async () => {
+  it('should display the MethodsOfClassContainer side', async () => {
     const fetchMock = getUndocumentedMethodsOfClassAPIMock();
 
     await act(async () => {

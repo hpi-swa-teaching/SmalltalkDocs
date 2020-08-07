@@ -6,14 +6,14 @@ import { NavLink } from 'react-router-dom';
 import { getPathToMethod } from '../../../utils/PathHandling/pathMapper';
 
 const UndocumentedMethodsList = props => {
-  const { methodList, site, currentClass } = props;
+  const { methodList, side, currentClass } = props;
   return (
     <div className="navListContainer">
       {methodList.map(aMethod => (
         <NavLink
           className="navButton"
           key={aMethod}
-          to={getPathToMethod(aMethod, currentClass, site)}
+          to={getPathToMethod(aMethod, currentClass, side)}
         >
           {aMethod}
         </NavLink>
@@ -25,7 +25,7 @@ const UndocumentedMethodsList = props => {
 UndocumentedMethodsList.propTypes = {
   methodList: PropTypes.arrayOf(PropTypes.string).isRequired,
   currentClass: PropTypes.string.isRequired,
-  site: PropTypes.string.isRequired
+  side: PropTypes.string.isRequired
 };
 
 export default UndocumentedMethodsList;

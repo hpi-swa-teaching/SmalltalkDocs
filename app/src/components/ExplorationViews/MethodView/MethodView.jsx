@@ -6,7 +6,7 @@ import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
 import { getMethodInfo, getMethodText } from '../../../utils/BackendHandling/apiHandler';
 import './MethodView.css';
 
-const MethodView = ({ currentClass, site, currentMethod }) => {
+const MethodView = ({ currentClass, side, currentMethod }) => {
   const [loading, setLoading] = useState(true);
   const [methodText, setMethodText] = useState('');
   const [hasPrecodeComment, setHasPrecodeComment] = useState(false);
@@ -14,8 +14,8 @@ const MethodView = ({ currentClass, site, currentMethod }) => {
 
   useEffect(() => {
     const simpleFetch = async () => {
-      const methodResponse = await getMethodInfo(currentClass, site, currentMethod);
-      const methodTextResponse = await getMethodText(currentClass, site, currentMethod);
+      const methodResponse = await getMethodInfo(currentClass, side, currentMethod);
+      const methodTextResponse = await getMethodText(currentClass, side, currentMethod);
       // console.log(methodResponse);
       setMethodText(methodTextResponse);
       setHasPrecodeComment(methodResponse.hasPrecodeComment);
@@ -23,7 +23,7 @@ const MethodView = ({ currentClass, site, currentMethod }) => {
       setLoading(false);
     };
     simpleFetch();
-  }, [currentClass, site, currentMethod]);
+  }, [currentClass, side, currentMethod]);
 
   return (
     <div>
@@ -53,6 +53,6 @@ export default MethodView;
 
 MethodView.propTypes = {
   currentClass: PropTypes.string.isRequired,
-  site: PropTypes.string.isRequired,
+  side: PropTypes.string.isRequired,
   currentMethod: PropTypes.string.isRequired
 };

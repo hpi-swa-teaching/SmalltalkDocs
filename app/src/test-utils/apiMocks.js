@@ -160,9 +160,9 @@ export const getContentOfBookMock = () =>
     });
   });
 
-export const getFetchMethodInfoAndCodeMock = (className, site, methodName) =>
+export const getFetchMethodInfoAndCodeMock = (className, side, methodName) =>
   jest.spyOn(global, 'fetch').mockImplementation(path => {
-    if (path === `${baseURL}/env/classes/${className}/methods/${site}/${methodName}`)
+    if (path === `${baseURL}/env/classes/${className}/methods/${side}/${methodName}`)
       return Promise.resolve({
         json: () => getSampleMethodInfoResponse()
       });

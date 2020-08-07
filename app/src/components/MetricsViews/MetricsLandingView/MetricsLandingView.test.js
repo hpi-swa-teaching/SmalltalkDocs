@@ -16,7 +16,7 @@ afterEach(() => {
 });
 
 describe('Metrics Landing View', () => {
-  it('should display the statistics landing view site', () => {
+  it('should display the statistics landing view side', () => {
     act(() => {
       render(<MetricsLandingView />, container);
     });
