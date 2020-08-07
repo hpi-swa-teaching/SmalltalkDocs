@@ -116,10 +116,6 @@ The `App` folders contains the main route definitions while the actual route ide
 
 A page in react is composed of several components and rendered according to the parameters provided within the route identifier. For our application, each page has its own folder within the `routes` folder.
 
-### Styles
-
-The `styles` folder is currently empty, but would ideally include globally accesible SASS variables and classes for e.g. a global color scheme.
-
 ### Test-Utils
 
 The `test-utils` directory contains helper scripts for the Jest test runner used within this project.
