@@ -16,6 +16,7 @@ const SearchExplorer = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [existsError, setExistsError] = useState(false);
+  const [isUsed, setIsUsed] = useState(false);
 
   const isEmptySearchString = searchString => searchString.length <= 0;
 
@@ -32,7 +33,7 @@ const SearchExplorer = () => {
 
   return (
     <div className="explorer">
-      <form onSubmit={event => doSearch(event)}>
+      <form onSubmit={event => doSearch(event)} onChange={() => setIsUsed(true)}>
         <input
           className="searchBox"
           type="text"
@@ -74,6 +75,7 @@ const SearchExplorer = () => {
           errorConditions={[
             { decisionFunction: isEmptySearchString, decisionValues: currentSearchText }
           ]}
+          isActive={isUsed}
         />
         {isLoading ? (
           <LoadingIndicator />
