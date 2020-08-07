@@ -1,9 +1,8 @@
 handler
 getClassMethodFrom: aClassName named: aMethodName
 	<get: '/env/classes/(\w+)/methods/class/([\w:]+)'>
-	|class comment|
-	(Environment current hasClassNamed: aClassName) ifFalse: [self sendErrorNoSuchClass. ^ self].
-	class := (Environment current classNamed: aClassName) class.
-	(class includesSelector: aMethodName asSymbol) ifFalse: [self sendErrorNoSuchMethod. ^ self].
-	comment := class firstPrecodeCommentFor: aMethodName asSymbol.
-	self sendJson: (Dictionary newFrom: {'precodeComment' -> comment. 'hasPrecodeComment'-> comment notNil}) asJsonString.
+	|class|
+	(SmapratEnvironmentHelper classExistsNamed: aClassName) ifFalse: [self sendErrorNoSuchClass. ^ nil].
+	class := (SmapratEnvironmentHelper classNamed: aClassName) class.
+	(class includesSelector: aMethodName asSymbol) ifFalse: [self sendErrorNoSuchMethod. ^ nil].
+	self sendJson: (SmapratEnvironmentHelper getMethodInfoJsonFrom: class named: aMethodName)

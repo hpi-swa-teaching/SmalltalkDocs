@@ -1,5 +1,5 @@
 serializer
-buildMethodDict
+getMethodDict
 	| allClasses allMethods buffer |
 	allClasses := Environment current allClasses.
 	buffer := OrderedCollection new.
