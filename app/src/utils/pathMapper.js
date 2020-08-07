@@ -4,7 +4,7 @@ export const getPathToClass = aClassName => `/doku/classes/${aClassName}`;
 export const getPathToDokuRoot = () => '/doku';
 export const getPathToHelpClass = aClassName => `/doku/help/${aClassName}`;
 export const getPathToRoot = () => '/';
-export const getPathToStatisticsRoot = () => '/statistics';
+export const getPathToMetricsRoot = () => '/statistics';
 export const getPathToMetrics = aMetrics => `/statistics/${aMetrics}`;
 
 const getURLParameterFromKey = key => `:${key}`;
