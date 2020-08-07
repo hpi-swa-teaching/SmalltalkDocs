@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { MemoryRouter } from 'react-router';
+import { BrowserRouter as Router } from 'react-router-dom';
+import ExplorationPage from './ExplorationPage';
 import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
 
 jest.doMock('../../components/ExplorationViews/ClassView/ClassView', () => () => (
@@ -27,19 +28,15 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-/* eslint-disable global-require */
-// TODO: adpat test to new structure
-describe('ExplorationView', () => {
-  xit('should display the ExplorationPage for mode: class', () => {
+xdescribe('ExplorationView', () => {
+  it('should display the ExplorationPage for mode: class', async () => {
     const mode = 'class';
 
-    const ExplorationView = require('./ExplorationPage').ExplorationPage;
-
-    act(() => {
+    await act(async () => {
       render(
-        <MemoryRouter>
-          <ExplorationView mode={mode} />
-        </MemoryRouter>,
+        <Router>
+          <ExplorationPage mode={mode} />
+        </Router>,
         container
       );
     });
@@ -50,16 +47,14 @@ describe('ExplorationView', () => {
     expect(container.querySelector('#helpViewMock')).toBeNull();
   });
 
-  xit('should display the ExplorationPage for mode: method', () => {
+  it('should display the ExplorationPage for mode: method', async () => {
     const mode = 'method';
 
-    const ExplorationView = require('./ExplorationPage').ExplorationPage;
-
-    act(() => {
+    await act(async () => {
       render(
-        <MemoryRouter>
-          <ExplorationView mode={mode} />
-        </MemoryRouter>,
+        <Router>
+          <ExplorationPage mode={mode} />
+        </Router>,
         container
       );
     });
@@ -70,16 +65,14 @@ describe('ExplorationView', () => {
     expect(container.querySelector('#helpViewMock')).toBeNull();
   });
 
-  xit('should display the ExplorationPage for mode: help', () => {
+  it('should display the ExplorationPage for mode: help', async () => {
     const mode = 'help';
 
-    const ExplorationView = require('./ExplorationPage').ExplorationPage;
-
-    act(() => {
+    await act(async () => {
       render(
-        <MemoryRouter>
-          <ExplorationView mode={mode} />
-        </MemoryRouter>,
+        <Router>
+          <ExplorationPage mode={mode} />
+        </Router>,
         container
       );
     });
@@ -89,6 +82,4 @@ describe('ExplorationView', () => {
     expect(container.querySelector('#methodViewMock')).toBeNull();
     expect(container.querySelector('#helpViewMock')).toBeInTheDocument();
   });
-
-  /* eslint-enable global-require */
 });

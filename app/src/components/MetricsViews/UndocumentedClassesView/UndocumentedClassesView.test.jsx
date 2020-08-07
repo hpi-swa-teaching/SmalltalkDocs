@@ -5,15 +5,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { baseURL } from '../../../config/constants';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
 import UndocumentedClassesView from './UndocumentedClassesView';
+import { getFetchClassesMock } from '../../../test-utils/apiMocks';
 
 describe('UncommentedClassView', () => {
-  const sampleUncommentedClassesResponse = { classes: ['Class1', 'Class2', 'Class3'] };
-
-  const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() =>
-    Promise.resolve({
-      json: () => sampleUncommentedClassesResponse
-    })
-  );
+  const fetchMock = getFetchClassesMock();
 
   let container = null;
   beforeEach(async () => {
@@ -35,9 +30,9 @@ describe('UncommentedClassView', () => {
   });
 
   it('should display fetched classes', async () => {
-    expect(container).toHaveTextContent('Class1');
-    expect(container).toHaveTextContent('Class2');
-    expect(container).toHaveTextContent('Class3');
+    expect(container).toHaveTextContent('RPTestClass');
+    expect(container).toHaveTextContent('X509TBSCertificate');
+    expect(container).toHaveTextContent('MetacelloAllowProjectUpgrade');
   });
 
   it('should display fetched classes', async () => {

@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import MethodSidebar from './MethodSidebar';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
+import { getFetchMethodsMock } from '../../../test-utils/apiMocks';
 
 let container = null;
 beforeEach(() => {
@@ -21,29 +22,7 @@ describe('MethodSidebar', () => {
     const isOpen = true;
     const toggleIsOpen = () => {};
 
-    const sampleClassAndMethodsOfClassResponse = {
-      isHelpBook: true,
-      classMethods: ['newStarted', 'newStartedOn:'],
-      count: { classMethods: 2, total: 12, instanceMethods: 10 },
-      instanceMethods: [
-        'getHelpPagesFrom:',
-        'getClassMethodTextFrom:named:',
-        'getInstanceMethodFrom:named:',
-        'getMethods:',
-        'getClasses',
-        'getHelpPageFrom:at:',
-        'helloWorld:',
-        'getClassMethodFrom:named:',
-        'getHelpBookFrom:',
-        'getInstanceMethodTextFrom:named:'
-      ]
-    };
-
-    jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleClassAndMethodsOfClassResponse
-      })
-    );
+    getFetchMethodsMock();
 
     await act(async () => {
       render(
@@ -55,7 +34,7 @@ describe('MethodSidebar', () => {
     });
 
     expect(container).toHaveTextContent('Categories');
-    expect(container).toHaveTextContent('Help Page');
+    expect(container).toHaveTextContent('getHelpPagesFrom:');
 
     global.fetch.mockRestore();
   });

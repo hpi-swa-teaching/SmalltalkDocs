@@ -4,6 +4,10 @@ import { act } from 'react-dom/test-utils';
 import { baseURL } from '../../../config/constants';
 import MethodView from './MethodView';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
+import {
+  getSampleMethodInfoResponse,
+  getSampleMethodCodeResponse
+} from '../../../test-utils/apiMocks';
 
 let container = null;
 beforeEach(() => {
@@ -23,23 +27,15 @@ describe('MethodView', () => {
     const site = 'site';
     const methodName = 'methodName';
 
-    const sampleMethodView = {
-      hasPrecodeComment: true,
-      precodeComment:
-        'This is the main entry point for the JSON parser. See also readFrom: on the class site.'
-    };
-
-    const sampleMethodViewText = `${methodName}\n\t^ 'MethodText-was-shown!'.`;
-
     const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(arg => {
       switch (arg) {
         case `${baseURL}/env/classes/${className}/methods/${site}/${methodName}`:
           return Promise.resolve({
-            json: () => sampleMethodView
+            json: () => getSampleMethodInfoResponse()
           });
         case `${baseURL}/env/classes/${className}/methods/${site}/${methodName}/text`:
           return Promise.resolve({
-            text: () => sampleMethodViewText
+            text: () => getSampleMethodCodeResponse()
           });
         default:
           break;
@@ -61,7 +57,9 @@ describe('MethodView', () => {
       `${baseURL}/env/classes/${className}/methods/${site}/${methodName}/text`
     );
     expect(container.querySelector('h1')).toHaveTextContent(methodName);
-    expect(container.querySelector('code')).toHaveTextContent('MethodText-was-shown!');
+    expect(container.querySelector('code')).toHaveTextContent(
+      'readFrom: aStream ^ self new readFrom: aStream.'
+    );
 
     global.fetch.mockRestore();
   });

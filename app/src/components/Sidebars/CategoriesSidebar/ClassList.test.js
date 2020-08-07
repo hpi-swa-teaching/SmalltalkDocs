@@ -5,6 +5,7 @@ import { act } from 'react-dom/test-utils';
 import ClassList from './ClassList';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
 import { baseURL } from '../../../config/constants';
+import { getFetchClassesMock } from '../../../test-utils/apiMocks';
 
 let container = null;
 beforeEach(() => {
@@ -19,16 +20,7 @@ afterEach(() => {
 
 describe('ClassList', () => {
   it('should display ClassList', async () => {
-    const sampleAllClassesResponse = {
-      classes: ['RPTestClass', 'X509TBSCertificate', 'MetacelloAllowProjectUpgrade'],
-      count: 3
-    };
-
-    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() =>
-      Promise.resolve({
-        json: () => sampleAllClassesResponse
-      })
-    );
+    const fetchMock = getFetchClassesMock();
 
     await act(async () => {
       render(
