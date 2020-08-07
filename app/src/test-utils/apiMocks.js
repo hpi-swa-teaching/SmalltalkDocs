@@ -166,13 +166,12 @@ export const getFetchMethodInfoAndCodeMock = (className, site, methodName) =>
       return Promise.resolve({
         json: () => getSampleMethodInfoResponse()
       });
-    else
-      return Promise.resolve({
-        text: () => getSampleMethodCodeResponse()
-      });
+    return Promise.resolve({
+      text: () => getSampleMethodCodeResponse()
+    });
   });
 
-export const getSearchedMethodsOrClasses = (sampleSearchTerm) =>
+export const getSearchedMethodsOrClasses = sampleSearchTerm =>
   jest.spyOn(global, 'fetch').mockImplementation(path => {
     if (path === `${baseURL}/env/search/methods/${sampleSearchTerm}`)
       return Promise.resolve({
@@ -182,6 +181,7 @@ export const getSearchedMethodsOrClasses = (sampleSearchTerm) =>
       return Promise.resolve({
         json: () => getSampleClassSearchResponse()
       });
+    return null;
   });
 
 export const getFetchMethodsMock = () =>

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const ExplorationLandingView = () => (
   <div>
     <h1>Welcome to Småprat!</h1>
