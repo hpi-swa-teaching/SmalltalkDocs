@@ -1,3 +1,3 @@
 help book
 bookName
-	^ 'first Book'
+	^ 'second book'

@@ -1,0 +1,1 @@
+A class to serialize the Subclasses of CustomHelp.

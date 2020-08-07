@@ -1,4 +1,3 @@
 accessing
 matchSimple: aString
-
-^ aString includesSubstring: self searchTerm.
+	^ aString includesSubstring: self searchTerm.

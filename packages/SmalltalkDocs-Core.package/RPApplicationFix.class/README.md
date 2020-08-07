@@ -1,0 +1,1 @@
+A class to fix deprecated methods in RPApplication and add new types to send.

@@ -1,10 +1,7 @@
 testing GetCategoryClasses
 testGetCategoryClassesValidCategory
-	| category contents classes |
+	| category contents |
 	category := self class category asString.
 	contents := self checkOkJsonResponseAndGetContentsAt:  '/env/categories/', category.
-	classes := (Environment current packageOrganizer 
-		packageNamed: category ifAbsent: [] ) classes collect: [
-			:class | class name asString].
-	self assert: classes = (contents at: 'classes').
-	self assert: classes size = (contents at: 'count').
+	self assert: ((contents at: 'classes') includesAllOf: #('SmapratMockClass' 'SmapratMockClassNoComment' 'SmapratMockHelpBook')).
+	self assert: (contents at: 'classes') size = (contents at: 'count').
