@@ -21,6 +21,6 @@ describe('LoadingIndicator', () => {
       render(<LoadingIndicator />, container);
     });
 
-    expect(container.querySelector('.loadingText')).toBeInTheDocument();
+    expect(container.querySelector('.lds-ellipsis')).toBeInTheDocument();
   });
 });
