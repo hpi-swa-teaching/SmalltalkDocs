@@ -6,9 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import SearchExplorer from './SearchExplorer';
 import { baseURL } from '../../config/constants';
 import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
-import {
-  getSearchedMethodsOrClasses
-} from '../../test-utils/apiMocks';
+import { getSearchedMethodsOrClasses } from '../../test-utils/apiMocks';
 
 let container = null;
 const sampleSearchTerm = 'test%test';

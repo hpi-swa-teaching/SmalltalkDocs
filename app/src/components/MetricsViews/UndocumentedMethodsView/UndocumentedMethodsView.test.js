@@ -7,7 +7,6 @@ import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-hel
 import { getFetchClassesMock } from '../../../test-utils/apiMocks';
 import UndocumentedMethodsView from './UndocumentedMethodsView';
 
-
 describe('Uncommented Methods View', () => {
   const fetchMock = getFetchClassesMock();
 
@@ -29,7 +28,7 @@ describe('Uncommented Methods View', () => {
     jest.clearAllMocks();
     container = cleanUpContainer(container);
   });
-  
+
   it('should display fetched classes', async () => {
     expect(container).toHaveTextContent('RPTestClass');
     expect(container).toHaveTextContent('X509TBSCertificate');
@@ -38,7 +37,7 @@ describe('Uncommented Methods View', () => {
 
   it('should display headline', async () => {
     expect(container).toHaveTextContent('Undocumented Methods');
-  });  
+  });
 
   it('should request API only once', () => expect(fetchMock).toBeCalledTimes(1));
 

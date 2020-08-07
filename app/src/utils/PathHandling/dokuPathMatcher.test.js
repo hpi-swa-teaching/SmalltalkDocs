@@ -13,7 +13,7 @@ import {
   getPathToMethod
 } from './pathMapper';
 
-describe('Test wether the documentation\'s path matchers detect as expected', () => {
+describe("Test wether the documentation's path matchers detect as expected", () => {
   test('Test matching the landing page', () => {
     expect(
       isLandingPath(buildLocationObj(getPathToDokuRoot()), buildEmptyPathParamsObj())

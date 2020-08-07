@@ -1,6 +1,5 @@
 import React from 'react';
-//import '../../../styles/landingViews.css';
-
+// import '../../../styles/landingViews.css';
 
 const MetricsLandingView = () => (
   <div>
