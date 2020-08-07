@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import './ErrorIndicator.css';
 
 // TODO: do we need any tests for this component?
-// TODO: Fix error message is shown when reloading the page without searching
 const ErrorIndicator = props => {
   const {
     errorConditions,
     errorMessage,
     errorState: existsError,
-    errorStateSetter: setExistsError
+    errorStateSetter: setExistsError,
+    isActive
   } = props;
 
   useEffect(
@@ -23,7 +23,7 @@ const ErrorIndicator = props => {
     [errorConditions, existsError, setExistsError]
   );
 
-  return existsError ? <div className="errorText">{errorMessage}</div> : null;
+  return existsError && isActive ? <div className="errorText">{errorMessage}</div> : null;
 };
 
 ErrorIndicator.propTypes = {
@@ -40,11 +40,13 @@ ErrorIndicator.propTypes = {
   ).isRequired,
   errorMessage: PropTypes.string,
   errorState: PropTypes.bool.isRequired,
-  errorStateSetter: PropTypes.func.isRequired
+  errorStateSetter: PropTypes.func.isRequired,
+  isActive: PropTypes.bool
 };
 
 ErrorIndicator.defaultProps = {
-  errorMessage: 'An error occurred. Please check your input or contact support.'
+  errorMessage: 'An error occurred. Please check your input or contact support.',
+  isActive: true
 };
 
 export default ErrorIndicator;

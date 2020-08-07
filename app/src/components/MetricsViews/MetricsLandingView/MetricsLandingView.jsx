@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../../styles/landingViews.css';
+//import '../../../styles/landingViews.css';
 
-// TODO: style component
+
 const MetricsLandingView = () => (
   <div>
     <h1>Welcome to Smaprat!</h1>

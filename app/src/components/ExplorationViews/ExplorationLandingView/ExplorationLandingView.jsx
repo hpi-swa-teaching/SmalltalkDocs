@@ -1,7 +1,6 @@
 import React from 'react';
-import '../../../styles/landingViews.css';
 
-// TODO: style component
+
 const ExplorationLandingView = () => (
   <div>
     <h1>Welcome to Småprat!</h1>

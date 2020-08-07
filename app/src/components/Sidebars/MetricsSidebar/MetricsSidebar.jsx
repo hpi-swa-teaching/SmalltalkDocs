@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { getMetricsNavigationMapping } from './metricsMapper';
+import { getMetricsNavigationMapping } from '../../../utils/ViewMappers/metricsMapper';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 
 import '../Sidebars.css';
