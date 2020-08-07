@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SmapratMockApplication",
+	"pools" : [
+		 ],
+	"super" : "RPApplicationFix",
+	"type" : "normal" }

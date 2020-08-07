@@ -1,3 +1,3 @@
-handler
+error response
 sendErrorNoSuchCategory
-	self send404WithTitle: 'The requested category does not exist.'.
+	self sendNotFoundResponseWithTitle: 'The requested category does not exist.'.

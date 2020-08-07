@@ -1,4 +1,4 @@
 handler
 getCategories
 	<get: '/env/categories'>
-	self sendJson: EnvironmentHelper getCategoriesJson.
+	self sendJson: SmapratEnvironmentHelper getCategoriesJson.

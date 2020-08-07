@@ -4,8 +4,9 @@
 	"instance" : {
 		"app" : "max 7/4/2020 12:25",
 		"app:" : "max 7/4/2020 12:25",
-		"setUp" : "max 7/4/2020 12:44",
-		"tearDown" : "max 8/2/2020 13:27",
-		"testRemoveModelClass" : "max 7/4/2020 12:44",
+		"setUp" : "max 8/5/2020 14:24",
+		"tearDown" : "max 8/5/2020 16:23",
+		"testRemoveModelClass" : "max 8/4/2020 15:39",
 		"testSendCss" : "max 7/4/2020 12:47",
-		"testSendJs" : "max 7/4/2020 12:48" } }
+		"testSendJs" : "max 7/4/2020 12:48",
+		"testStopping" : "max 8/4/2020 15:49" } }

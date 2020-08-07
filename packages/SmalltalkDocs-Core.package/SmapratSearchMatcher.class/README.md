@@ -1,0 +1,1 @@
+A simple and fast matcher class to match strings with a wildcard.

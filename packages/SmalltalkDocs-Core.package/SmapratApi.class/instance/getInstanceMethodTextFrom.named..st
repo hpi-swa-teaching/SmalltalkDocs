@@ -2,7 +2,7 @@ handler
 getInstanceMethodTextFrom: aClassName named: aMethodName
 	<get: '/env/classes/(\w+)/methods/instance/([\w:]+)/text'>
 	|class|
-	(Environment current hasClassNamed: aClassName) ifFalse: [self sendErrorNoSuchClass. ^ nil].
-	class := Environment current classNamed: aClassName.
+	(SmapratEnvironmentHelper classExistsNamed: aClassName) ifFalse: [self sendErrorNoSuchClass. ^ nil].
+	class := SmapratEnvironmentHelper classNamed: aClassName.
 	(class includesSelector: aMethodName asSymbol) ifFalse: [self sendErrorNoSuchMethod. ^ nil].
-	self sendText: (EnvironmentHelper getMethodTextFrom: class named: aMethodName asSymbol) withUnixLineEndings.
+	self sendText: (SmapratEnvironmentHelper getMethodTextFrom: class named: aMethodName asSymbol) withUnixLineEndings.

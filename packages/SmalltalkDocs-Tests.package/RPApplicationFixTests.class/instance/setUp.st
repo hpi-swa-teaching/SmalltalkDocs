@@ -1,3 +1,3 @@
 accessing
 setUp
-	self app: MockApplication new.
+	self app: SmapratMockApplication new.

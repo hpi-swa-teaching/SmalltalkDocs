@@ -1,10 +1,7 @@
 testing GetSearchResults
 testGetSearchResultsMethodWithWildcardAtEnd
-	| result contents methods |
-	result := RPTestHelper get: '/env/search/methods/method%' on: self api.
-	self assert: result contentType = 'application/json'.
-	self assert: result status = #ok.
-	contents := Json readFrom: result contents contents readStream.
+	| contents methods |
+	contents := self checkOkJsonResponseAndGetContentsAt: '/env/search/methods/method%'.
 	methods  := contents at: 'methods'.
 	self assert: ((methods collect: [:method | method at: 'methodName']) allSatisfy: [:methodName| methodName beginsWith: 'method']).
 	self assert: ((methods collect: [:method | method at: 'className']) includes: 'SmapratMockClass').

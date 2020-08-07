@@ -1,9 +1,6 @@
 testing GetUndocumentedClasses
 testGetUndocumentedClasses
-	| result contents |
-	result := RPTestHelper get: '/statistics/undocumented/classes' on: api.
-	self assert: result contentType = 'application/json'.
-	self assert: result status = #ok.
-	contents := Json readFrom: result contents contents readStream.
-	self assert: ((contents at: 'classes') noneSatisfy: [:class | (Environment current classNamed: class) hasComment]).
-	self assert: (contents at: 'count') = (Environment current allClasses select: [:class | class hasComment not]) size.
+	| contents |
+	contents := self checkOkJsonResponseAndGetContentsAt: '/statistics/undocumented/classes'.
+	self assert: ((contents at: 'classes') sameElements: (((Environment current allClasses) select: [:class | class hasComment not]) collect: [:class | class name]) ).
+	self assert: (contents at: 'count') = (contents at: 'classes')  size.
