@@ -1,6 +1,6 @@
 # 🗄️ SmalltalkDocs "Smaprat"
 
-![Backend CI](https://github.com/hpi-swa-teaching/SmalltalkDocs/workflows/Backend%20CI/badge.svg?branch=dev) [![Backend Coverage Status](https://coveralls.io/repos/github/hpi-swa-teaching/SmalltalkDocs/badge.svg?branch=dev)](https://coveralls.io/github/hpi-swa-teaching/SmalltalkDocs?branch=dev) ![Frontend CI](https://github.com/hpi-swa-teaching/SmalltalkDocs/workflows/Frontend%20CI/badge.svg?branch=dev)
+![Backend CI](https://github.com/hpi-swa-teaching/SmalltalkDocs/workflows/Backend%20CI/badge.svg?branch=master) [![Backend Coverage Status](https://coveralls.io/repos/github/hpi-swa-teaching/SmalltalkDocs/badge.svg?branch=master)](https://coveralls.io/github/hpi-swa-teaching/SmalltalkDocs?branch=master) ![Frontend CI](https://github.com/hpi-swa-teaching/SmalltalkDocs/workflows/Frontend%20CI/badge.svg?branch=master)
 
 ## Introduction
 
@@ -17,7 +17,7 @@ Open your Squeak image and run the following code from within a workspace. This 
 ``` smalltalk
 Metacello new
     baseline: 'SmalltalkDocs';
-    repository: 'github://hpi-swa-teaching/SmalltalkDocs:dev/packages';
+    repository: 'github://hpi-swa-teaching/SmalltalkDocs:master/packages';
     load.
 ```
 
@@ -35,7 +35,7 @@ Since the Smaprat frontend uses React, there are two fundamental ways to get a l
 
 #### Easy Installation
 
-Download the latest artifact .zip from the Github Actions page of this repository - e.g. for [branch:dev](https://github.com/hpi-swa-teaching/SmalltalkDocs/actions?query=workflow%3A%22Frontend+CI%22+branch%3Adev).
+Download the latest artifact .zip from the Github Actions page of this repository - e.g. for [branch:master](https://github.com/hpi-swa-teaching/SmalltalkDocs/actions?query=workflow%3A%22Frontend+CI%22+branch%3Amaster).
 The artifact is named "smaprat-frontend.zip" and contains a compiled version of the React `.jsx` code.
 
 Next, you can place these files within the `www` folder of a supported webserver.  
