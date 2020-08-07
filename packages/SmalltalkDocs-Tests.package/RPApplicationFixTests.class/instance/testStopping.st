@@ -1,4 +1,4 @@
-accessing
+testing
 testStopping
 	self app startOn: 0.
 	100 milliSecond asDelay wait.

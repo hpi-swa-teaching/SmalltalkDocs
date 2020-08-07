@@ -1,6 +1,6 @@
-accessing
+testing
 testSendJs
 	| result |
 	result := RPTestHelper get: '/js' on: self app.
-	self assert: result status = #ok.
-	self assert: result contentType = 'text/javascript'
+	self assert: result status equals: #ok.
+	self assert: result contentType equals: 'text/javascript'

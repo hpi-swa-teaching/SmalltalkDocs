@@ -1,4 +1,4 @@
 asserting
 assertOkTextResponse: aResponse
-	self assert: aResponse status = #ok.
-	self assert: aResponse contentType = 'text/plain'.
+	self assert: aResponse status equals: #ok.
+	self assert: aResponse contentType equals: 'text/plain'.

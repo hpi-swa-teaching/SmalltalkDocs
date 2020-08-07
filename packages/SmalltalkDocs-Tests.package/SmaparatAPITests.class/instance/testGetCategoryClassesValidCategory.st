@@ -4,4 +4,4 @@ testGetCategoryClassesValidCategory
 	category := self class category asString.
 	contents := self checkOkJsonResponseAndGetContentsAt:  '/env/categories/', category.
 	self assert: ((contents at: 'classes') includesAllOf: #('SmapratMockClass' 'SmapratMockClassNoComment' 'SmapratMockHelpBook')).
-	self assert: (contents at: 'classes') size = (contents at: 'count').
+	self assert: (contents at: 'classes') size equals: (contents at: 'count').

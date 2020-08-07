@@ -1,4 +1,4 @@
-handler
+error response
 sendErrorIfClassAbsent: aClassName ifPresent: aBlock
 	(SmapratEnvironmentHelper classExistsNamed: aClassName) 
 		ifFalse: [self sendErrorNoSuchClass]

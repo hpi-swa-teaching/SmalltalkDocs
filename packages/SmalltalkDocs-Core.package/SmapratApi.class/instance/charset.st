@@ -1,3 +1,3 @@
-initialization
+configuration
 charset
 	^ 'utf-8'

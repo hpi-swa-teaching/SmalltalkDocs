@@ -1,5 +1,5 @@
 testing GetHelpBook
 testGetHelpBookInvalidHelpBook
-	self assertNotAHelpBookAt:  '/help/SmapratMockClass'
+	self assertNotAHelpBookAt: '/help/SmapratMockClass'
 	
 	

@@ -2,4 +2,4 @@ testing GetMethodText
 testGetMethodTextInstanceMethodWithArgument
 	| contents |
 	contents := self checkOkTextResponseAndGetContentsAt: '/env/classes/SmapratMockClass/methods/instance/method3:/text'.
-	self assert: contents = (SmapratMockClass methodDict at: #method3:) getSource asString withUnixLineEndings.
+	self assert: contents equals: 'method3: anArgument'.

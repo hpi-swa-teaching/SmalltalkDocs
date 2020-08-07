@@ -1,3 +1,3 @@
-asserting
+constants
 errorResponseType
 	^ 'application/error+json'

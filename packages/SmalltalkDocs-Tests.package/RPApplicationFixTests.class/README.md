@@ -1,1 +1,1 @@
-Test RPApplicationFix
+Uses SmapratMockApplication as subject application.

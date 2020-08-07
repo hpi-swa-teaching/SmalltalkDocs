@@ -1,5 +1,6 @@
-accessing
+matching
 matchWithWildcard: aString
+	"Match the searchTerm on the string. Use wildcard as zero or more arbitrary characters."
 	| searchParts searchPosition |
 	searchParts := self searchTerm findTokens: self wildcard.
 	searchPosition := 1.

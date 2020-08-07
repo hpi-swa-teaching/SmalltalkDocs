@@ -1,4 +1,4 @@
-handler
+error response
 sendErrorIfClassNotAHelpBook: aClass ifSuccessfull: aBlock
 	(SmapratHelpPageSerializer isHelpBook: aClass) 
 		ifFalse: [self sendErrorNotAHelpBook]

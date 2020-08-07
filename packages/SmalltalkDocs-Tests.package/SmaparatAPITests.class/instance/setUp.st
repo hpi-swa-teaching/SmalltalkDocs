@@ -2,7 +2,7 @@ running
 setUp
 	self generateNonexisitingClassName.
 	self api: SmapratApi new.
-	self mockHelpBook: SmapratMockHelpBook.
-	self mockHelpBook superclass: CustomHelp.
-	CustomHelp addSubclass: self mockHelpBook.
+	"Make MockHelpBook an actual HelpBook"
+	SmapratMockHelpBook superclass: CustomHelp.
+	CustomHelp addSubclass: SmapratMockHelpBook.
 	self helpPageSerializer: SmapratHelpPageSerializer.
