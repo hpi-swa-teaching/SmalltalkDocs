@@ -1,3 +1,3 @@
-as yet unclassified
+mocking
 packageOrganizer
 	^ SmapratMockPackageOrganizer new

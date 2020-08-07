@@ -1,3 +1,3 @@
-as yet unclassified
+mocking
 classNames
-	^ #('SmapratMockClass' 'SmapratMockClassNoComment' 'SmapratMockHelpBook' 'SmapratMockSubHelpBook')
+	^ self classDict keys

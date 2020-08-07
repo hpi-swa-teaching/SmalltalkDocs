@@ -1,3 +1,3 @@
-as yet unclassified
+mocking
 hasClassNamed: aString
-	^ (#('SmapratMockClass' 'SmapratMockClassNoComment' 'SmapratMockHelpBook' 'SmapratMockSubHelpBook') includes: aString)
+	^ self classNames includes: aString

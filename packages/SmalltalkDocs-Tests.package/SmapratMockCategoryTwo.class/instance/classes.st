@@ -1,4 +1,4 @@
-as yet unclassified
+mocking
 classes
 	^ (Dictionary newFrom: {
 		'SmapratMockHelpBook' -> SmapratMockHelpBook.

@@ -1,3 +1,3 @@
-as yet unclassified
+mocking
 packageNames
-	^ #('SmapratMockCategoryOne' 'SmapratMockCategoryTwo')
+	^ self packages keys

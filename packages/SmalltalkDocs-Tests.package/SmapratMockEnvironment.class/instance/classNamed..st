@@ -1,3 +1,3 @@
-as yet unclassified
+mocking
 classNamed: aString
-	^ (Dictionary newFrom: {'SmapratMockClass' -> SmapratMockClass. 'SmapratMockClassNoComment' -> SmapratMockClassNoComment. 'SmapratMockHelpBook' -> SmapratMockHelpBook. 'SmapratMockSubHelpBook' -> SmapratMockSubHelpBook.}) at: aString
+	^ self classDict at: aString
