@@ -1,15 +1,15 @@
 import React, { lazy, Suspense } from 'react';
 // base component are small enough to load immediately
-import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
-import UnknownStatistics from '../../MetricsViews/UnkownMetrics/UnknownMetrics';
+import LoadingIndicator from '../../components/LoadingIndicator/LoadingIndicator';
+import UnknownStatistics from '../../components/MetricsViews/UnkownMetrics/UnknownMetrics';
 
 // use lazy import for complex components
 const UndocumentedClassesView = lazy(() =>
-  import('../../MetricsViews/UndocumentedClassesView/UndocumentedClassesView')
+  import('../../components/MetricsViews/UndocumentedClassesView/UndocumentedClassesView')
 );
 
 const UndocumentedMethodsView = lazy(() =>
-  import('../../MetricsViews/UndocumentedMethodsView/UndocumentedMethodsView')
+  import('../../components/MetricsViews/UndocumentedMethodsView/UndocumentedMethodsView')
 );
 
 // each key represents a URL suffix

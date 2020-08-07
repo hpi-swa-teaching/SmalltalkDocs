@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import MetricsSidebar from '../../components/Sidebars/MetricsSidebar/MetricsSidebar';
 import MetricsLandingView from '../../components/MetricsViews/MetricsLandingView/MetricsLandingView';
-import { getMetricsViewFromParameter } from '../../components/Sidebars/MetricsSidebar/metricsMapper';
+import { getMetricsViewFromParameter } from '../../utils/ViewMappers/metricsMapper';
 import { metricsKey } from '../../utils/PathHandling/pathMapper';
 
 import './MetricsPage.css';
