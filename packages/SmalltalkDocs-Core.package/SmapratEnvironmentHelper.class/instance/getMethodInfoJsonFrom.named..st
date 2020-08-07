@@ -1,4 +1,4 @@
-serializer
+serialize
 getMethodInfoJsonFrom: aClass named: aMethodName
 	| comment |
 	comment := aClass firstPrecodeCommentFor: aMethodName asSymbol.

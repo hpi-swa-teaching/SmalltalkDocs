@@ -1,5 +1,5 @@
-serializer
+serialize
 getCategoriesJson
 	| categories |
-	categories := Environment current packageOrganizer packageNames.
+	categories := self usedEnvironment packageOrganizer packageNames.
 	^ (Dictionary newFrom: { 'categories' -> categories. 'count' -> categories size}) asJsonString

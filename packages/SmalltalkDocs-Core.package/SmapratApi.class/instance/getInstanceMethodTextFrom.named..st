@@ -5,5 +5,5 @@ getInstanceMethodTextFrom: aClassName named: aMethodName
 		orDoesNotUnderstandInstanceSelector: aMethodName 
 		ifSuccessfull: [:class | 
 			self sendText: (
-				SmapratEnvironmentHelper getMethodTextFrom: class 
+				self environmentSerializer getMethodTextFrom: class 
 				named: aMethodName asSymbol) withUnixLineEndings.]

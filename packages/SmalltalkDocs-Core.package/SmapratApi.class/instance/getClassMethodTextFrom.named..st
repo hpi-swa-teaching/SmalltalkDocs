@@ -4,4 +4,4 @@ getClassMethodTextFrom: aClassName named: aMethodName
 	self sendErrorIfClassAbsent: aClassName 
 		orDoesNotUnderstandClassSelector: aMethodName 
 		ifSuccessfull: [:class | 
-			self sendText: (SmapratEnvironmentHelper getMethodTextFrom: class named: aMethodName asSymbol) withUnixLineEndings.]
+			self sendText: (self environmentSerializer getMethodTextFrom: class named: aMethodName asSymbol) withUnixLineEndings.]

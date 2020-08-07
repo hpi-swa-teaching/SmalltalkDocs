@@ -1,4 +1,4 @@
-serializer
+serialize
 getCategoryInfoJsonFrom: aCategory
 	| classes |
 	classes := aCategory classes collect: [

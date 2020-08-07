@@ -1,7 +1,7 @@
 error response
 sendErrorIfClassAbsent: aClassName ifPresent: aBlock
-	(SmapratEnvironmentHelper classExistsNamed: aClassName) 
+	(self environmentSerializer classExistsNamed: aClassName) 
 		ifFalse: [self sendErrorNoSuchClass]
 		ifTrue: [|class| 
-			class := (SmapratEnvironmentHelper classNamed: aClassName).
+			class := (self environmentSerializer classNamed: aClassName).
 			aBlock value: class]
