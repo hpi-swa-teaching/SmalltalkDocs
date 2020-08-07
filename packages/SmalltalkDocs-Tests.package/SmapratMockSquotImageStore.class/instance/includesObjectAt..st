@@ -1,4 +1,0 @@
-constants
-includesObjectAt: path
-
-	^ true
