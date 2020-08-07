@@ -58,7 +58,7 @@
 		"testGetMethodInfoInvalidClassMethod" : "max 8/4/2020 18:59",
 		"testGetMethodInfoInvalidInstanceMethod" : "max 8/4/2020 18:59",
 		"testGetMethodTextClassMethodNoArgument" : "max 8/7/2020 17:55",
-		"testGetMethodTextClassMethodWithArgument" : "max 8/7/2020 17:56",
+		"testGetMethodTextClassMethodWithArgument" : "max 8/7/2020 18:24",
 		"testGetMethodTextInstanceMethodNoArgument" : "max 8/7/2020 17:56",
 		"testGetMethodTextInstanceMethodWithArgument" : "max 8/7/2020 17:56",
 		"testGetMethodTextInvalidClassClassMethod" : "max 8/4/2020 19:00",
