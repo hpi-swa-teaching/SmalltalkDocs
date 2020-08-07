@@ -34,11 +34,7 @@ const UndocumentedMethodsView = () => {
                 {aClassName}
               </button>
               {aClassName === currentClass ? (
-                <MethodsOfClassContainer
-                  key={aClassName}
-                  theClassName={aClassName}
-                  isActive={aClassName === currentClass}
-                />
+                <MethodsOfClassContainer key={aClassName} theClassName={aClassName} />
               ) : null}
             </li>
           ))}
