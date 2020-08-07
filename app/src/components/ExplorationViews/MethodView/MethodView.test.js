@@ -13,7 +13,6 @@ const site = 'site';
 const methodName = 'methodName';
 const path = `${baseURL}/env/classes/${className}/methods/${site}/${methodName}`;
 
-
 beforeEach(() => {
   jest.clearAllMocks();
   // setup a DOM element as a render target
