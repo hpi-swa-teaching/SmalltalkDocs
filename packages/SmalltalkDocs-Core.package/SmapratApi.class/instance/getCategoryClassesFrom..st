@@ -2,5 +2,5 @@ handler
 getCategoryClassesFrom: aCategoryName
 	<get: '/env/categories/([\w\-]+)'>
 	| category |
-	category := SmapratEnvironmentHelper packageExistsNamed: aCategoryName ifAbsent: [self sendErrorNoSuchCategory. ^ nil].
-	self sendJson: (SmapratEnvironmentHelper getCategoryInfoJsonFrom: category).
+	category := self environmentSerializer packageExistsNamed: aCategoryName ifAbsent: [self sendErrorNoSuchCategory. ^ nil].
+	self sendJson: (self environmentSerializer getCategoryInfoJsonFrom: category).

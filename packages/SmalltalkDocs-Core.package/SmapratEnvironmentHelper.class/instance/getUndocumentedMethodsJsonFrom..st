@@ -1,4 +1,4 @@
-serializer
+serialize
 getUndocumentedMethodsJsonFrom: aClass
 	|instanceMethods classMethods count |
 	instanceMethods := (aClass selectors select: [:selector | (aClass firstPrecodeCommentFor: selector) isNil] thenCollect: [:method | method asString]) sort.

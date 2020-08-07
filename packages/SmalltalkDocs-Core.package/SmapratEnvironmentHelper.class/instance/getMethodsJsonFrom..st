@@ -1,4 +1,4 @@
-serializer
+serialize
 getMethodsJsonFrom: aClass
 	|instanceMethods classMethods count|
 	instanceMethods := (aClass selectors collect: [:method | method asString]) sort.

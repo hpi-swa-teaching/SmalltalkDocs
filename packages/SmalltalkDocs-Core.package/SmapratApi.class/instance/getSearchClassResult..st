@@ -1,4 +1,4 @@
 handler
 getSearchClassResult: aSearchTerm
 	<get: '/env/search/classes/([\w:%]+)'>
-	self sendJson: (SmapratEnvironmentHelper getClassSearchResultsJsonFrom: aSearchTerm).
+	self sendJson: (self environmentSerializer getClassSearchResultsJsonFrom: aSearchTerm).

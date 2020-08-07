@@ -5,5 +5,5 @@ getInstanceMethodFrom: aClassName named: aMethodName
 			orDoesNotUnderstandInstanceSelector: aMethodName 
 			ifSuccessfull: [:class | 
 				self sendJson: (
-					SmapratEnvironmentHelper getMethodInfoJsonFrom: class 
+					self environmentSerializer getMethodInfoJsonFrom: class 
 					named: aMethodName)].

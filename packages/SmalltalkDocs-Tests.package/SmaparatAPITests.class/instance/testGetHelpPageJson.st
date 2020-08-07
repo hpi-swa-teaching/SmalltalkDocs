@@ -1,7 +1,6 @@
 testing GetHelpPages
 testGetHelpPageJson
 	| contents |
-	self flag: 'Refactor Json Object.'.
 	contents := self checkOkJsonResponseAndGetContentsAt: '/help/SmapratMockHelpBook/pages/first'.
 	self assert: contents equals: (Json readFrom: '{"content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus nunc mi, at vehicula neque lacinia sed. Sed elementum nisl.","pageName":"first","title":"first"}' readStream).
 	

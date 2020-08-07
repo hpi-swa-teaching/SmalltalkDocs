@@ -1,4 +1,4 @@
 handler
 getUndocumentedClasses
 	<get: '/statistics/undocumented/classes'>
-	self sendJson: SmapratEnvironmentHelper getUndocumentedClassesJson.
+	self sendJson: self environmentSerializer getUndocumentedClassesJson.

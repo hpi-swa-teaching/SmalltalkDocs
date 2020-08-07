@@ -1,4 +1,4 @@
-serializer
+serialize
 getMethodSearchResultsJsonFrom: aSearchString
 	| matcher matchedMethods allMethods |
 	matcher := SmapratSearchMatcher new.

@@ -1,7 +1,7 @@
-serializer
+serialize
 getMethodDict
 	| allClasses allMethods buffer |
-	allClasses := Environment current allClasses.
+	allClasses := self usedEnvironment allClasses.
 	buffer := OrderedCollection new.
 	allMethods := allClasses collect: [:class | class selectors collect: 
 		[:selector | Dictionary newFrom: {

@@ -1,0 +1,3 @@
+mocking
+category
+	^ 'SmapratMockCategoryOne'

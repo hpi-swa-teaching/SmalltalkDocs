@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "max 8/7/2020 13:03",
 	"instvars" : [
-		 ],
+		"usedEnvironment" ],
 	"name" : "SmapratEnvironmentHelper",
 	"pools" : [
 		 ],

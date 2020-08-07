@@ -4,4 +4,4 @@ getClassMethodFrom: aClassName named: aMethodName
 	self sendErrorIfClassAbsent: aClassName 
 		orDoesNotUnderstandClassSelector: aMethodName 
 		ifSuccessfull: [:class | 
-			self sendJson: (SmapratEnvironmentHelper getMethodInfoJsonFrom: class named: aMethodName)].
+			self sendJson: (self environmentSerializer getMethodInfoJsonFrom: class named: aMethodName)].
