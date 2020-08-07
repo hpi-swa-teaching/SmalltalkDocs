@@ -4,14 +4,14 @@ import { act } from 'react-dom/test-utils';
 import { baseURL } from '../../../config/constants';
 import MethodView from './MethodView';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
-import { getFetchMethodInfoAndCodeMock } from '../../../test-utils/apiMocks';
+import {
+  getFetchMethodInfoAndCodeMock,
+  getSampleClassName,
+  getSampleMethodName,
+  getSampleSide
+} from '../../../test-utils/apiMocks';
 
 let container = null;
-
-const className = 'className';
-const site = 'site';
-const methodName = 'methodName';
-const path = `${baseURL}/env/classes/${className}/methods/${site}/${methodName}`;
 
 beforeEach(() => {
   jest.clearAllMocks();
@@ -26,11 +26,20 @@ afterEach(() => {
 
 describe('Method View', () => {
   it('should display a current method', async () => {
-    const fetchMock = getFetchMethodInfoAndCodeMock(className, site, methodName);
+    const path = `${baseURL}/env/classes/${getSampleClassName()}/methods/${getSampleSide()}/${getSampleMethodName()}`;
+    const fetchMock = getFetchMethodInfoAndCodeMock(
+      getSampleClassName(),
+      getSampleSide(),
+      getSampleMethodName()
+    );
 
     await act(async () => {
       render(
-        <MethodView currentClass={className} site={site} currentMethod={methodName} />,
+        <MethodView
+          currentClass={getSampleClassName()}
+          site={getSampleSide()}
+          currentMethod={getSampleMethodName()}
+        />,
         container
       );
     });
@@ -39,7 +48,7 @@ describe('Method View', () => {
 
     expect(fetchMock).toHaveBeenCalledWith(`${path}/text`);
 
-    expect(container.querySelector('h1')).toHaveTextContent(methodName);
+    expect(container.querySelector('h1')).toHaveTextContent(getSampleMethodName());
 
     expect(container.querySelector('code')).toHaveTextContent(
       'readFrom: aStream ^ self new readFrom: aStream.'
