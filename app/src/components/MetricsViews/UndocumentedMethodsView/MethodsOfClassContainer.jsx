@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { getUndocumentedMethodsOfClass } from '../../../utils/apiHandler';
+import { getUndocumentedMethodsOfClass } from '../../../utils/BackendHandling/apiHandler';
 import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
 import UndocumentedMethodsList from './UndocumentedMethodsList';
 

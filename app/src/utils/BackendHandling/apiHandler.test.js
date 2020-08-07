@@ -1,4 +1,4 @@
-import { baseURL } from '../config/constants';
+import { baseURL } from '../../config/constants';
 import {
   getHelpPageInfoMock,
   getUndocumentedMethodsOfClassAPIMock,
@@ -36,7 +36,7 @@ import {
   getSampleHelpPagesGivenByClass,
   getContentOfBookMock,
   getSampleUndocumentedMethodsOfClassResponse
-} from '../test-utils/apiMocks';
+} from '../../test-utils/apiMocks';
 import {
   getContentOfBook,
   getContentOfPage,

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
-import { getAllMethodsOf, getClass } from '../../../utils/apiHandler';
+import { getAllMethodsOf, getClass } from '../../../utils/BackendHandling/apiHandler';
 import './ClassView.css';
 
 const ClassView = ({ currentClass }) => {

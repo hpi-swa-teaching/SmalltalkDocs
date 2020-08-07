@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
-import { getMethodInfo, getMethodText } from '../../../utils/apiHandler';
+import { getMethodInfo, getMethodText } from '../../../utils/BackendHandling/apiHandler';
 import './MethodView.css';
 
 const MethodView = ({ currentClass, site, currentMethod }) => {

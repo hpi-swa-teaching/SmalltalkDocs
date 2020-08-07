@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { getPathToMethod } from '../../../utils/pathMapper';
+import { getPathToMethod } from '../../../utils/PathHandling/pathMapper';
 import './MethodList.css';
 
 const MethodList = props => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import SearchExplorer from '../../components/SearchExplorer/SearchExplorer';
+
 import './RootLandingPage.css';
 
 const RootLandingPage = () => {

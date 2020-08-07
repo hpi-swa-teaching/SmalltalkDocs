@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './UndocumentedMethodsList.css';
 import { NavLink } from 'react-router-dom';
-import { getPathToMethod } from '../../../utils/pathMapper';
+import { getPathToMethod } from '../../../utils/PathHandling/pathMapper';
 
 // TODO: style component
 // TODO: is it possible to use ResultEnumerationItem?

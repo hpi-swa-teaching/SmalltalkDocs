@@ -7,7 +7,7 @@ import {
   getPathToRoot,
   getPathToMetricsRoot,
   getSpecificMetricsURLBluePrint
-} from '../../utils/pathMapper';
+} from '../../utils/PathHandling/pathMapper';
 
 import './App.css';
 

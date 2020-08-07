@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getUndocumentedClasses } from '../../../utils/apiHandler';
+import { getUndocumentedClasses } from '../../../utils/BackendHandling/apiHandler';
 import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
 import ResultEnumerationItem from '../../ResultEnumerationItem/ResultEnumerationItem';
 

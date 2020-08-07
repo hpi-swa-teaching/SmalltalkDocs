@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { getClass, getClassMethods, getInstanceMethods } from '../../../utils/apiHandler';
-import { getPathToClass, getPathToDokuRoot, getPathToHelpClass } from '../../../utils/pathMapper';
+import {
+  getClass,
+  getClassMethods,
+  getInstanceMethods
+} from '../../../utils/BackendHandling/apiHandler';
+import {
+  getPathToClass,
+  getPathToDokuRoot,
+  getPathToHelpClass
+} from '../../../utils/PathHandling/pathMapper';
 import SidebarHeader from '../SidebarHeader/SidebarHeader';
 import MethodList from './MethodList';
 

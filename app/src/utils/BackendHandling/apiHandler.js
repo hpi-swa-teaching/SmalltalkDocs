@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { baseURL } from '../config/constants';
+import { baseURL } from '../../config/constants';
 
 export const getBookInfo = async helpClassName =>
   fetch(`${baseURL}/help/${helpClassName}`).then(response => response.json());

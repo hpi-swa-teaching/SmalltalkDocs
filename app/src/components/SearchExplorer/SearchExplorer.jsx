@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import ErrorIndicator from '../ErrorIndicator/ErrorIndicator';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import ResultEnumerationItem from '../ResultEnumerationItem/ResultEnumerationItem';
-import { getPathToMethod, getPathToClass } from '../../utils/pathMapper';
-import { searchForClasses, searchForMethods } from '../../utils/apiHandler';
+import { getPathToMethod, getPathToClass } from '../../utils/PathHandling/pathMapper';
+import { searchForClasses, searchForMethods } from '../../utils/BackendHandling/apiHandler';
 import './SearchExplorer.css';
 
 const SearchExplorer = () => {

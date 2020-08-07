@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getClasses } from '../../../utils/apiHandler';
+import { getClasses } from '../../../utils/BackendHandling/apiHandler';
 import MethodsOfClassContainer from './MethodsOfClassContainer';
 import LoadingIndicator from '../../LoadingIndicator/LoadingIndicator';
 
