@@ -121,6 +121,11 @@ export const getSampleUndocumentedMethodsOfClassResponse = () => ({
   },
   instanceMethods: ['addInstVarNames:', 'asClassDefinition', 'asHelpTopic', 'withClassVersion:']
 });
+export const getSampleClassResponse = () => ({
+  count: { classMethods: 2, total: 12, instanceMethods: 10 },
+  hasClassComment: true,
+  classComment: 'this is a class comment'
+});
 
 // mock implementations
 export const getHelpPageInfoMock = () =>
@@ -217,3 +222,10 @@ export const getUndocumentedMethodsOfClassAPIMock = () =>
     .mockImplementation(() =>
       Promise.resolve({ json: () => getSampleUndocumentedMethodsOfClassResponse() })
     );
+
+export const getClassMock = () =>
+  jest.spyOn(global, 'fetch').mockImplementation(() =>
+    Promise.resolve({
+      json: () => getSampleClassResponse()
+    })
+  );

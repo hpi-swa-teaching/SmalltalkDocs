@@ -4,7 +4,10 @@ import { act } from 'react-dom/test-utils';
 import { BrowserRouter as Router } from 'react-router-dom';
 import MethodsOfClassContainer from './MethodsOfClassContainer';
 import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-helper';
-import { getUndocumentedMethodsOfClassAPIMock } from '../../../test-utils/apiMocks';
+import {
+  getSampleClassName,
+  getUndocumentedMethodsOfClassAPIMock
+} from '../../../test-utils/apiMocks';
 import { baseURL } from '../../../config/constants';
 
 let container = null;
@@ -22,20 +25,17 @@ describe('MethodsOfClassContainer', () => {
   it('should display the MethodsOfClassContainer site', async () => {
     const fetchMock = getUndocumentedMethodsOfClassAPIMock();
 
-    const testClassName = 'testClassName';
-    const testIsActive = true;
-
     await act(async () => {
       render(
         <Router>
-          <MethodsOfClassContainer isActive={testIsActive} theClassName={testClassName} />
+          <MethodsOfClassContainer theClassName={getSampleClassName()} />
         </Router>,
         container
       );
     });
 
     expect(fetchMock).toHaveBeenCalledWith(
-      `${baseURL}/statistics/undocumented/methods/${testClassName}`
+      `${baseURL}/statistics/undocumented/methods/${getSampleClassName()}`
     );
   });
 });
