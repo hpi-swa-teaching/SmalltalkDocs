@@ -39,7 +39,7 @@ Download the latest artifact .zip from the Github Actions page of this repositor
 The artifact is named "smaprat-frontend.zip" and contains a compiled version of the React `.jsx` code.
 
 Next, you can place these files within the `www` folder of a supported webserver.  
-One popular solution is [`serve`](github.com/vercel/serve) - install it via `npm i -g serve` and then run `serve -s .` inside the unzipped artifact directory (containing the `index.html` file).
+One popular solution is [`serve`](https://github.com/vercel/serve) - install it via `npm i -g serve` and then run `serve -s .` inside the unzipped artifact directory (containing the `index.html` file).
 *Alternatively, one can use e.g. Nginx with the provided file in `app/nginx.example`. This is recommended for larger scale deployments.*
 
 #### Advanced Installation

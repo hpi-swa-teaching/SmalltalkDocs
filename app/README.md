@@ -5,7 +5,7 @@
 The frontend was built using React - a framework for progressive webapps. Therefore, the whole webUI is a single-page application. Altough this allows for smoother transitions and less loading times, it does come with some noteworthy caveats.
 
 Since the site itself is single page, a single artifact `index.html` will be produced. It is the webservers obligation to serve this file to all requests which do not reference locally existent files (like JS or CSS etc.). To download a precompiled artifact, open the latest Github Actions build for e.g. master branch and download the `smaprat-frontend.zip` from within the FrontendCI job.  
-For larger deployments, an example Nginx config is provided as [nginx.example](./nginx.example) within this repository. For smaller or locally running instances, one might as well make use of [`serve`](github.com/vercel/serve) which can be installed with `npm i -g serve`. Afterwards, it is as easy as issuing `serve -s .` inside the unzipped artifact's directory to start a local webserver with the correct configuration applied *(-s tell serve to run in single-page mode)*.
+For larger deployments, an example Nginx config is provided as [nginx.example](./nginx.example) within this repository. For smaller or locally running instances, one might as well make use of [`serve`](https://github.com/vercel/serve) which can be installed with `npm i -g serve`. Afterwards, it is as easy as issuing `serve -s .` inside the unzipped artifact's directory to start a local webserver with the correct configuration applied *(-s tell serve to run in single-page mode)*.
 
 Not only deployments require special treatment - also development comes with some specialties. Since the raw source code files within this directory are not executable by themselves, you'll need a React development server in order to serve the local source code. You can find notes on this below.
 
@@ -13,8 +13,8 @@ Not only deployments require special treatment - also development comes with som
 
 ### IDE Configuration
 
-* Do not forget to install Jest Plugin for Webstorm (Preferences - Languages & Frameworks - JavaScript - Libraries - Download - 'jest' - Download and Install)
-* If you use VS Code add following statement to settings.json  
+* If you use Webstorm, do not forget to install Jest plugin _(Preferences - Languages & Frameworks - JavaScript - Libraries - Download - 'jest' - Download and Install)_
+* If you use VS Code, add following statement to settings.json  
 
 ``` json
 {
