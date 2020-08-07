@@ -23,8 +23,7 @@ const HelpView = lazy(() => import('../../components/ExplorationViews/HelpView/H
 const MethodView = lazy(() => import('../../components/ExplorationViews/MethodView/MethodView'));
 
 /*
-// TODO: bessere Formulierung?
-Use the name key in the mapping arrays as key for the map function such as described in the React documentation
+The name key only exists to satisfy the requirements of the map function from React.
  */
 
 export const getExplorationViewByPath = (locationObj, paramsObj) =>
