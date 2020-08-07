@@ -2,6 +2,8 @@ import { baseURL } from '../config/constants';
 
 // mock results
 export const getSampleClassName = () => 'SampleClass';
+export const getSampleMethodName = () => 'getSmaprat';
+export const getSampleSide = () => 'instance';
 export const getSampleCategoryName = () => 'Smaprat';
 export const getSampleClassSearchTerm = () => 'Smaprat%';
 export const getSampleMethodSearchTerm = () => 'allSati%';

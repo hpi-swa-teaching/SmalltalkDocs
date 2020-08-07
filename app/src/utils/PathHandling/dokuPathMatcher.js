@@ -1,7 +1,5 @@
 import { classKey, methodKey, methodSideKey } from './pathMapper';
 
-// TODO: write tests for matchers
-
 /*
 locationObj & paramsObj represent the returning values of built-in React hooks
  */
