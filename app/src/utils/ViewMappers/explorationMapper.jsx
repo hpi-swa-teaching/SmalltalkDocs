@@ -73,7 +73,9 @@ export const getExplorationViewByPath = (locationObj, paramsObj) =>
     .map(aViewObj => <div key={aViewObj.name}>{aViewObj.component}</div>);
 
 const shouldShowMethodSidebar = (locationObj, paramsObj) =>
-  isMethodPath(locationObj, paramsObj) || isClassRootPath(locationObj, paramsObj);
+  isMethodPath(locationObj, paramsObj) ||
+  isClassRootPath(locationObj, paramsObj) ||
+  isHelpBookPath(locationObj, paramsObj);
 
 export const getSidebarByPath = (locationObj, paramsObj, sizeState, sizeController) =>
   [

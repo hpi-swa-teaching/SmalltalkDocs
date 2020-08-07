@@ -23,3 +23,5 @@ export const getMethodDocumentationURLBluePrint = () =>
     getURLParameterFromKey(classKey()),
     getURLParameterFromKey(methodSideKey())
   );
+export const getHelpClassURLBluePrint = () =>
+  getPathToHelpClass(getURLParameterFromKey(classKey()));

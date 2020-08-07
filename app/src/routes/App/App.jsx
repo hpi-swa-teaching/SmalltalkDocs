@@ -6,7 +6,8 @@ import {
   getPathToDokuRoot,
   getPathToRoot,
   getPathToMetricsRoot,
-  getSpecificMetricsURLBluePrint
+  getSpecificMetricsURLBluePrint,
+  getHelpClassURLBluePrint
 } from '../../utils/PathHandling/pathMapper';
 
 import './App.css';
@@ -26,6 +27,7 @@ const App = () => (
         <Route exact path={getPathToDokuRoot()} component={ExplorationView} />
         <Route exact path={getClassDocumentationURLBluePrint()} component={ExplorationView} />
         <Route exact path={getMethodDocumentationURLBluePrint()} component={ExplorationView} />
+        <Route exact path={getHelpClassURLBluePrint()} component={ExplorationView} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>
