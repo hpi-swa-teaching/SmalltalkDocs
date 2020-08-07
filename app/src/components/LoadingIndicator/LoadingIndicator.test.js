@@ -15,7 +15,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('LoadingIndicator', () => {
+describe('Loading Indicator', () => {
   it('should display LoadingIndicator', () => {
     act(() => {
       render(<LoadingIndicator />, container);

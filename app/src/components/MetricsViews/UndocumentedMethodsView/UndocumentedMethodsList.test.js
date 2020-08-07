@@ -16,7 +16,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('UndocumentedMethodsList', () => {
+describe('Undocumented Methods List', () => {
   it('should display the UndocumentedMethodsList site', () => {
     const methodList = ['test1', 'test2'];
     const site = 'test';

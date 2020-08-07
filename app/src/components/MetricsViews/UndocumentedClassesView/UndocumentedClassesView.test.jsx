@@ -7,7 +7,7 @@ import { cleanUpContainer, prepareContainer } from '../../../test-utils/test-hel
 import UndocumentedClassesView from './UndocumentedClassesView';
 import { getFetchClassesMock } from '../../../test-utils/apiMocks';
 
-describe('UncommentedClassView', () => {
+describe('Uncommented Class View', () => {
   const fetchMock = getFetchClassesMock();
 
   let container = null;

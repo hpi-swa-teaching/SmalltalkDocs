@@ -8,7 +8,7 @@ import { getFetchClassesMock } from '../../../test-utils/apiMocks';
 import UndocumentedMethodsView from './UndocumentedMethodsView';
 
 
-describe('UncommentedMethodsView', () => {
+describe('Uncommented Methods View', () => {
   const fetchMock = getFetchClassesMock();
 
   let container = null;

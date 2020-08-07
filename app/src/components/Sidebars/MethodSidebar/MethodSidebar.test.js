@@ -17,7 +17,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('MethodSidebar', () => {
+describe('Method Sidebar', () => {
   it('should display fetched class and its methods', async () => {
     const isOpen = true;
     const toggleIsOpen = () => {};

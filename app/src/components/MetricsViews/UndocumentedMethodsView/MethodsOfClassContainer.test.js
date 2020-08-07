@@ -21,7 +21,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('MethodsOfClassContainer', () => {
+describe('Methods Of Class Container', () => {
   it('should display the MethodsOfClassContainer site', async () => {
     const fetchMock = getUndocumentedMethodsOfClassAPIMock();
 

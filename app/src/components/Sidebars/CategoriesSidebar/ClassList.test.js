@@ -18,7 +18,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('ClassList', () => {
+describe('Class List', () => {
   it('should display ClassList', async () => {
     const fetchMock = getFetchClassesMock();
 

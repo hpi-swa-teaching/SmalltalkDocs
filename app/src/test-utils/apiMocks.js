@@ -160,6 +160,30 @@ export const getContentOfBookMock = () =>
     });
   });
 
+export const getFetchMethodInfoAndCodeMock = (className, site, methodName) =>
+  jest.spyOn(global, 'fetch').mockImplementation(path => {
+    if (path === `${baseURL}/env/classes/${className}/methods/${site}/${methodName}`)
+      return Promise.resolve({
+        json: () => getSampleMethodInfoResponse()
+      });
+    else
+      return Promise.resolve({
+        text: () => getSampleMethodCodeResponse()
+      });
+  });
+
+export const getSearchedMethodsOrClasses = (sampleSearchTerm) =>
+  jest.spyOn(global, 'fetch').mockImplementation(path => {
+    if (path === `${baseURL}/env/search/methods/${sampleSearchTerm}`)
+      return Promise.resolve({
+        json: () => getSampleMethodSearchResponse()
+      });
+    if (path === `${baseURL}/env/search/classes/${sampleSearchTerm}`)
+      return Promise.resolve({
+        json: () => getSampleClassSearchResponse()
+      });
+  });
+
 export const getFetchMethodsMock = () =>
   jest.spyOn(global, 'fetch').mockImplementation(() =>
     Promise.resolve({

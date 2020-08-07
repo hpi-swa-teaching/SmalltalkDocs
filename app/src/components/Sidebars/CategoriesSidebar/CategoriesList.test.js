@@ -16,7 +16,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('CategoriesList', () => {
+describe('Categories List', () => {
   it('should display CategoriesList', async () => {
     const categoryList = ['category1', 'category2', 'category3', 'category4'];
 

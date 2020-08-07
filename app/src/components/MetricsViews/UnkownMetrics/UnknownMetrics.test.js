@@ -15,7 +15,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('UnknownStatistics', () => {
+describe('Unknown Statistics', () => {
   it('should display UnknownStatistics site', () => {
     const testStatisticsName = 'test';
 

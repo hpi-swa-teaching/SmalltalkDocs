@@ -7,8 +7,7 @@ import SearchExplorer from './SearchExplorer';
 import { baseURL } from '../../config/constants';
 import { cleanUpContainer, prepareContainer } from '../../test-utils/test-helper';
 import {
-  getSampleClassSearchResponse,
-  getSampleMethodSearchResponse
+  getSearchedMethodsOrClasses
 } from '../../test-utils/apiMocks';
 
 let container = null;
@@ -25,7 +24,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('SearchExplorer', () => {
+describe('Search Explorer', () => {
   it('should display search form', async () => {
     await act(async () => {
       render(<SearchExplorer />, container);
@@ -35,21 +34,7 @@ describe('SearchExplorer', () => {
   });
 
   it('should search for classes and methods on submit', async () => {
-    const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(arg => {
-      switch (arg) {
-        case `${baseURL}/env/search/methods/${sampleSearchTerm}`:
-          return Promise.resolve({
-            json: () => getSampleMethodSearchResponse()
-          });
-        case `${baseURL}/env/search/classes/${sampleSearchTerm}`:
-          return Promise.resolve({
-            json: () => getSampleClassSearchResponse()
-          });
-        default:
-          break;
-      }
-      return null;
-    });
+    const fetchMock = getSearchedMethodsOrClasses(sampleSearchTerm);
 
     await act(async () => {
       render(

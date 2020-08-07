@@ -16,7 +16,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('MethodList', () => {
+describe('Method List', () => {
   it('should display MethodList', () => {
     const currentClass = 'currentClass';
     const side = 'side';

@@ -21,7 +21,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('RootLandingPage', () => {
+describe('Root Landing Page', () => {
   it('should display the RootLandingPage', () => {
     act(() => {
       render(

@@ -16,7 +16,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('MetricsSidebar', () => {
+describe('Metrics Sidebar', () => {
   it('should display the metrics sidebar', () => {
     const isOpen = true;
     const toggleIsOpen = () => {};

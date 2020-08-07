@@ -15,7 +15,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('MetricsLandingView', () => {
+describe('Metrics Landing View', () => {
   it('should display the statistics landing view site', () => {
     act(() => {
       render(<MetricsLandingView />, container);

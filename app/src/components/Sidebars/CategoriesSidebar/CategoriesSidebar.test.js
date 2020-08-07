@@ -17,7 +17,7 @@ afterEach(() => {
   container = cleanUpContainer(container);
 });
 
-describe('CategoriesSidebar', () => {
+describe('Categories Sidebar', () => {
   it('should displayed buttons with fetched categories', async () => {
     const isOpen = true;
     const toggleIsOpen = () => {};

@@ -11,7 +11,7 @@ import {
   getSampleMethodsOfClassResponse
 } from '../../../test-utils/apiMocks';
 
-describe('ClassView', () => {
+describe('Class View', () => {
   let container = null;
   beforeEach(() => {
     // setup a DOM element as a render target
