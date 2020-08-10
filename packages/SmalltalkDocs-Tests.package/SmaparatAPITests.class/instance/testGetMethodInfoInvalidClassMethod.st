@@ -1,0 +1,3 @@
+testing GetMethodInfo
+testGetMethodInfoInvalidClassMethod
+	self assertNoSuchMethodAt: '/env/classes/SmapratMockClass/methods/class/invalidMethodThatDoesNotExist'

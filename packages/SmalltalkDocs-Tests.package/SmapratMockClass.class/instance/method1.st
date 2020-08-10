@@ -1,0 +1,2 @@
+mocking
+method1

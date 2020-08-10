@@ -1,0 +1,3 @@
+testing GetMethodText
+testGetMethodTextInvalidInstanceMethod
+	self assertNoSuchMethodAt: '/env/classes/SmapratMockClass/methods/instance/invalidMethodThatDoesNotExist/text'

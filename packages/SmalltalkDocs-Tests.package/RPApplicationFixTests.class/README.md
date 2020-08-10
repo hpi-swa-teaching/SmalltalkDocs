@@ -1,0 +1,1 @@
+Uses SmapratMockApplication as subject application.

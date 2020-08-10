@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"app" : "max 7/4/2020 12:25",
+		"app:" : "max 7/4/2020 12:25",
+		"setUp" : "max 8/5/2020 14:24",
+		"tearDown" : "max 8/7/2020 17:25",
+		"testRemoveModelClass" : "max 8/7/2020 18:01",
+		"testSendCss" : "max 8/7/2020 18:01",
+		"testSendJs" : "max 8/7/2020 18:01",
+		"testStopping" : "max 8/4/2020 15:49" } }

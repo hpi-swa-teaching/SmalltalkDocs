@@ -1,0 +1,50 @@
+label {
+  display: block;
+}
+
+.explorer {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.searchBox {
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+.checkBox {
+  margin-right: 10px;
+}
+
+.checkClasses {
+  margin-left: -9px;
+  padding: 3px;
+}
+
+.checkMethods {
+  padding: 3px;
+}
+
+.submitButton {
+  /* Pointer/hand icon */
+  position: relative;
+  width: 200px;
+  height: 41px;
+  margin: 10px 10px;
+  padding: 10px 24px;
+  background: #fff;
+
+  /* Some padding */
+  cursor: pointer;
+}
+
+.resultBox {
+  height: 500px;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.resultBox::-webkit-scrollbar {
+  display: none;
+}

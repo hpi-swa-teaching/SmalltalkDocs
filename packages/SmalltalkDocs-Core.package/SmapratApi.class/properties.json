@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "max 8/7/2020 13:03",
+	"instvars" : [
+		"environmentSerializer" ],
+	"name" : "SmapratApi",
+	"pools" : [
+		 ],
+	"super" : "RPApplicationFix",
+	"type" : "normal" }

@@ -1,0 +1,21 @@
+.methodList {
+  position: relative;
+  left: 14%;
+  list-style-type: none;
+}
+
+.LinkText {
+  position: relative;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.LinkText:hover {
+  color: #cfcfcf;
+}
+
+li {
+  position: relative;
+}

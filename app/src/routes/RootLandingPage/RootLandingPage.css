@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0;
+}
+
+.main {
+  padding: 0 10px;
+}
+
+#openedSidebar {
+  margin-left: 417px; /* Same as the width of the sidenav */
+}
+
+#closedSidebar {
+  margin-left: 50px;
+}
+
+.frame {
+  text-align: center;
+}
+
+.heading {
+  position: relative;
+  margin-top: 3%;
+  color: #175578;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  position: relative;
+  margin-top: 20px;
+  color: #000;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.enterbutton {
+  display: inline-block;
+  width: 300px;
+  margin-top: 35px;
+  margin-right: 50px;
+  margin-left: 50px;
+  padding: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #175578;
+  background-color: #fff;
+  color: #175578;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.enterbutton:hover {
+  background: #f1f1f1;
+  color: #175578;
+}

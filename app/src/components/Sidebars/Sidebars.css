@@ -1,0 +1,32 @@
+.sidenav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-top: 20px;
+  overflow-x: hidden;
+  background: #175578;
+}
+
+#openSidebarBox {
+  width: 417px;
+}
+
+#closedSidebarBox {
+  width: 50px;
+}
+
+.secondarySidebarTitle {
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  color: #fff;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.secondarySidebarTitleLink {
+  color: #fff;
+  text-decoration: none;
+}

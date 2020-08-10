@@ -1,0 +1,3 @@
+testing GetCategoryClasses
+testGetCategoryClassesInvalidCategory
+	self assertNoSuchCategoryAt: '/env/categories/MockClassNotExistingClass', self nonexistingClassName

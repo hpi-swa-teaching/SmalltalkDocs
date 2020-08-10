@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "max 8/7/2020 13:00",
+	"instvars" : [
+		"searchMatcher" ],
+	"name" : "SmapratSearchMatcherTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

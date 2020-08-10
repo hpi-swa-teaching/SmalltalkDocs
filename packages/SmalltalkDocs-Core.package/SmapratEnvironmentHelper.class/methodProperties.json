@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"classExistsNamed:" : "max 8/7/2020 19:30",
+		"classNamed:" : "max 8/7/2020 18:42",
+		"getCategoriesJson" : "max 8/7/2020 18:47",
+		"getCategoryInfoJsonFrom:" : "max 8/7/2020 18:28",
+		"getClassInfoJsonFrom:" : "max 8/7/2020 18:28",
+		"getClassSearchResultsJsonFrom:" : "max 8/7/2020 18:55",
+		"getClassesJson" : "max 8/7/2020 18:56",
+		"getMethodDict" : "max 8/7/2020 18:56",
+		"getMethodInfoJsonFrom:named:" : "max 8/7/2020 18:29",
+		"getMethodSearchResultsJsonFrom:" : "max 8/7/2020 18:29",
+		"getMethodTextFrom:named:" : "max 8/7/2020 18:29",
+		"getMethodsJsonFrom:" : "max 8/7/2020 18:29",
+		"getUndocumentedClassesJson" : "max 8/7/2020 18:57",
+		"getUndocumentedMethodsJsonFrom:" : "max 8/7/2020 18:29",
+		"packageExistsNamed:ifAbsent:" : "max 8/7/2020 19:29",
+		"usedEnvironment" : "max 8/7/2020 18:32",
+		"usedEnvironment:" : "max 8/7/2020 18:32" } }

@@ -1,0 +1,19 @@
+.categoriesList {
+  position: relative;
+  left: 10%;
+  list-style-type: none;
+}
+
+.categoryButton {
+  width: 350px;
+  padding: 2px;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.categoryButton:hover {
+  color: #cfcfcf;
+}

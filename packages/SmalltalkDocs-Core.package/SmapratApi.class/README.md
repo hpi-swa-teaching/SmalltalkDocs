@@ -1,0 +1,1 @@
+An Api to serve informations about the Squeak Image. It uses the EnvironmentHelper class to retrieve information about the environment including its classes and methods.

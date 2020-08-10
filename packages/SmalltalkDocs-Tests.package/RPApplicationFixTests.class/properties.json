@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "max 8/7/2020 17:26",
+	"instvars" : [
+		"app" ],
+	"name" : "RPApplicationFixTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

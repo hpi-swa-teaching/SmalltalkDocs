@@ -1,0 +1,25 @@
+{
+  "short_name": "Smaprat",
+  "name": "SmalltalkDocs",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "196icon.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    },
+    {
+      "src": "310icon.png",
+      "type": "image/png",
+      "sizes": "310x310"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

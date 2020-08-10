@@ -1,0 +1,25 @@
+.resultEnumerationLink {
+  display: inline-block;
+  width: 80%;
+  margin: 10px;
+  padding: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #175578;
+  background-color: #fff;
+  color: #175578;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.resultEnumerationLink:hover {
+  background: #f1f1f1;
+  color: #175578;
+}
+
+.resultEnumerationList {
+  position: relative;
+  list-style-type: none;
+}

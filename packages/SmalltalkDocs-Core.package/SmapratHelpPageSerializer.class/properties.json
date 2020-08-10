@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "max 8/7/2020 13:04",
+	"instvars" : [
+		 ],
+	"name" : "SmapratHelpPageSerializer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,17 @@
+{
+	"category" : "SmalltalkDocs-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "max 8/7/2020 13:00",
+	"instvars" : [
+		"api",
+		"mockHelpBook",
+		"helpPageSerializer",
+		"nonexistingClassName" ],
+	"name" : "SmaparatAPITests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

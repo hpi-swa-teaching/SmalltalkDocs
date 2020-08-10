@@ -1,0 +1,1 @@
+A class to retrieve information about the environment. It uses the current environment.

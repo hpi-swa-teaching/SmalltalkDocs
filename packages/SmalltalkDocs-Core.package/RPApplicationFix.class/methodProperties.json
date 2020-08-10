@@ -2,5 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
+		"getRegexHandlerFromUrl" : "max 5/19/2020 20:54",
+		"initializeEndpointRoutes" : "max 8/2/2020 12:46",
 		"removeModelRouteFor:" : "max 5/13/2020 14:10",
-		"route:" : "max 5/13/2020 14:03" } }
+		"sendCSS:" : "max 7/3/2020 14:40",
+		"sendJS:" : "max 7/3/2020 14:41",
+		"sendJson:" : "max 6/30/2020 11:30",
+		"sendText:" : "max 6/30/2020 11:31",
+		"stop" : "max 8/4/2020 15:52" } }

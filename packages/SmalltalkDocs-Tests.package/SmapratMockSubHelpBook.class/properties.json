@@ -1,0 +1,14 @@
+{
+	"category" : "SmalltalkDocs-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "SmapratMockSubHelpBook",
+	"pools" : [
+		 ],
+	"super" : "SmapratMockHelpBook",
+	"type" : "normal" }

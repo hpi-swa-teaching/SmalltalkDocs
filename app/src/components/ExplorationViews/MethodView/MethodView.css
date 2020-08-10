@@ -1,0 +1,14 @@
+.code {
+  margin: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #175578;
+  color: #585858;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+.comment {
+  color: #fff;
+  font-size: 0.9rem;
+}
